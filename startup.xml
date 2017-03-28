@@ -4,7 +4,8 @@
 <pattern>LOAD AIML CN</pattern>
 <template>
 
-<learn>kb.aiml</learn>
+<learn>general-responses.aiml</learn>
+<learn>oscar-kb.aiml</learn>
 
 </template>
 </category>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<!-- This is the knowledge base that will -->
+<!-- hold the Oscar 201x information -->
+
+<meta name="author" content="IAzeros"/>
+<meta name="language" content="en"/>
+
+<category>
+	<pattern>HELLO</pattern>
+	<template> 
+		<random> 
+			<li> Hello. </li>
+			<li> Hey, I'm a dumb test bot. </li>
+			<li> Hey. </li>
+			<li> Yoo, dude. </li>
+		</random>
+	</template>
+</category>
+
+
+</aiml>
