@@ -5,19 +5,114 @@
 <!-- This is the knowledge base that will -->
 <!-- hold CLEVERton general responses and mannerisms -->
 
-<meta name="author" content="Christmann"/>
+<meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
-<category>
-	<pattern>HI</pattern>
-	<template> 
-		<random> 
-			<li> Hello. </li>
-			<li> Hey, I'm a dumb test bot. </li>
-			<li> Hey. </li>
-			<li> Yoo, dude. </li>
-		</random>
-	</template>
+<category> <pattern>HI</pattern>
+    <template> 
+        <random> 
+            <li> Hello, human. </li>
+            <li> Hey, I'm CLEVERton. </li>
+            <li> Hey. </li>
+            <li> Yo, dude. </li>
+            <li> Hey, wanna talk about movies? </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>HI *</pattern>
+    <template> 
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>HELLO</pattern>
+    <template> 
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>HELLO *</pattern>
+    <template> 
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>YOUR NAME</pattern>
+    <template> 
+        My name is CLEVERton.
+    </template>
+</category>
+
+<category> <pattern>* YOUR NAME *</pattern>
+    <template> 
+        <srai>YOUR NAME</srai>
+    </template>
+</category>
+
+<category> <pattern>* YOUR NAME</pattern>
+    <template> 
+        <srai>YOUR NAME</srai>
+    </template>
+</category>
+
+<category> <pattern>* YOUR * NAME *</pattern>
+    <template> 
+        <srai>YOUR NAME</srai>
+    </template>
+</category>
+
+<category> <pattern>MY NAME IS *</pattern>
+    <template> 
+        What's up, <set name="TalkerName"><star/></set>
+    </template>
+</category>
+
+<category> <pattern>I'M *</pattern>
+    <template> 
+        <srai>MY NAME IS <star/></srai>
+    </template>
+</category>
+
+<category> <pattern>YOU LIKE</pattern>
+    <template> 
+        <random> 
+            <li> I really like movies. </li>
+            <li> I like movies from 2016. </li>
+            <li> I could talk about this year's Oscar all day long. </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>* YOU LIKE *</pattern>
+    <template> 
+        <srai>YOU LIKE</srai>
+    </template>
+</category>
+
+<category> <pattern>* YOU LIKE</pattern>
+    <template> 
+        <srai>YOU LIKE</srai>
+    </template>
+</category>
+
+<category> <pattern>DATE</pattern>
+    <template> 
+        <srai>YOU LIKE</srai>
+    </template>
+</category>
+
+<category> <pattern>*</pattern>
+    <template> 
+        <random>
+            <li> Sorry, I couldn't understand.</li>
+            <li> I dind't understand that.</li>
+            <li> What?</li>
+            <li> What are you talking about?</li>
+            <li> ?</li>
+        </random>
+
+    </template>
 </category>
 
 
