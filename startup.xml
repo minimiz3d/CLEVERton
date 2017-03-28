@@ -1,0 +1,12 @@
+<aiml version="1.0">
+
+<category>
+<pattern>LOAD AIML CN</pattern>
+<template>
+
+<learn>kb.aiml</learn>
+
+</template>
+</category>
+
+</aiml>
