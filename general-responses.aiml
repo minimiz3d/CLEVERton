@@ -38,6 +38,86 @@
     </template>
 </category>
 
+<category> <pattern>HEY</pattern>
+    <template> 
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>HEY *</pattern>
+    <template> 
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>YES</pattern>
+    <template> 
+        <random> 
+            <li> Ok. </li>
+            <li> Awesome. </li>
+            <li> Nice. </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>YES *</pattern>
+    <template> 
+        <srai>YES</srai>
+    </template>
+</category>
+
+<category> <pattern>SURE</pattern>
+    <template> 
+        <srai>YES</srai>
+    </template>
+</category>
+
+<category> <pattern>SURE *</pattern>
+    <template> 
+        <srai>YES</srai>
+    </template>
+</category>
+
+<category> <pattern>FINE</pattern>
+    <template> 
+        <random> 
+            <li> Okay, then. </li>
+            <li> That makes me happy. </li>
+            <li> That seems nice. </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>* FINE *</pattern>
+    <template> 
+        <srai>FINE</srai>
+    </template>
+</category>
+
+<category> <pattern>FINE *</pattern>
+    <template> 
+        <srai>FINE</srai>
+    </template>
+</category>
+
+<category> <pattern>* FINE</pattern>
+    <template> 
+        <srai>FINE</srai>
+    </template>
+</category>
+
+<category> <pattern>NICE</pattern>
+    <template> 
+        <srai>FINE</srai>
+    </template>
+</category>
+
+<category> <pattern>FINE *</pattern>
+    <template> 
+        <srai>FINE</srai>
+    </template>
+</category>
+
 <category> <pattern>YOUR NAME</pattern>
     <template> 
         My name is CLEVERton.
@@ -68,7 +148,7 @@
     </template>
 </category>
 
-<category> <pattern>I'M *</pattern>
+<category> <pattern>IM *</pattern>
     <template> 
         <srai>MY NAME IS <star/></srai>
     </template>
@@ -96,9 +176,65 @@
     </template>
 </category>
 
+<category> <pattern>SORRY</pattern>
+    <template> 
+        There's no need to be sorry.
+    </template>
+</category>
+
 <category> <pattern>DATE</pattern>
     <template> 
-        <srai>YOU LIKE</srai>
+        Today is <get name="date"/>
+    </template>
+</category>
+
+<category> <pattern>* DATE *</pattern>
+    <template> 
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>* DATE</pattern>
+    <template> 
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>TIME</pattern>
+    <template> 
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>TIME *</pattern>
+    <template> 
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>* TIME</pattern>
+    <template> 
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>* TIME *</pattern>
+    <template> 
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>WANT * MOVIES</pattern>
+    <template> 
+        <random>
+            <li> I would love to talk about movies. </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>WHAT * TALK *</pattern>
+    <template> 
+        <srai>WANT * MOVIES</srai>
     </template>
 </category>
 
@@ -109,7 +245,7 @@
             <li> I dind't understand that.</li>
             <li> What?</li>
             <li> What are you talking about?</li>
-            <li> ?</li>
+            <li> Let's try talking about movies, maybe?</li>
         </random>
 
     </template>
