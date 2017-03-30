@@ -2,57 +2,15 @@
 
 <aiml version="1.0">
 
-<!-- This is the knowledge base that will -->
-<!-- hold CLEVERton general responses and mannerisms -->
+<!-- Generic responses given by CLEVERton -->
 
 <meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
-<category> <pattern>HI</pattern>
-    <template> 
-        <random> 
-            <li> Hello, human. </li>
-            <li> Hey, I'm CLEVERton. </li>
-            <li> Hey. </li>
-            <li> Yo, dude. </li>
-            <li> Hey, wanna talk about movies? </li>
-        </random>
-    </template>
-</category>
-
-<category> <pattern>HI *</pattern>
-    <template> 
-        <srai>HI</srai>
-    </template>
-</category>
-
-<category> <pattern>HELLO</pattern>
-    <template> 
-        <srai>HI</srai>
-    </template>
-</category>
-
-<category> <pattern>HELLO *</pattern>
-    <template> 
-        <srai>HI</srai>
-    </template>
-</category>
-
-<category> <pattern>HEY</pattern>
-    <template> 
-        <srai>HI</srai>
-    </template>
-</category>
-
-<category> <pattern>HEY *</pattern>
-    <template> 
-        <srai>HI</srai>
-    </template>
-</category>
-
+<!-- Confirmation responses -->
 <category> <pattern>YES</pattern>
-    <template> 
-        <random> 
+    <template>
+        <random>
             <li> Ok. </li>
             <li> Awesome. </li>
             <li> Nice. </li>
@@ -61,26 +19,26 @@
 </category>
 
 <category> <pattern>YES *</pattern>
-    <template> 
+    <template>
         <srai>YES</srai>
     </template>
 </category>
 
 <category> <pattern>SURE</pattern>
-    <template> 
+    <template>
         <srai>YES</srai>
     </template>
 </category>
 
 <category> <pattern>SURE *</pattern>
-    <template> 
+    <template>
         <srai>YES</srai>
     </template>
 </category>
 
 <category> <pattern>FINE</pattern>
-    <template> 
-        <random> 
+    <template>
+        <random>
             <li> Okay, then. </li>
             <li> That makes me happy. </li>
             <li> That seems nice. </li>
@@ -89,74 +47,119 @@
 </category>
 
 <category> <pattern>* FINE *</pattern>
-    <template> 
+    <template>
         <srai>FINE</srai>
     </template>
 </category>
 
 <category> <pattern>FINE *</pattern>
-    <template> 
+    <template>
         <srai>FINE</srai>
     </template>
 </category>
 
 <category> <pattern>* FINE</pattern>
-    <template> 
+    <template>
         <srai>FINE</srai>
     </template>
 </category>
 
 <category> <pattern>NICE</pattern>
-    <template> 
+    <template>
         <srai>FINE</srai>
     </template>
 </category>
 
 <category> <pattern>FINE *</pattern>
-    <template> 
+    <template>
         <srai>FINE</srai>
     </template>
 </category>
 
+<!-- Information about CLEVERton -->
 <category> <pattern>YOUR NAME</pattern>
-    <template> 
+    <template>
         My name is CLEVERton.
     </template>
 </category>
 
 <category> <pattern>* YOUR NAME *</pattern>
-    <template> 
+    <template>
         <srai>YOUR NAME</srai>
     </template>
 </category>
 
 <category> <pattern>* YOUR NAME</pattern>
-    <template> 
+    <template>
         <srai>YOUR NAME</srai>
     </template>
 </category>
 
 <category> <pattern>* YOUR * NAME *</pattern>
-    <template> 
+    <template>
         <srai>YOUR NAME</srai>
     </template>
 </category>
 
+<!-- Information about the day -->
+<category> <pattern>DATE</pattern>
+    <template>
+        Today is <get name="date"/>
+    </template>
+</category>
+
+<category> <pattern>* DATE *</pattern>
+    <template>
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>* DATE</pattern>
+    <template>
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>TIME</pattern>
+    <template>
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>TIME *</pattern>
+    <template>
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>* TIME</pattern>
+    <template>
+        <srai>DATE</srai>
+    </template>
+</category>
+
+<category> <pattern>* TIME *</pattern>
+    <template>
+        <srai>DATE</srai>
+    </template>
+</category>
+
+
 <category> <pattern>MY NAME IS *</pattern>
-    <template> 
+    <template>
         What's up, <set name="TalkerName"><star/></set>
     </template>
 </category>
 
 <category> <pattern>IM *</pattern>
-    <template> 
+    <template>
         <srai>MY NAME IS <star/></srai>
     </template>
 </category>
 
 <category> <pattern>YOU LIKE</pattern>
-    <template> 
-        <random> 
+    <template>
+        <random>
             <li> I really like movies. </li>
             <li> I like movies from 2016. </li>
             <li> I could talk about this year's Oscar all day long. </li>
@@ -165,67 +168,26 @@
 </category>
 
 <category> <pattern>* YOU LIKE *</pattern>
-    <template> 
+    <template>
         <srai>YOU LIKE</srai>
     </template>
 </category>
 
 <category> <pattern>* YOU LIKE</pattern>
-    <template> 
+    <template>
         <srai>YOU LIKE</srai>
     </template>
 </category>
 
 <category> <pattern>SORRY</pattern>
-    <template> 
+    <template>
         There's no need to be sorry.
     </template>
 </category>
 
-<category> <pattern>DATE</pattern>
-    <template> 
-        Today is <get name="date"/>
-    </template>
-</category>
-
-<category> <pattern>* DATE *</pattern>
-    <template> 
-        <srai>DATE</srai>
-    </template>
-</category>
-
-<category> <pattern>* DATE</pattern>
-    <template> 
-        <srai>DATE</srai>
-    </template>
-</category>
-
-<category> <pattern>TIME</pattern>
-    <template> 
-        <srai>DATE</srai>
-    </template>
-</category>
-
-<category> <pattern>TIME *</pattern>
-    <template> 
-        <srai>DATE</srai>
-    </template>
-</category>
-
-<category> <pattern>* TIME</pattern>
-    <template> 
-        <srai>DATE</srai>
-    </template>
-</category>
-
-<category> <pattern>* TIME *</pattern>
-    <template> 
-        <srai>DATE</srai>
-    </template>
-</category>
 
 <category> <pattern>WANT * MOVIES</pattern>
-    <template> 
+    <template>
         <random>
             <li> I would love to talk about movies. </li>
         </random>
@@ -233,13 +195,13 @@
 </category>
 
 <category> <pattern>WHAT * TALK *</pattern>
-    <template> 
+    <template>
         <srai>WANT * MOVIES</srai>
     </template>
 </category>
 
 <category> <pattern>*</pattern>
-    <template> 
+    <template>
         <random>
             <li> Sorry, I couldn't understand.</li>
             <li> I dind't understand that.</li>

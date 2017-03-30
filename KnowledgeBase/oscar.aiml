@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<!-- This is the knowledge base that will -->
+<!-- hold the Oscar 2017 information -->
+
+<meta name="author" content="IAzeros"/>
+<meta name="language" content="en"/>
+
+<!--
+    Best supporting actor
+        WINNER: Mahershala Ali (Moonlight)
+        Jeff Bridges (Hell or High Water)
+        Lucas Hedges (Manchester by the Sea)
+        Dev Patel (Lion)
+        Michael Shannon (Nocturnal Animals)
+
+    Best makeup and hairstyling
+        A Man Called Ove
+        Star Trek Beyond
+        WINNER: Suicide Squad
+
+    Best costume design
+        Allied
+        WINNER: Fantastic Beasts and Where to Find Them
+        Florence Foster Jenkins
+        Jackie
+        La La Land
+
+    Best documentary
+        Fire at Sea
+        I Am Not Your Negro
+        Life, Animated
+        WINNER: OJ: Made in America
+        13th
+
+    Best sound editing
+
+
+    Best sound mixing
+
+
+    Best supporting actress
+
+
+    Best foreign language film
+
+
+    Best animated short
+
+
+    Best animated feature
+
+
+    Best production design
+
+
+    Best visual effects
+
+
+    Best film editing
+
+
+    Best documentary short
+
+
+    Best live-action short
+
+
+    Best cinematography
+
+
+    Best score
+
+
+    Best song
+
+
+    Best original screenplay
+
+
+    Best adapted screenplay
+
+
+    Best director
+
+
+    Best actor
+
+
+    Best actress
+
+
+    Best picture
+
+
+
+-->
+
+
+</aiml>

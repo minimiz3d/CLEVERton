@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<!-- Greetings responses -->
+
+<meta name="author" content="IAzeros"/>
+<meta name="language" content="en"/>
+
+<category> <pattern>HI</pattern>
+    <template>
+        <random>
+            <li> Hello, human. </li>
+            <li> Hey, I'm CLEVERton. </li>
+            <li> Hey. </li>
+            <li> Yo, dude. </li>
+            <li> Hey, wanna talk about movies? </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>HI *</pattern>
+    <template>
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>HELLO</pattern>
+    <template>
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>HELLO *</pattern>
+    <template>
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>HELLO MY NAME IS *</pattern>
+    <template>
+        What's up, <set name="TalkerName"><star/></set>
+    </template>
+</category>
+
+<category> <pattern>HEY</pattern>
+    <template>
+        <srai>HI</srai>
+    </template>
+</category>
+
+<category> <pattern>HEY *</pattern>
+    <template>
+        <srai>HI</srai>
+    </template>
+</category>
+</aiml>
