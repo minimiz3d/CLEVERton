@@ -1,6 +1,11 @@
 import aiml
 import time
 
+# this is used for colored output
+class colors:
+    USER = '\033[92m'
+    CLEVERTON = '\033[94m'
+
 # The Kernel object is the public interface to the AIML interpreter.
 k = aiml.Kernel()
 
@@ -19,13 +24,13 @@ k.setPredicate("TalkerName", username)
 # Loop forever, reading user input from the command
 # line and printing respones
 while True:
-    input = raw_input(username + ": ")
+    input = raw_input(colors.USER + username + ": ")
 
     if ("date" or "time") in input:
         curr_time = str(time.ctime())
         k.setPredicate("date", curr_time)
 
-    print "CLEVERton: " + k.respond(input)
+    print colors.CLEVERTON + "CLEVERton: " + k.respond(input)
 
     if "name" in input:
         username = k.getPredicate("TalkerName")

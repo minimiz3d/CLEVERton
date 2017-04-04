@@ -36,6 +36,21 @@
     </template>
 </category>
 
+<category> <pattern>NOT FINE</pattern>
+    <template>
+        <random>
+            <li> Aww, don't be sad. </li>
+            <li> Why?. </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>* NOT FINE</pattern>
+    <template>
+        <srai>NOT FINE</srai>
+    </template>
+</category>
+
 <category> <pattern>FINE</pattern>
     <template>
         <random>
