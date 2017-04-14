@@ -219,10 +219,21 @@
     </template>
 </category>
 
+<!-- Importante!
+    TODO: Aprender a usar o contexto. Por exemplo, na seguinte conversa:
+    user: how old is andrew garfield? -> cleverton: 33 years old.
+    user: how many movies he did in his carreer? -> Cleverton vai saber que se refere ao andrew garfield.
+    >>Provavelmente usa <topic>!
+-->
 
 <!-- Andrew Garfield (Hacksaw Ridge) -->
 <category> <pattern>ANDREW GARFIELD NUMBER OF MOVIES</pattern>
     <template>He was in 39 movies as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES ANDREW GARFIELD *</pattern>
+    <template>
+        <srai>ANDREW GARFIELD NUMBER OF MOVIES</srai>
+    </template>
 </category>
 <category> <pattern>ANDREW GARFIELD AGE</pattern>
     <template>
@@ -299,7 +310,7 @@
     </template>
 </category>
 
-<!-- TODO: Descobrir o erro das curiosidades! -->
+
 <!-- Viggo Mortensen (Captain Fantastic) -->
 <category> <pattern>VIGGO MORTENSEN AGE</pattern>
     <template>
@@ -323,7 +334,9 @@
     </template>
 </category>
 <category> <pattern>* VIGGO MORTENSEN BEST MOVIES</pattern>
-    <srai>VIGGO MORTESEN BEST MOVIES</srai>
+    <template>
+        <srai>VIGGO MORTESEN BEST MOVIES</srai>
+    </template>
 </category>
 <category> <pattern>* VIGGO MORTENSEN *</pattern>
     <template>
@@ -339,7 +352,6 @@
 
 
 <!-- Denzel Washington (Fences) -->
-<!-- TODO: Random e *Best movies não estão funfando! -->
 <category> <pattern>DENZEL WASHINGTON AGE</pattern>
     <template>
         He's 62 years old.
@@ -362,7 +374,9 @@
     </template>
 </category>
 <category> <pattern>* DENZEL WASHINGTON BEST MOVIES</pattern>
-    <srai>DENZEL WASHINGTON BEST MOVIES</srai>
+    <template>
+        <srai>DENZEL WASHINGTON BEST MOVIES</srai>
+    </template>
 </category>
 <category> <pattern>* DENZEL WASHINGTON *</pattern>
     <template>
