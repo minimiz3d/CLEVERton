@@ -2,50 +2,494 @@
 
 <aiml version="1.0">
 
-<!-- Greetings responses -->
+<!-- Actors knowledge base -->
 
 <meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
-<category> <pattern>HI</pattern>
+<!-- Just getting actor/actress name templates -->
+<!-- TODO: Melhorar aqui -->
+<!-- TODO: Adicionar número de filmes na carreira (mulheres) -->
+<category> <pattern>HOW MANY MOVIES HE DID</pattern>
+    <template>
+        <srai><get name = "ActorName"/> NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>HOW MANY MOVIES HE DID *</pattern>
+    <template>
+        <srai>HOW MANY MOVIES HE DID</srai>
+    </template>
+</category>
+<category> <pattern>HOW MANY MOVIES SHE DID</pattern>
+    <template>
+        <srai><get name = "ActressName"/> NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>HOW MANY MOVIES SHE DID *</pattern>
+    <template>
+        <srai>HOW MANY MOVIES SHE DID</srai>
+    </template>
+</category>
+
+
+<!-- Setting actor name: -->
+<category> <pattern>CASEY AFFLECK</pattern>
+    <template>
+        <set name = "ActorName" >Casey Affleck</set>?
+        What about him?
+    </template>
+</category>
+<category> <pattern>ANDREW GARFIELD</pattern>
+    <template>
+        <set name = "ActorName" >Andrew Garfield</set>?
+        What about him?
+    </template>
+</category>
+<category> <pattern>RYAN GOSLING</pattern>
+    <template>
+        <set name = "ActorName" >Ryan Gosling</set>?
+        What about him? He played the main role in La La Land (2016). ALMOST won.
+    </template>
+</category>
+<category> <pattern>VIGGO MORTENSEN</pattern>
+    <template>
+        <set name = "ActorName" >Viggo Mortensen</set>?
+        What about him?
+    </template>
+</category>
+<category> <pattern>DENZEL WASHINGTON</pattern>
+    <template>
+        <set name = "ActorName" >Denzel Washington</set>?
+        What about him?
+    </template>
+</category>
+
+<category> <pattern>MAHERSHALA ALI</pattern>
+    <template>
+        <set name = "ActorName" >Mahershala Ali</set>?
+        What about him?
+    </template>
+</category>
+<category> <pattern>JEFF BRIDGES</pattern>
+    <template>
+        <set name = "ActorName" >Jeff Bridges</set>?
+        What about him?
+    </template>
+</category>
+<category> <pattern>LUCAS HEDGES</pattern>
+    <template>
+        <set name = "ActorName" >Lucas Hedges</set>?
+        What about him?
+    </template>
+</category>
+<category> <pattern>DEV PATEL</pattern>
+    <template>
+        <set name = "ActorName" >Dev Patel</set>?
+        What about him?
+    </template>
+</category>
+<category> <pattern>MICHAEL SHANNON</pattern>
+    <template>
+        <set name = "ActorName" >Michael Shannon</set>?
+        What about him?
+    </template>
+</category>
+
+<!-- Setting actress name: -->
+<category> <pattern>ISABELLE HUPPERT</pattern>
+    <template>
+        <set name = "ActressName" >Isabelle Huppert</set>?
+        What about her?
+    </template>
+</category>
+<category> <pattern>RUTH NEGGA</pattern>
+    <template>
+        <set name = "ActressName" >Ruth Negga</set>?
+        What about her?
+    </template>
+</category>
+<category> <pattern>EMMA STONE</pattern>
+    <template>
+        <set name = "ActressName" >Emma Stone</set>?
+        What about her? She won best actress playing the main role in La La Land (2016).
+    </template>
+</category>
+<category> <pattern>NATALIE PORTMAN</pattern>
+    <template>
+        <set name = "ActressName" >Natalie Portman</set>?
+        What about her?
+    </template>
+</category>
+<category> <pattern>MERYL STREEP</pattern>
+    <template>
+        <set name = "ActressName" >Meryl Streep</set>?
+        What about her?
+    </template>
+</category>
+
+<category> <pattern>VIOLA DAVIS</pattern>
+    <template>
+        <set name = "ActressName" >Viola Davis</set>?
+        What about her?
+    </template>
+</category>
+<category> <pattern>NAOMIE HARRIS</pattern>
+    <template>
+        <set name = "ActressName" >Naomie Harris</set>?
+        What about her?
+    </template>
+</category>
+<category> <pattern>NICOLE KIDMAN</pattern>
+    <template>
+        <set name = "ActressName" >Nicole Kidman</set>?
+        What about her?
+    </template>
+</category>
+<category> <pattern>OCTAVIA SPENCER</pattern>
+    <template>
+        <set name = "ActressName" >Octavia Spencer</set>?
+        What about her?
+    </template>
+</category>
+<category> <pattern>MICHELLE WILLIAMS</pattern>
+    <template>
+        <set name = "ActressName" >Michelle Williams</set>?
+        What about her?
+    </template>
+</category>
+
+<!--TEMPLATES:
+    * AGE
+    * BEST MOVIES
+    * GENERAL CURIOSITIES
+-->
+
+<!--ACTOR IN A LEADING ROLE - LIST
+    WINNER: Casey Affleck (Manchester by the Sea)
+    Andrew Garfield (Hacksaw Ridge)
+    Ryan Gosling (La La Land)
+    Viggo Mortensen (Captain Fantastic)
+    Denzel Washington (Fences)
+-->
+
+<!-- WINNER: Casey Affleck (Manchester by the Sea) -->
+<category> <pattern>CASEY AFFLECK NUMBER OF MOVIES</pattern>
+    <template>He was in 26 movies as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES CASEY AFFLECK *</pattern>
+    <template>
+        <srai>CASEY AFFLECK NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>CASEY AFFLECK AGE</pattern>
+    <template>
+        He's 41 years old.
+    </template>
+</category>
+<category> <pattern>* CASEY AFFLECK AGE</pattern>
+    <template>
+        <srai>CASEY AFFLECK AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS CASEY AFFLECK</pattern>
+    <template>
+        <srai>CASEY AFFLECK AGE</srai>
+    </template>
+</category>
+<category> <pattern>* CASEY AFFLECK BEST MOVIES</pattern>
+    <template>
+        <srai>CASEY AFFLECK BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>CASEY AFFLECK BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        Good Will Hunting (1997); Gone Baby Gone (2007); The Assassination Of Jesse James By The Coward Robert Ford (2007).
+    </template>
+</category>
+<category> <pattern>* CASEY AFFLECK *</pattern>
     <template>
         <random>
-            <li> Hello, human. </li>
-            <li> Hey, I'm CLEVERton. </li>
-            <li> Hey. </li>
-            <li> Yo, dude. </li>
-            <li> Hey, wanna talk about movies? </li>
+            <!-- General curiosities -->
+            <li>Did you know that Caleb Casey Affleck was born on August 12, 1975, in Falmouth, Massachusetts?</li>
+            <li>Did you know that the younger brother of actor Ben Affleck, Casey has established a career as an actor in his own right,
+                beginning with smaller roles in films such as To Die For (1995) with Joaquin Phoenix and Chasing Amy (1997) with his older brother?</li>
+            <li>Did you know that Affleck is a vegan and is actively involved in animal rights, working with groups like PETA and Farm Sanctuary?</li>
         </random>
     </template>
 </category>
 
-<category> <pattern>HI *</pattern>
+
+<!-- Andrew Garfield (Hacksaw Ridge) -->
+<category> <pattern>ANDREW GARFIELD NUMBER OF MOVIES</pattern>
+    <template>He was in 39 movies as an actor.</template>
+</category>
+<category> <pattern>ANDREW GARFIELD AGE</pattern>
     <template>
-        <srai>HI</srai>
+        He's 33 years old.
+    </template>
+</category>
+<category> <pattern>* ANDREW GARFIELD AGE</pattern>
+    <template>
+        <srai>ANDREW GARFIELD AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS ANDREW GARFIELD</pattern>
+    <template>
+        <srai>ANDREW GARFIELD AGE</srai>
+    </template>
+</category>
+<category> <pattern>ANDREW GARFIELD BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        The Amazing Spiderman (2010); The Social Network (2010); Never Let Me Go (2010);
+    </template>
+</category>
+<category> <pattern>* ANDREW GARFIELD BEST MOVIES</pattern>
+    <template>
+        <srai>ANDREW GARFIELD BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* ANDREW GARFIELD *</pattern>
+    <template>
+        <random>
+            <li>Did you know that </li>
+            <li>Did you know that </li>
+            <li>Did you know that </li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HELLO</pattern>
+
+<!-- Ryan Gosling (La La Land) -->
+<category> <pattern>RYAN GOSLING AGE</pattern>
     <template>
-        <srai>HI</srai>
+        He's 36 years old.
+    </template>
+</category>
+<category> <pattern>* RYAN GOSLING AGE</pattern>
+    <template>
+        <srai>RYAN GOSLING AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS RYAN GOSLING</pattern>
+    <template>
+        <srai>RYAN GOSLING AGE</srai>
+    </template>
+</category>
+<category> <pattern>RYAN GOSLING BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        The Nice Guys (2016); Drive (2011); Lars And The Real Girl (2007)
+    </template>
+</category>
+<category> <pattern>* RYAN GOSLING BEST MOVIES</pattern>
+    <template>
+        <srai>RYAN GOSLING BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* RYAN GOSLING *</pattern>
+    <template>
+        <random>
+            <li>Did you know that he's also an accomplished jazz guitarist and singer?</li>
+            <li>Did you know that when he was a kid, he could do an absolutely epic rendition of “Everybody Dance Now”?
+            Check it out: https://youtu.be/dJQvXCoNDzM</li>
+            <li>Did you know that he’s in a band called Dead Man’s Bones where he sings about paranormal phenomena?</li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HELLO *</pattern>
+<!-- TODO: Descobrir o erro das curiosidades! -->
+<!-- Viggo Mortensen (Captain Fantastic) -->
+<category> <pattern>VIGGO MORTENSEN AGE</pattern>
     <template>
-        <srai>HI</srai>
+        He's 58 years old.
+    </template>
+</category>
+<category> <pattern>* VIGGO MORTENSEN AGE</pattern>
+    <template>
+        <srai>VIGGO MORTENSEN AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS VIGGO MORTENSEN</pattern>
+    <template>
+        <srai>VIGGO MORTENSEN AGE</srai>
+    </template>
+</category>
+<category> <pattern>VIGGO MORTENSEN BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        THe Lord Of The Rings Triology (2001,2,3); History of Violence (2005); The Prophecy (1995)
+    </template>
+</category>
+<category> <pattern>* VIGGO MORTENSEN BEST MOVIES</pattern>
+    <srai>VIGGO MORTESEN BEST MOVIES</srai>
+</category>
+<category> <pattern>* VIGGO MORTENSEN *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that Viggo Mortensen is also an author, with various books of poetry, photography, and painting published?</li>
+            <li>Did you know that Mortensen is a painter and photographer?</li>
+            <li>Did you know that he speaks fluent English, Danish, Spanish and French.
+                He is also conversational in Italian, and understands Norwegian and Swedish</li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HEY</pattern>
+
+<!-- Denzel Washington (Fences) -->
+<!-- TODO: Random e *Best movies não estão funfando! -->
+<category> <pattern>DENZEL WASHINGTON AGE</pattern>
     <template>
-        <srai>HI</srai>
+        He's 62 years old.
+    </template>
+</category>
+<category> <pattern>* DENZEL WASHINGTON AGE</pattern>
+    <template>
+        <srai>DENZEL WASHINGTON AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS DENZEL WASHINGTON</pattern>
+    <template>
+        <srai>DENZEL WASHINGTON AGE</srai>
+    </template>
+</category>
+<category> <pattern>DENZEL WASHINGTON BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        Glory (1989); Malcolm X (1992); Much Ado About Nothing (1993)
+    </template>
+</category>
+<category> <pattern>* DENZEL WASHINGTON BEST MOVIES</pattern>
+    <srai>DENZEL WASHINGTON BEST MOVIES</srai>
+</category>
+<category> <pattern>* DENZEL WASHINGTON *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that he is only the second black actor to win Academy Award for Best Actor in a Leading Role (2001)?
+            The first was Sidney Poitier who won in 1963 and also received an honorary Academy Award in 2001.</li>
+            <li>Did you know that he holds the unique feat of more number of Oscar nominations by an African American, with a total of 6 nominations?</li>
+            <li>Did you know that Washington was ranked #39 on the list of “Greatest Movie Stars of All Time” by Premiere magazine in their “Stars in Our Constellation” feature?</li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HEY *</pattern>
+
+
+
+<!-- ACTRESS IN A LEADING ROLE -->
+    <!-- Isabelle Huppert (Elle)
+    Ruth Negga (Loving)
+    WINNER: Emma Stone (La La Land)
+    Natalie Portman (Jackie)
+    Meryl Streep (Florence Foster Jenkins) -->
+
+<!-- WINNER: Emma Stone (La La Land) -->
+<category> <pattern>* EMMA STONE *</pattern>
     <template>
-        <srai>HI</srai>
     </template>
 </category>
+
+<!-- Isabelle Huppert (Elle) -->
+<category> <pattern>* ISABELLE HUPPERT *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Ruth Negga (Loving) -->
+<category> <pattern>* RUTH NEGGA *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Natalie Portman (Jackie) -->
+<category> <pattern>* NATALIE PORTMAN *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Meryl Streep (Florence Foster Jenkins) -->
+<category> <pattern>* MERYL STREEP *</pattern>
+    <template>
+    </template>
+</category>
+
+
+<!-- ACTOR IN A SUPPORTING ROLE -->
+    <!-- WINNER: Mahershala Ali (Moonlight)
+    Jeff Bridges (Hell or High Water)
+    Lucas Hedges (Manchester by the Sea)
+    Dev Patel (Lion)
+    Michael Shannon (Nocturnal Animals) -->
+
+<!-- WINNER: Mahershala Ali (Moonlight) -->
+<category> <pattern>* MAHERSHALA ALI *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Jeff Bridges (Hell or High Water) -->
+<category> <pattern>* JEFF BRIDGES *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Lucas Hedges (Manchester by the Sea) -->
+<category> <pattern>* LUCAS HEDGES *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Dev Patel (Lion) -->
+<category> <pattern>* DEV PATEL *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Michael Shannon (Nocturnal Animals) -->
+<category> <pattern>* MICHAEL SHANNON *</pattern>
+    <template>
+    </template>
+</category>
+
+
+<!-- ACTRESS IN A SUPPORTING ROLE -->
+    <!-- WINNER: Viola Davis (Fences)
+    Naomie Harris (Moonlight)
+    Nicole Kidman (Lion)
+    Octavia Spencer (Hidden Figures)
+    Michelle Williams (Manchester by the Sea) -->
+
+<!-- WINNER: Viola Davis (Fences) -->
+<category> <pattern>* VIOLA DAVIS *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Naomie Harris (Moonlight) -->
+<category> <pattern>* NAOMIE HARRIS *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Nicole Kidman (Lion) -->
+<category> <pattern>* NICOLE KIDMAN *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Octavia Spencer (Hidden Figures) -->
+<category> <pattern>* OCTAVIA SPENCER *</pattern>
+    <template>
+    </template>
+</category>
+
+<!-- Michelle Williams (Manchester by the Sea) -->
+<category> <pattern>* MICHELLE WILLIAMS *</pattern>
+    <template>
+    </template>
+</category>
+
 </aiml>
