@@ -8,95 +8,421 @@
 <meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
-<!--
-    Best supporting actor
-        WINNER: Mahershala Ali (Moonlight)
-        Jeff Bridges (Hell or High Water)
-        Lucas Hedges (Manchester by the Sea)
-        Dev Patel (Lion)
-        Michael Shannon (Nocturnal Animals)
+<!-- Best picture -->
+<category>
+	<pattern>BEST PICTURE</pattern>
+	<template>
+		<random>
+			<li>The nominees for best picture were Arrival, Fences, Hacksaw Ridge, Hell or High Water, Hidden Figures, La La Land, Lion, Manchester by the Sea and Moonlight.</li>
+			<li>The movies nominated for best picture were Arrival, Fences, Hacksaw Ridge, Hell or High Water, Hidden Figures, La La Land, Lion, Manchester by the Sea and Moonlight.</li>
+			<li>The following movies were nominated for best picture: Arrival, Fences, Hacksaw Ridge, Hell or High Water, Hidden Figures, La La Land, Lion, Manchester by the Sea and Moonlight.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>BEST PICTURE *</pattern>
+	<template><srai>BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ BEST PICTURE </pattern>
+	<template><srai>BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ BEST PICTURE? </pattern>
+	<template><srai>BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ BEST PICTURE *</pattern>
+	<template><srai>BEST PICTURE</srai></template>
+</category>
+<!-- TODO: Fazer quem venceu -->
 
-    Best makeup and hairstyling
-        A Man Called Ove
-        Star Trek Beyond
-        WINNER: Suicide Squad
+<!-- Actor in leading role -->
+<category>
+	<pattern>ACTOR IN A LEADING ROLE</pattern>
+	<template>
+		<random>
+			<li>The nominees for actor in a leading role were Casey Affleck, Andrew Garfield, Ryan Gosling, Viggo Mortensen and Denzel Washington.</li>
+			<li>The actors who were nominated for leading role were Casey Affleck, Andrew Garfield, Ryan Gosling, Viggo Mortensen and Denzel Washington.</li>
+			<li>Casey Affleck, Andrew Garfield, Ryan Gosling, Viggo Mortensen and Denzel Washington were nominated for actor in a leading role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ ACTOR IN A LEADING ROLE</pattern>
+	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTOR IN A LEADING ROLE?</pattern>
+	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTOR IN A LEADING ROLE * </pattern>
+	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+</category>
 
-    Best costume design
-        Allied
-        WINNER: Fantastic Beasts and Where to Find Them
-        Florence Foster Jenkins
-        Jackie
-        La La Land
+<!-- Actress in a leading role -->
+<category>
+	<pattern>ACTRESS IN A LEADING ROLE</pattern>
+	<template>
+		<random>
+			<li>The nominees for actress in a leading role were Isabelle Huppert, Ruth Negga, Natalie Portman, Emma Stone and Meryl Streep.</li>
+			<li>The actresses who were nominated for leading role were Isabelle Huppert, Ruth Negga, Natalie Portman, Emma Stone and Meryl Streep.</li>
+			<li>Isabelle Huppert, Ruth Negga, Natalie Portman, Emma Stone and Meryl Streep were nominated for actress in a leading role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ ACTRESS IN A LEADING ROLE</pattern>
+	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTRESS IN A LEADING ROLE?</pattern>
+	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+</category>
 
-    Best documentary
-        Fire at Sea
-        I Am Not Your Negro
-        Life, Animated
-        WINNER: OJ: Made in America
-        13th
+<!-- Actor in a supporting role -->
+<category>
+	<pattern>ACTOR IN A SUPPORTING ROLE</pattern>
+	<template>
+		<random>
+			<li>The nominees for actor in a supporting role were Mahershala Ali, Jeff Bridges, Lucas Hedges, Dev Patel and Michael Shannon.</li>
+			<li>The actors who were nominated for supporting role were Mahershala Ali, Jeff Bridges, Lucas Hedges, Dev Patel and Michael Shannon.</li>
+			<li>Mahershala Ali, Jeff Bridges, Lucas Hedges, Dev Patel and Michael Shannon were nominated for actor in a supporting role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ ACTOR IN A SUPPORTING ROLE</pattern>
+	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTOR IN A SUPPORTING ROLE?</pattern>
+	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
 
-    Best sound editing
+<!-- Actress in a supporting role -->
+<category>
+	<pattern>ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template>
+		<random>
+			<li>The nominees for actress in a supporting role were Viola Davis, Naomie Harris, Nicole Kidman, Octavia Spencer and Michelle Williams.</li>
+			<li>The actresses who were nominated for supporting role were Viola Davis, Naomie Harris, Nicole Kidman, Octavia Spencer and Michelle Williams.</li>
+			<li>Viola Davis, Naomie Harris, Nicole Kidman, Octavia Spencer and Michelle Williams were nominated for actress in a supporting role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTRESS IN A SUPPORTING ROLE?</pattern>
+	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
 
+<!-- Animated feature film -->
+<category>
+	<pattern>ANIMATED FEATURE FILM</pattern>
+	<template>
+		<random>
+			<li>The nominees for animated feature film were Kubo and the Two Strings, Moana, My Life as a Zucchini, The Red Turtle and Zootopia.</li>
+			<li>The movies nominated for animated feature film were Kubo and the Two Strings, Moana, My Life as a Zucchini, The Red Turtle and Zootopia.</li>
+			<li>The following movies were nominated for animated feature film: Kubo and the Two Strings, Moana, My Life as a Zucchini, The Red Turtle and Zootopia.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ ANIMATED FEATURE FILM</pattern>
+	<template><srai>ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ ANIMATED FEATURE FILM?</pattern>
+	<template><srai>ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>ANIMATED FEATURE FILM *</pattern>
+	<template><srai>ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ ANIMATED FEATURE FILM *</pattern>
+	<template><srai>ANIMATED FEATURE FILM</srai></template>
+</category>
 
-    Best sound mixing
+<!-- Cinematograpy -->
+<category>
+	<pattern>CINEMATOGRAPHY</pattern>
+	<template>
+		<random>
+			<li>The nominees for cinematography were Arrival, La La Land, Lion, Moonlight and Silence.</li>
+			<li>The movies nominated for cinematography were Arrival, La La Land, Lion, Moonlight and Silence.</li>
+			<li>The following movies were nominated for cinematography: Arrival, La La Land, Lion, Moonlight and Silence.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ CINEMATOGRAPHY</pattern>
+	<template><srai>CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ CINEMATOGRAPHY?</pattern>
+	<template><srai>CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>CINEMATOGRAPHY *</pattern>
+	<template><srai>CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ CINEMATOGRAPHY *</pattern>
+	<template><srai>CINEMATOGRAPHY</srai></template>
+</category>
 
+<!-- Costume design -->
+<category>
+	<pattern>COSTUME DESIGN</pattern>
+	<template>
+		<random>
+			<li>The nominees for costume design were Allied, Fantastic Beasts and Where to Find Them, Florence Foster Jenkins, Jackie and La La Land.</li>
+			<li>The movies nominated for costume design were Allied, Fantastic Beasts and Where to Find Them, Florence Foster Jenkins, Jackie and La La Land.</li>
+			<li>The following movies were nominated for costume design: Allied, Fantastic Beasts and Where to Find Them, Florence Foster Jenkins, Jackie and La La Land.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ COSTUME DESIGN</pattern>
+	<template><srai>COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ COSTUME DESIGN?</pattern>
+	<template><srai>COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>COSTUME DESIGN *</pattern>
+	<template><srai>COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ COSTUME DESIGN *</pattern>
+	<template><srai>COSTUME DESIGN</srai></template>
+</category>
 
-    Best supporting actress
+<!-- Directing -->
+<category>
+	<pattern>DIRECTING</pattern>
+	<template>
+		<random>
+			<li>The nominees for directing were Arrival, Hacksaw Ridge, La La Land, Manchester by the Sea, Moonlight.</li>
+			<li>The movies nominated for directing were Arrival, Hacksaw Ridge, La La Land, Manchester by the Sea, Moonlight.</li>
+			<li>The following movies were nominated for directing: Arrival, Hacksaw Ridge, La La Land, Manchester by the Sea, Moonlight.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ DIRECTING</pattern>
+	<template><srai>DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>DIRECTING *</pattern>
+	<template><srai>DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ DIRECTING *</pattern>
+	<template><srai>DIRECTING</srai></template>
+</category>
 
+<!-- Documentary (feature) -->
+<category>
+	<pattern>FEATURE DOCUMENTARY</pattern>
+	<template>
+		<random>
+			<li>The nominees for feature documentary were Fire at Sea, I Am Not Your Negro, Life, Animated, O.J.: Made in America and 13th.</li>
+			<li>The movies nominated for feature documentary were Fire at Sea, I Am Not Your Negro, Life, Animated, O.J.: Made in America and 13th.</li>
+			<li>The following movies were nominated for feature documentary: Fire at Sea, I Am Not Your Negro, Life, Animated, O.J.: Made in America and 13th.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ FEATURE DOCUMENTARY</pattern>
+	<template><srai>FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>FEATURE DOCUMENTARY *</pattern>
+	<template><srai>FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ FEATURE DOCUMENTARY *</pattern>
+	<template><srai>FEATURE DOCUMENTARY</srai></template>
+</category>
 
-    Best foreign language film
+<!-- Documentary (short subject) -->
+<category>
+	<pattern>SHORT SUBJECT DOCUMENTARY</pattern>
+	<template>
+		<random>
+			<li>The nominees for short subject documentary were Extremis, 4.1 Miles, Joe's Violin, Watani: My Homeland, The White Helmets.</li>
+			<li>The movies nominated for short subject documentary were Extremis, 4.1 Miles, Joe's Violin, Watani: My Homeland, The White Helmets.</li>
+			<li>The following movies were nominated for short subject documentary: Extremis, 4.1 Miles, Joe's Violin, Watani: My Homeland, The White Helmets.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ SHORT SUBJECT DOCUMENTARY</pattern>
+	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>SHORT DOCUMENTARY</pattern>
+	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ SHORT DOCUMENTARY</pattern>
+	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>SHORT DOCUMENTARY *</pattern>
+	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ SHORT DOCUMENTARY *</pattern>
+	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
 
+<!-- Film editing -->
+<category>
+	<pattern>EDITING</pattern>
+	<template>
+		<random>
+			<li>The nominees for film editing were Arrival, Hacksaw Ridge, Hell or High Water, La La Land and Moonlight.</li>
+			<li>The movies nominated for film editing were Arrival, Hacksaw Ridge, Hell or High Water, La La Land and Moonlight.</li>
+			<li>The following movies were nominated for film editing: Arrival, Hacksaw Ridge, Hell or High Water, La La Land and Moonlight.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ EDITING</pattern>
+	<template><srai>EDITING</srai></template>
+</category>
+<category>
+	<pattern>EDITING *</pattern>
+	<template><srai>EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ EDITING *</pattern>
+	<template><srai>EDITING</srai></template>
+</category>
 
-    Best animated short
+<!-- Foreign language film -->
+<category>
+	<pattern>FOREIGN</pattern>
+	<template>
+		<random>
+			<li>The nominees for foreign language film were Land of Mine, A Man Called Ove, The Salesman, Tanna, Toni Erdmann.</li>
+			<li>The movies nominated for foreign language film were Land of Mine, A Man Called Ove, The Salesman, Tanna, Toni Erdmann.</li>
+			<li>The following movies were nominated for foreign language film: Land of Mine, A Man Called Ove, The Salesman, Tanna, Toni Erdmann.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ FOREIGN</pattern>
+	<template><srai>FOREIGN</srai></template>
+</category>
+<category>
+	<pattern>FOREIGN *</pattern>
+	<template><srai>FOREIGN</srai></template>
+</category>
+<category>
+	<pattern>_ FOREIGN *</pattern>
+	<template><srai>FOREIGN</srai></template>
+</category>
 
-
-    Best animated feature
-
-
-    Best production design
-
-
-    Best visual effects
-
-
-    Best film editing
-
-
-    Best documentary short
-
-
-    Best live-action short
-
-
-    Best cinematography
-
-
-    Best score
-
-
-    Best song
-
-
-    Best original screenplay
-
-
-    Best adapted screenplay
-
-
-    Best director
-
-
-    Best actor
-
-
-    Best actress
-
-
-    Best picture
-
-
-
--->
-
+<!-- Makeup and Hairstyling -->
+<category>
+	<pattern>MAKEUP AND HAIRSTYLING</pattern>
+	<template>
+		<random>
+			<li>The nominees for makeup and hairstyling were A Man Called Ove, Star Trek Beyond and Suicide Squad.</li>
+			<li>The movies nominated for makeup and hairstyling were A Man Called Ove, Star Trek Beyond and Suicide Squad.</li>
+			<li>The following movies were nominated for makeup and hairstyling: A Man Called Ove, Star Trek Beyond and Suicide Squad.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>_ MAKEUP AND HAIRSTYLING</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>MAKEUP</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ MAKEUP</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>MAKEUP *</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ MAKEUP *</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>HAIRSTYLING</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ HAIRSTYLING</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>HAIRSTYLING *</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ HAIRSTYLING *</pattern>
+	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+</category>
 
 </aiml>

@@ -7,10 +7,10 @@
 <meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
-<!-- Confirmation responses -->
 <category> <pattern>YES</pattern>
     <template>
         <random>
+            <li> Yes. </li>
             <li> Ok. </li>
             <li> Awesome. </li>
             <li> Nice. </li>
@@ -91,7 +91,22 @@
     </template>
 </category>
 
-<!-- Information about CLEVERton -->
+<category> <pattern>EVERYTHING FINE</pattern>
+    <template>
+        <random>
+            <li> I'm doing okay.</li>
+            <li> I would really like to have a movie talk with someone. </li>
+            <li> Everything's awesome. </li>
+        </random>
+    </template>
+</category>
+
+<category> <pattern>* EVERYTHING FINE</pattern>
+    <template>
+        <srai>FINE</srai>
+    </template>
+</category>
+
 <category> <pattern>YOUR NAME</pattern>
     <template>
         My name is CLEVERton.
@@ -135,27 +150,34 @@
     </template>
 </category>
 
-<category> <pattern>TIME</pattern>
+<category> <pattern>WHAT DAY *</pattern>
     <template>
         <srai>DATE</srai>
+    </template>
+</category>
+
+
+<category> <pattern>TIME</pattern>
+    <template>
+        Now is <get name="time"/>
     </template>
 </category>
 
 <category> <pattern>TIME *</pattern>
     <template>
-        <srai>DATE</srai>
+        <srai>TIME</srai>
     </template>
 </category>
 
 <category> <pattern>* TIME</pattern>
     <template>
-        <srai>DATE</srai>
+        <srai>TIME</srai>
     </template>
 </category>
 
 <category> <pattern>* TIME *</pattern>
     <template>
-        <srai>DATE</srai>
+        <srai>TIME</srai>
     </template>
 </category>
 
@@ -219,7 +241,7 @@
     <template>
         <random>
             <li> Sorry, I couldn't understand.</li>
-            <li> I dind't understand that.</li>
+            <li> I didn't understand that.</li>
             <li> What?</li>
             <li> What are you talking about?</li>
             <li> Let's try talking about movies, maybe?</li>
