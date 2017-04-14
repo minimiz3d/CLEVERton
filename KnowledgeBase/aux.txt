@@ -1,0 +1,28 @@
+<!--ACTOR IN A LEADING ROLE - LIST
+    WINNER: Casey Affleck (Manchester by the Sea)
+    Andrew Garfield (Hacksaw Ridge)
+    Ryan Gosling (La La Land)
+    Viggo Mortensen (Captain Fantastic)
+    Denzel Washington (Fences)
+-->
+
+<!-- ACTRESS IN A LEADING ROLE -->
+    <!-- Isabelle Huppert (Elle)
+    Ruth Negga (Loving)
+    WINNER: Emma Stone (La La Land)
+    Natalie Portman (Jackie)
+    Meryl Streep (Florence Foster Jenkins) -->
+
+    <!-- ACTOR IN A SUPPORTING ROLE -->
+        <!-- WINNER: Mahershala Ali (Moonlight)
+        Jeff Bridges (Hell or High Water)
+        Lucas Hedges (Manchester by the Sea)
+        Dev Patel (Lion)
+        Michael Shannon (Nocturnal Animals) -->
+
+        <!-- ACTRESS IN A SUPPORTING ROLE -->
+            <!-- WINNER: Viola Davis (Fences)
+            Naomie Harris (Moonlight)
+            Nicole Kidman (Lion)
+            Octavia Spencer (Hidden Figures)
+            Michelle Williams (Manchester by the Sea) -->
