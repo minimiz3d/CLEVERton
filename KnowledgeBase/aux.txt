@@ -1,3 +1,22 @@
+<category> <pattern>SETTING UP  NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName"></set></think>
+    </template>
+</category>
+<category> <pattern></pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP  NAME</srai>
+    </template>
+</category>
+<category> <pattern>* </pattern>
+    <template>
+        <srai></srai>
+    </template>
+</category>
+
+
 <!--ACTOR IN A LEADING ROLE - LIST
     WINNER: Casey Affleck (Manchester by the Sea)
     Andrew Garfield (Hacksaw Ridge)

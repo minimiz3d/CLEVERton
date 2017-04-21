@@ -9,7 +9,6 @@
 
 <!-- Just getting actor/actress name templates -->
 <!-- TODO: Melhorar aqui -->
-<!-- TODO: Adicionar número de filmes na carreira (mulheres) -->
 <category> <pattern>HOW MANY MOVIES HE DID</pattern>
     <template>
         <srai><get name = "ActorName"/> NUMBER OF MOVIES</srai>
@@ -222,12 +221,21 @@
     Então por ex, se o cara mandar só um: Casey, sacar q é o casey affleck...
 -->
 
+<!-- TODO: Adicionar nome do personagem do ator no filme!
+    Usar variavel "characterName"
+-->
+
 <!-- Setting actor name: -->
+<category> <pattern>SETTING UP CASEY AFFLECK NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Casey Affleck</set></think>
+        <think><set name = "OscarWinnerThisYear">yes</set></think>
+    </template>
+</category>
 <category> <pattern>CASEY AFFLECK</pattern>
     <template>
-        <think><set name = "ActorName" >Casey Affleck</set></think>
-        <think><set name = "OscarWinnerThisYear">yes</set></think>
         What about him?
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>
     </template>
 </category>
 <category> <pattern>* CASEY AFFLECK</pattern>
@@ -236,11 +244,16 @@
     </template>
 </category>
 
+<category> <pattern>SETTING UP ANDREW GARFIELD NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Andrew Garfield</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
 <category> <pattern>ANDREW GARFIELD</pattern>
     <template>
-        <set name = "ActorName" >Andrew Garfield</set>?
-        <think><set name = "OscarWinnerThisYear">no</set></think>
         What about him?
+        <srai>SETTING UP ANDREW GARFIELD NAME</srai>
     </template>
 </category>
 <category> <pattern>* ANDREW GARFIELD</pattern>
@@ -249,11 +262,16 @@
     </template>
 </category>
 
+<category> <pattern>SETTING UP RYAN GOSLING NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Ryan Gosling</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
 <category> <pattern>RYAN GOSLING</pattern>
     <template>
-        <set name = "ActorName" >Ryan Gosling</set>?
-        <think><set name = "OscarWinnerThisYear">no</set></think>
         What about him? He played the main role in La La Land (2016). ALMOST won.
+        <srai>SETTING UP RYAN GOSLING NAME</srai>
     </template>
 </category>
 <category> <pattern>* RYAN GOSLING</pattern>
@@ -262,11 +280,16 @@
     </template>
 </category>
 
+<category> <pattern>SETTING UP VIGGO MORTENSEN NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Viggo Mortensen</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
 <category> <pattern>VIGGO MORTENSEN</pattern>
     <template>
-        <set name = "ActorName" >Viggo Mortensen</set>?
-        <think><set name = "OscarWinnerThisYear">no</set></think>
         What about him?
+        <srai>SETTING UP VIGGO MORTENSEN NAME</srai>
     </template>
 </category>
 <category> <pattern>* VIGGO MORTENSEN</pattern>
@@ -275,11 +298,16 @@
     </template>
 </category>
 
+<category> <pattern>SETTING UP DENZEL WASHINGTON NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Denzel Washington</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
 <category> <pattern>DENZEL WASHINGTON</pattern>
     <template>
-        <set name = "ActorName" >Denzel Washington</set>?
-        <think><set name = "OscarWinnerThisYear">no</set></think>
         What about him?
+        <srai>SETTING UP DENZEL WASHINGTON NAME</srai>
     </template>
 </category>
 <category> <pattern>* DENZEL WASHINGTON</pattern>
@@ -288,115 +316,278 @@
     </template>
 </category>
 
-
+<category> <pattern>SETTING UP MAHERSHALA ALI NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Mahershala Ali</set></think>
+        <think><set name = "OscarWinnerThisYear">yes</set></think>
+    </template>
+</category>
 <category> <pattern>MAHERSHALA ALI</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">yes</set></think>
-        <set name = "ActorName" >Mahershala Ali</set>?
         What about him?
+        <srai>SETTING UP MAHERSHALA ALI NAME</srai>
+    </template>
+</category>
+<category> <pattern>* MAHERSHALA ALI</pattern>
+    <template>
+        <srai>SETTING UP MAHERSHALA ALI NAME</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP JEFF BRIDGES NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName" >Jeff Bridges</set></think>
     </template>
 </category>
 <category> <pattern>JEFF BRIDGES</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActorName" >Jeff Bridges</set>?
         What about him?
+        <srai>SETTING UP JEFF BRIDGES NAME</srai>
+    </template>
+</category>
+<category> <pattern>* JEFF BRIDGES</pattern>
+    <template>
+        <srai>JEFF BRIDGES</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP LUCAS HEDGES NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName">Lucas Hedges</set></think>
     </template>
 </category>
 <category> <pattern>LUCAS HEDGES</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActorName" >Lucas Hedges</set>?
         What about him?
+        <srai>SETTING UP LUCAS HEDGES NAME</srai>
+    </template>
+</category>
+<category> <pattern>* LUCAS HEDGES</pattern>
+    <template>
+        <srai>LUCAS HEDGES</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP DEV PATEL NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName">Dev Patel</set></think>
     </template>
 </category>
 <category> <pattern>DEV PATEL</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActorName" >Dev Patel</set>?
         What about him?
+        <srai>SETTING UP DEV PATEL NAME</srai>
+    </template>
+</category>
+<category> <pattern>* DEV PATEL</pattern>
+    <template>
+        <srai>DEV PATEL</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP MICHAEL SHANNON NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName"></set></think>
     </template>
 </category>
 <category> <pattern>MICHAEL SHANNON</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActorName" >Michael Shannon</set>?
         What about him?
+        <srai>SETTING UP MICHAEL SHANNON NAME</srai>
+    </template>
+</category>
+<category> <pattern>* MICHAEL SHANNON</pattern>
+    <template>
+        <srai>MICHAEL SHANNON</srai>
     </template>
 </category>
 
+
 <!-- Setting actress name: -->
-<category> <pattern>ISABELLE HUPPERT</pattern>
+<category> <pattern>SETTING UP ISABELLE HUPPERT NAME</pattern>
     <template>
         <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Isabelle Huppert</set>?
+        <think><set name = "ActressName">Isabelle Huppert</set></think>
+    </template>
+</category>
+<category> <pattern>ISABELLE HUPPERT</pattern>
+    <template>
         What about her?
+        <srai>SETTING UP ISABELLE HUPPERT NAME</srai>
+    </template>
+</category>
+<category> <pattern>* ISABELLE HUPPERT</pattern>
+    <template>
+        <srai>ISABELLE HUPPERT</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP RUTH NEGGA NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Ruth Negga</set></think>
     </template>
 </category>
 <category> <pattern>RUTH NEGGA</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Ruth Negga</set>?
         What about her?
+        <srai>SETTING UP RUTH NEGGA NAME</srai>
+    </template>
+</category>
+<category> <pattern>* RUTH NEGGA</pattern>
+    <template>
+        <srai>RUTH NEGGA</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP EMMA STONE NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">yes</set></think>
+        <think><set name = "ActressName"></set>Emma Stone</think>
     </template>
 </category>
 <category> <pattern>EMMA STONE</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">yes</set></think>
-        <set name = "ActressName" >Emma Stone</set>?
         What about her? She won best actress playing the main role in La La Land (2016).
+        <srai>SETTING UP EMMA STONE NAME</srai>
+    </template>
+</category>
+<category> <pattern>* EMMA STONE</pattern>
+    <template>
+        <srai>EMMA STONE</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP NATALIE PORTMAN NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Natalie Portman</set></think>
     </template>
 </category>
 <category> <pattern>NATALIE PORTMAN</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Natalie Portman</set>?
         What about her?
+        <srai>SETTING UP NATALIE PORTMAN NAME</srai>
+    </template>
+</category>
+<category> <pattern>* NATALIE PORTMAN</pattern>
+    <template>
+        <srai>NATALIE PORTMAN</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP  NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Meryl Streep</set></think>
     </template>
 </category>
 <category> <pattern>MERYL STREEP</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Meryl Streep</set>?
         What about her?
+        <srai>SETTING UP MERYL STREEP NAME</srai>
+    </template>
+</category>
+<category> <pattern>* MERYL STREEP</pattern>
+    <template>
+        <srai>MERYL STREEP</srai>
     </template>
 </category>
 
-<category> <pattern>VIOLA DAVIS</pattern>
+<category> <pattern>SETTING UP VIOLA DAVIS NAME</pattern>
     <template>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
-        <set name = "ActressName" >Viola Davis</set>?
+        <think><set name = "ActressName">Viola Davis</set></think>
+    </template>
+</category>
+<category> <pattern>VIOLA DAVIS</pattern>
+    <template>
         What about her?
+        <srai>SETTING UP VIOLA DAVIS NAME</srai>
+    </template>
+</category>
+<category> <pattern>* VIOLA DAVIS</pattern>
+    <template>
+        <srai>VIOLA DAVIS</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP NAOMIE HARRIS NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Naomie Harris</set></think>
     </template>
 </category>
 <category> <pattern>NAOMIE HARRIS</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Naomie Harris</set>?
         What about her?
+        <srai>SETTING UP NAOMIE HARRIS NAME</srai>
+    </template>
+</category>
+<category> <pattern>* NAOMIE HARRIS</pattern>
+    <template>
+        <srai>NAOMIE HARRIS</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP NICOLE KIDMAN NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Nicole Kidman</set></think>
     </template>
 </category>
 <category> <pattern>NICOLE KIDMAN</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Nicole Kidman</set>?
         What about her?
+        <srai>SETTING UP NICOLE KIDMAN NAME</srai>
+    </template>
+</category>
+<category> <pattern>* NICOLE KIDMAN</pattern>
+    <template>
+        <srai>NICOLE KIDMAN</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP OCTAVIA SPENCER NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Octavia Spencer</set></think>
     </template>
 </category>
 <category> <pattern>OCTAVIA SPENCER</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Octavia Spencer</set>?
         What about her?
+        <srai>SETTING UP OCTAVIA SPENCER NAME</srai>
+    </template>
+</category>
+<category> <pattern>* OCTAVIA SPENCER</pattern>
+    <template>
+        <srai>OCTAVIA SPENCER</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP MICHELLE WILLIAMS NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Michelle Williams</set></think>
     </template>
 </category>
 <category> <pattern>MICHELLE WILLIAMS</pattern>
     <template>
-        <think><set name = "OscarWinnerThisYear">no</set></think>
-        <set name = "ActressName" >Michelle Williams</set>?
         What about her?
+        <srai>SETTING UP MICHELLE WILLIAMS NAME</srai>
     </template>
 </category>
+<category> <pattern>* MICHELLE WILLIAMS</pattern>
+    <template>
+        <srai>MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+
 
 <!--TEMPLATES:
     * AGE
@@ -421,7 +612,10 @@
 
 <!-- WINNER: Casey Affleck (Manchester by the Sea) -->
 <category> <pattern>CASEY AFFLECK NUMBER OF MOVIES</pattern>
-    <template>He was in 26 roles as an actor.</template>
+    <template>
+        He was in 26 roles as an actor.
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>
+    </template>
 </category>
 <category> <pattern>HOW MANY MOVIES CASEY AFFLECK *</pattern>
     <template>
