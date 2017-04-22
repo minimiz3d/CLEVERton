@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import aiml
 import time
 import signal
@@ -53,7 +55,9 @@ while True:
         curr_time = str(time.ctime()[11:19])    # get only current hour
         k.setPredicate("time", curr_time)
 
-    print colors.CLEVERTON + "CLEVERton: " + k.respond(input)
+    # makes sure only the first letter of the response string is upper case
+    response = k.respond(input).capitalize()
+    print colors.CLEVERTON + "CLEVERton: " + response
 
     if "name" or "im" in input:
         username = k.getPredicate("TalkerName")

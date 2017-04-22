@@ -7,45 +7,126 @@
 <meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
-<category> <pattern>HI</pattern>
+
+
+<category> <pattern>41 MILES</pattern>
     <template>
-        <random>
-            <li> Hello, human. </li>
-            <li> Hey, I'm CLEVERton. </li>
-            <li> Hey. </li>
-            <li> Yo, dude. </li>
-            <li> Hey, wanna talk about movies? </li>
-        </random>
+      <think><set name = "Last_Movie" >41 Miles</set></think>
+        I see you have some interest in 4.1 Miles. This movie is a documentary
+        that talks about a greek Captain during the migration crisis in Europe.
+        Wanna know more about?
     </template>
 </category>
 
-<category> <pattern>HI *</pattern>
+<category> <pattern>13 HOURS THE SECRET SOLDIERS OF BENGHAZI</pattern>
     <template>
-        <srai>HI</srai>
+      <think><set name = "Last_Movie" >13 Hours The Secret Soldiers of Benghazi</set></think>
+        I see you have some interest 13 Hours: The Secret Soldiers of Benghazi.
+        The film follows six members of a security team who fight to defend the American diplomatic compound in Benghazi,
+        Libya after waves of terrorist attacks on September 11, 2012.
+        Wanna know more about?
     </template>
 </category>
 
-<category> <pattern>HELLO</pattern>
+
+<category> <pattern>13TH</pattern>
     <template>
-        <srai>HI</srai>
+      <think><set name = "Last_Movie" >13th</set></think>
+        I see you have some interest in 13th.
+        The film explores the "intersection of race, justice and mass incarceration in the United States.
+       Wanna know more about?
     </template>
 </category>
 
-<category> <pattern>HELLO *</pattern>
+
+<category> <pattern>20TH CENTURY WOMEN</pattern>
     <template>
-        <srai>HI</srai>
+      <think><set name = "Last_Movie" >20th Century Women</set></think>
+        I see you have some interest in 20th Century Women.
+        The film is set in 1970s Southern California and based in part on Mills' childhood.
+        Wanna know more about?
     </template>
 </category>
 
-<category> <pattern>HEY</pattern>
+<category> <pattern>ACTORS</pattern>
     <template>
-        <srai>HI</srai>
+      <condition name = "Last_Movie" value = "41 Miles">
+            We're talking about a documentary here, which means we don't have actors in it.
+      </condition>
+      <condition name = "Last_Movie" value = "13 Hours The Secret Soldiers of Benghazi">
+            The film stars James Badge Dale, John Krasinski, Max Martini, Pablo Schreiber and Toby Stephens.
+      </condition>
+
     </template>
 </category>
 
-<category> <pattern>HEY *</pattern>
+<category> <pattern>RELEASE</pattern>
     <template>
-        <srai>HI</srai>
+      <condition name = "Last_Movie" value = "41 Miles">
+            The film premiered on NYTimes.com in September 2016. Isn't that nice?
+      </condition>
+      <condition name = "Last_Movie" value = "13 Hours The Secret Soldiers of Benghazi">
+            The film was released on January 15, 2016, by Paramount Pictures.
+      </condition>
+
     </template>
 </category>
+
+<category> <pattern>DIRECTOR</pattern>
+    <template>
+      <condition name = "Last_Movie" value = "41 Miles">
+            Daphne Matziaraki is the mind behind this creation (:
+      </condition>
+      <condition name = "Last_Movie" value = "13 Hours The Secret Soldiers of Benghazi">
+             Michael Bay is the mind behind this creation (:
+      </condition>
+
+    </template>
+</category>
+
+
+
+
+
+
+<category> <pattern>ACTORS 41 MILES</pattern>
+    <template>
+        We're talking about a documentary here, which means we don't have actors in it.
+    </template>
+</category>
+<category> <pattern>RELEASE 41 MILES</pattern>
+    <template>
+        The film premiered on NYTimes.com in September 2016. Isn't that nice?
+    </template>
+</category>
+<category> <pattern>DIRECTOR 41 MILES</pattern>
+    <template>
+        Daphne Matziaraki is the mind behind this creation (:
+    </template>
+</category>
+
+
+<category> <pattern>* MILES</pattern>
+    <template>
+        <srai>41 MILES</srai>
+    </template>
+</category>
+<category> <pattern>* ACTORS IN 41 MILES</pattern>
+    <template>
+        <srai>ACTORS 41 MILES</srai>
+    </template>
+</category>
+<category> <pattern>* RELEASE OF 41 MILES</pattern>
+    <template>
+        <srai>RELEASE 41 MILES</srai>
+    </template>
+</category>
+<category> <pattern>* DIRECTOR OF 41 MILES</pattern>
+    <template>
+        <srai>DIRECTOR 41 MILES</srai>
+    </template>
+</category>
+
+
+
 </aiml>

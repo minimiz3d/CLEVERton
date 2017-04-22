@@ -2,50 +2,1749 @@
 
 <aiml version="1.0">
 
-<!-- Greetings responses -->
+<!-- Actors knowledge base -->
 
 <meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
-<category> <pattern>HI</pattern>
+<!-- Just getting actor/actress name templates -->
+<!-- TODO: Melhorar aqui -->
+<category> <pattern>HOW MANY MOVIES HE DID</pattern>
+    <template>
+        <srai><get name = "ActorName"/> NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>HOW MANY MOVIES HE DID *</pattern>
+    <template>
+        <srai>HOW MANY MOVIES HE DID</srai>
+    </template>
+</category>
+<category> <pattern>HOW MANY MOVIES SHE DID</pattern>
+    <template>
+        <srai><get name = "ActressName"/> NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>HOW MANY MOVIES SHE DID *</pattern>
+    <template>
+        <srai>HOW MANY MOVIES SHE DID</srai>
+    </template>
+</category>
+
+<!-- Win/Lost oscar in this year templates (based on "OscarWinnerThisYear" variable) -->
+<category> <pattern>DID HE WIN</pattern>
+    <template>
+        <condition name = "OscarWinnerThisYear" value = "yes">
+            Yes, he won this year.
+        </condition>
+        <condition name = "OscarWinnerThisYear" value = "no">
+            No. He lost in this year :/
+        </condition>
+    </template>
+</category>
+<category> <pattern>* HE WIN *</pattern>
+    <template>
+        <srai>DID HE WIN</srai>
+    </template>
+</category>
+<category> <pattern>* HE WIN</pattern>
+    <template>
+        <srai>DID HE WIN</srai>
+    </template>
+</category>
+<category> <pattern>HE WIN *</pattern>
+    <template>
+        <srai>DID HE WIN</srai>
+    </template>
+</category>
+<category> <pattern>HE WON *</pattern>
+    <template>
+        <srai>DID HE WIN</srai>
+    </template>
+</category>
+<category> <pattern>HE WON</pattern>
+    <template>
+        <srai>DID HE WIN</srai>
+    </template>
+</category>
+<category> <pattern>* HE WON *</pattern>
+    <template>
+        <srai>DID HE WIN</srai>
+    </template>
+</category>
+<category> <pattern>* HE WON</pattern>
+    <template>
+        <srai>DID HE WIN</srai>
+    </template>
+</category>
+
+<category> <pattern>DID HE LOSE</pattern>
+    <template>
+        <condition name = "OscarWinnerThisYear" value = "no">
+            Yes, he lost in this year.
+        </condition>
+        <condition name = "OscarWinnerThisYear" value = "yes">
+            No. He won in this year :)
+        </condition>
+    </template>
+</category>
+<category> <pattern>* HE LOSE *</pattern>
+    <template>
+        <srai>DID HE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>* HE LOSE</pattern>
+    <template>
+        <srai>DID HE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>HE LOSE *</pattern>
+    <template>
+        <srai>DID HE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>HE LOST *</pattern>
+    <template>
+        <srai>DID HE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>HE LOST</pattern>
+    <template>
+        <srai>DID HE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>* HE LOST *</pattern>
+    <template>
+        <srai>DID HE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>* HE LOST</pattern>
+    <template>
+        <srai>DID HE LOSE</srai>
+    </template>
+</category>
+
+<category> <pattern>DID SHE WIN</pattern>
+    <template>
+        <condition name = "OscarWinnerThisYear" value = "yes">
+            Yes, she won this year.
+        </condition>
+        <condition name = "OscarWinnerThisYear" value = "no">
+            No. she lost in this year :/
+        </condition>
+    </template>
+</category>
+<category> <pattern>* SHE WIN *</pattern>
+    <template>
+        <srai>DID SHE WIN</srai>
+    </template>
+</category>
+<category> <pattern>* SHE WIN</pattern>
+    <template>
+        <srai>DID SHE WIN</srai>
+    </template>
+</category>
+<category> <pattern>SHE WIN *</pattern>
+    <template>
+        <srai>DID SHE WIN</srai>
+    </template>
+</category>
+<category> <pattern>SHE WON *</pattern>
+    <template>
+        <srai>DID SHE WIN</srai>
+    </template>
+</category>
+<category> <pattern>SHE WON</pattern>
+    <template>
+        <srai>DID SHE WIN</srai>
+    </template>
+</category>
+<category> <pattern>* SHE WON *</pattern>
+    <template>
+        <srai>DID SHE WIN</srai>
+    </template>
+</category>
+<category> <pattern>* SHE WON</pattern>
+    <template>
+        <srai>DID SHE WIN</srai>
+    </template>
+</category>
+
+<category> <pattern>DID SHE LOSE</pattern>
+    <template>
+        <condition name = "OscarWinnerThisYear" value = "no">
+            Yes, she lost in this year.
+        </condition>
+        <condition name = "OscarWinnerThisYear" value = "yes">
+            No. she won in this year :)
+        </condition>
+    </template>
+</category>
+<category> <pattern>* SHE LOSE *</pattern>
+    <template>
+        <srai>DID SHE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>* SHE LOSE</pattern>
+    <template>
+        <srai>DID SHE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>SHE LOSE *</pattern>
+    <template>
+        <srai>DID SHE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>SHE LOST *</pattern>
+    <template>
+        <srai>DID SHE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>SHE LOST</pattern>
+    <template>
+        <srai>DID SHE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>* SHE LOST *</pattern>
+    <template>
+        <srai>DID SHE LOSE</srai>
+    </template>
+</category>
+<category> <pattern>* SHE LOST</pattern>
+    <template>
+        <srai>DID SHE LOSE</srai>
+    </template>
+</category>
+
+<!--TODO: Adicionar novas formas de setar o nome do ator.
+    Não só quando fala "talnome" solto assim...
+    Tentar compreender q ele tá falando sobre o ator/atriz.
+    Então por ex, se o cara mandar só um: Casey, sacar q é o casey affleck...
+-->
+
+<!-- TODO: Adicionar nome do personagem do ator no filme!
+    Usar variavel "characterName"
+-->
+
+<!-- Setting actor name: -->
+<category> <pattern>SETTING UP CASEY AFFLECK NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Casey Affleck</set></think>
+        <think><set name = "OscarWinnerThisYear">yes</set></think>
+    </template>
+</category>
+<category> <pattern>CASEY AFFLECK</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>
+    </template>
+</category>
+<category> <pattern>* CASEY AFFLECK</pattern>
+    <template>
+        <srai>CASEY AFFLECK</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP ANDREW GARFIELD NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Andrew Garfield</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
+<category> <pattern>ANDREW GARFIELD</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP ANDREW GARFIELD NAME</srai>
+    </template>
+</category>
+<category> <pattern>* ANDREW GARFIELD</pattern>
+    <template>
+        <srai>ANDREW GARFIELD</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP RYAN GOSLING NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Ryan Gosling</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
+<category> <pattern>RYAN GOSLING</pattern>
+    <template>
+        What about him? He played the main role in La La Land (2016). ALMOST won.
+        <srai>SETTING UP RYAN GOSLING NAME</srai>
+    </template>
+</category>
+<category> <pattern>* RYAN GOSLING</pattern>
+    <template>
+        <srai>RYAN GOSLING</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP VIGGO MORTENSEN NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Viggo Mortensen</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
+<category> <pattern>VIGGO MORTENSEN</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP VIGGO MORTENSEN NAME</srai>
+    </template>
+</category>
+<category> <pattern>* VIGGO MORTENSEN</pattern>
+    <template>
+        <srai>VIGGO MORTENSEN</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP DENZEL WASHINGTON NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Denzel Washington</set></think>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+    </template>
+</category>
+<category> <pattern>DENZEL WASHINGTON</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP DENZEL WASHINGTON NAME</srai>
+    </template>
+</category>
+<category> <pattern>* DENZEL WASHINGTON</pattern>
+    <template>
+        <srai>DENZEL WASHINGTON</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP MAHERSHALA ALI NAME</pattern>
+    <template>
+        <think><set name = "ActorName">Mahershala Ali</set></think>
+        <think><set name = "OscarWinnerThisYear">yes</set></think>
+    </template>
+</category>
+<category> <pattern>MAHERSHALA ALI</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP MAHERSHALA ALI NAME</srai>
+    </template>
+</category>
+<category> <pattern>* MAHERSHALA ALI</pattern>
+    <template>
+        <srai>SETTING UP MAHERSHALA ALI NAME</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP JEFF BRIDGES NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName" >Jeff Bridges</set></think>
+    </template>
+</category>
+<category> <pattern>JEFF BRIDGES</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP JEFF BRIDGES NAME</srai>
+    </template>
+</category>
+<category> <pattern>* JEFF BRIDGES</pattern>
+    <template>
+        <srai>JEFF BRIDGES</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP LUCAS HEDGES NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName">Lucas Hedges</set></think>
+    </template>
+</category>
+<category> <pattern>LUCAS HEDGES</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP LUCAS HEDGES NAME</srai>
+    </template>
+</category>
+<category> <pattern>* LUCAS HEDGES</pattern>
+    <template>
+        <srai>LUCAS HEDGES</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP DEV PATEL NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName">Dev Patel</set></think>
+    </template>
+</category>
+<category> <pattern>DEV PATEL</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP DEV PATEL NAME</srai>
+    </template>
+</category>
+<category> <pattern>* DEV PATEL</pattern>
+    <template>
+        <srai>DEV PATEL</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP MICHAEL SHANNON NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActorName"></set></think>
+    </template>
+</category>
+<category> <pattern>MICHAEL SHANNON</pattern>
+    <template>
+        What about him?
+        <srai>SETTING UP MICHAEL SHANNON NAME</srai>
+    </template>
+</category>
+<category> <pattern>* MICHAEL SHANNON</pattern>
+    <template>
+        <srai>MICHAEL SHANNON</srai>
+    </template>
+</category>
+
+
+<!-- Setting actress name: -->
+<category> <pattern>SETTING UP ISABELLE HUPPERT NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Isabelle Huppert</set></think>
+    </template>
+</category>
+<category> <pattern>ISABELLE HUPPERT</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP ISABELLE HUPPERT NAME</srai>
+    </template>
+</category>
+<category> <pattern>* ISABELLE HUPPERT</pattern>
+    <template>
+        <srai>ISABELLE HUPPERT</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP RUTH NEGGA NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Ruth Negga</set></think>
+    </template>
+</category>
+<category> <pattern>RUTH NEGGA</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP RUTH NEGGA NAME</srai>
+    </template>
+</category>
+<category> <pattern>* RUTH NEGGA</pattern>
+    <template>
+        <srai>RUTH NEGGA</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP EMMA STONE NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">yes</set></think>
+        <think><set name = "ActressName"></set>Emma Stone</think>
+    </template>
+</category>
+<category> <pattern>EMMA STONE</pattern>
+    <template>
+        What about her? She won best actress playing the main role in La La Land (2016).
+        <srai>SETTING UP EMMA STONE NAME</srai>
+    </template>
+</category>
+<category> <pattern>* EMMA STONE</pattern>
+    <template>
+        <srai>EMMA STONE</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP NATALIE PORTMAN NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Natalie Portman</set></think>
+    </template>
+</category>
+<category> <pattern>NATALIE PORTMAN</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP NATALIE PORTMAN NAME</srai>
+    </template>
+</category>
+<category> <pattern>* NATALIE PORTMAN</pattern>
+    <template>
+        <srai>NATALIE PORTMAN</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP  NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Meryl Streep</set></think>
+    </template>
+</category>
+<category> <pattern>MERYL STREEP</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP MERYL STREEP NAME</srai>
+    </template>
+</category>
+<category> <pattern>* MERYL STREEP</pattern>
+    <template>
+        <srai>MERYL STREEP</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP VIOLA DAVIS NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">yes</set></think>
+        <think><set name = "ActressName">Viola Davis</set></think>
+    </template>
+</category>
+<category> <pattern>VIOLA DAVIS</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP VIOLA DAVIS NAME</srai>
+    </template>
+</category>
+<category> <pattern>* VIOLA DAVIS</pattern>
+    <template>
+        <srai>VIOLA DAVIS</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP NAOMIE HARRIS NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Naomie Harris</set></think>
+    </template>
+</category>
+<category> <pattern>NAOMIE HARRIS</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP NAOMIE HARRIS NAME</srai>
+    </template>
+</category>
+<category> <pattern>* NAOMIE HARRIS</pattern>
+    <template>
+        <srai>NAOMIE HARRIS</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP NICOLE KIDMAN NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Nicole Kidman</set></think>
+    </template>
+</category>
+<category> <pattern>NICOLE KIDMAN</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP NICOLE KIDMAN NAME</srai>
+    </template>
+</category>
+<category> <pattern>* NICOLE KIDMAN</pattern>
+    <template>
+        <srai>NICOLE KIDMAN</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP OCTAVIA SPENCER NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Octavia Spencer</set></think>
+    </template>
+</category>
+<category> <pattern>OCTAVIA SPENCER</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP OCTAVIA SPENCER NAME</srai>
+    </template>
+</category>
+<category> <pattern>* OCTAVIA SPENCER</pattern>
+    <template>
+        <srai>OCTAVIA SPENCER</srai>
+    </template>
+</category>
+
+<category> <pattern>SETTING UP MICHELLE WILLIAMS NAME</pattern>
+    <template>
+        <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "ActressName">Michelle Williams</set></think>
+    </template>
+</category>
+<category> <pattern>MICHELLE WILLIAMS</pattern>
+    <template>
+        What about her?
+        <srai>SETTING UP MICHELLE WILLIAMS NAME</srai>
+    </template>
+</category>
+<category> <pattern>* MICHELLE WILLIAMS</pattern>
+    <template>
+        <srai>MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+
+
+<!--TEMPLATES:
+    * AGE
+    * BEST MOVIES
+    * GENERAL CURIOSITIES
+-->
+
+<!--ACTOR IN A LEADING ROLE - LIST
+    WINNER: Casey Affleck (Manchester by the Sea)
+    Andrew Garfield (Hacksaw Ridge)
+    Ryan Gosling (La La Land)
+    Viggo Mortensen (Captain Fantastic)
+    Denzel Washington (Fences)
+-->
+
+<!-- Importante!
+    TODO: Aprender a usar o contexto. Por exemplo, na seguinte conversa:
+    user: how old is andrew garfield? -> cleverton: 33 years old.
+    user: how many movies he did in his carreer? -> Cleverton vai saber que se refere ao andrew garfield.
+    >>Provavelmente usa <topic>!
+-->
+
+<!-- WINNER: Casey Affleck (Manchester by the Sea) -->
+<category> <pattern>CASEY AFFLECK NUMBER OF MOVIES</pattern>
+    <template>
+        He was in 26 roles as an actor.
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>
+    </template>
+</category>
+<category> <pattern>HOW MANY MOVIES CASEY AFFLECK *</pattern>
+    <template>
+        <srai>CASEY AFFLECK NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>CASEY AFFLECK AGE</pattern>
+    <template>
+        He's 41 years old.
+    </template>
+</category>
+<category> <pattern>* CASEY AFFLECK AGE</pattern>
+    <template>
+        <srai>CASEY AFFLECK AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS CASEY AFFLECK</pattern>
+    <template>
+        <srai>CASEY AFFLECK AGE</srai>
+    </template>
+</category>
+<category> <pattern>* CASEY AFFLECK BEST MOVIES</pattern>
+    <template>
+        <srai>CASEY AFFLECK BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>CASEY AFFLECK BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        Good Will Hunting (1997); Gone Baby Gone (2007); The Assassination Of Jesse James By The Coward Robert Ford (2007).
+    </template>
+</category>
+<category> <pattern>* CASEY AFFLECK *</pattern>
     <template>
         <random>
-            <li> Hello, human. </li>
-            <li> Hey, I'm CLEVERton. </li>
-            <li> Hey. </li>
-            <li> Yo, dude. </li>
-            <li> Hey, wanna talk about movies? </li>
+            <!-- General curiosities -->
+            <li>Did you know that Caleb Casey Affleck was born on August 12, 1975, in Falmouth, Massachusetts?</li>
+            <li>Did you know that the younger brother of actor Ben Affleck, Casey has established a career as an actor in his own right,
+                beginning with smaller roles in films such as To Die For (1995) with Joaquin Phoenix and Chasing Amy (1997) with his older brother?</li>
+            <li>Did you know that Affleck is a vegan and is actively involved in animal rights, working with groups like PETA and Farm Sanctuary?</li>
         </random>
     </template>
 </category>
 
-<category> <pattern>HI *</pattern>
+
+<!-- Andrew Garfield (Hacksaw Ridge) -->
+<category> <pattern>ANDREW GARFIELD NUMBER OF MOVIES</pattern>
+    <template>He was in 39 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES ANDREW GARFIELD *</pattern>
     <template>
-        <srai>HI</srai>
+        <srai>ANDREW GARFIELD NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>ANDREW GARFIELD AGE</pattern>
+    <template>
+        He's 33 years old.
+    </template>
+</category>
+<category> <pattern>* ANDREW GARFIELD AGE</pattern>
+    <template>
+        <srai>ANDREW GARFIELD AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS ANDREW GARFIELD</pattern>
+    <template>
+        <srai>ANDREW GARFIELD AGE</srai>
+    </template>
+</category>
+<category> <pattern>ANDREW GARFIELD BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        The Amazing Spiderman (2010); The Social Network (2010); Never Let Me Go (2010);
+    </template>
+</category>
+<category> <pattern>* ANDREW GARFIELD BEST MOVIES</pattern>
+    <template>
+        <srai>ANDREW GARFIELD BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* ANDREW GARFIELD *</pattern>
+    <template>
+        <random>
+            <li>Did you know that </li>
+            <li>Did you know that </li>
+            <li>Did you know that </li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HELLO</pattern>
+
+<!-- Ryan Gosling (La La Land) -->
+<category> <pattern>RYAN GOSLING NUMBER OF MOVIES</pattern>
+    <template>He was in 42 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES RYAN GOSLING *</pattern>
     <template>
-        <srai>HI</srai>
+        <srai>RYAN GOSLING NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>RYAN GOSLING AGE</pattern>
+    <template>
+        He's 36 years old.
+    </template>
+</category>
+<category> <pattern>* RYAN GOSLING AGE</pattern>
+    <template>
+        <srai>RYAN GOSLING AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS RYAN GOSLING</pattern>
+    <template>
+        <srai>RYAN GOSLING AGE</srai>
+    </template>
+</category>
+<category> <pattern>RYAN GOSLING BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        The Nice Guys (2016); Drive (2011); Lars And The Real Girl (2007)
+    </template>
+</category>
+<category> <pattern>* RYAN GOSLING BEST MOVIES</pattern>
+    <template>
+        <srai>RYAN GOSLING BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* RYAN GOSLING *</pattern>
+    <template>
+        <random>
+            <li>Did you know that he's also an accomplished jazz guitarist and singer?</li>
+            <li>Did you know that when he was a kid, he could do an absolutely epic rendition of “Everybody Dance Now”?
+            Check it out: https://youtu.be/dJQvXCoNDzM</li>
+            <li>Did you know that he’s in a band called Dead Man’s Bones where he sings about paranormal phenomena?</li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HELLO *</pattern>
+
+<!-- Viggo Mortensen (Captain Fantastic) -->
+<category> <pattern>VIGGO MORTENSEN NUMBER OF MOVIES</pattern>
+    <template>He was in 56 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES VIGGO MORTENSEN *</pattern>
     <template>
-        <srai>HI</srai>
+        <srai>VIGGO MORTENSEN NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>VIGGO MORTENSEN AGE</pattern>
+    <template>
+        He's 58 years old.
+    </template>
+</category>
+<category> <pattern>* VIGGO MORTENSEN AGE</pattern>
+    <template>
+        <srai>VIGGO MORTENSEN AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS VIGGO MORTENSEN</pattern>
+    <template>
+        <srai>VIGGO MORTENSEN AGE</srai>
+    </template>
+</category>
+<category> <pattern>VIGGO MORTENSEN BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        THe Lord Of The Rings Triology (2001,2,3); History of Violence (2005); The Prophecy (1995)
+    </template>
+</category>
+<category> <pattern>* VIGGO MORTENSEN BEST MOVIES</pattern>
+    <template>
+        <srai>VIGGO MORTESEN BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* VIGGO MORTENSEN *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that Viggo Mortensen is also an author, with various books of poetry, photography, and painting published?</li>
+            <li>Did you know that Mortensen is a painter and photographer?</li>
+            <li>Did you know that he speaks fluent English, Danish, Spanish and French.
+                He is also conversational in Italian, and understands Norwegian and Swedish</li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HEY</pattern>
+
+<!-- Denzel Washington (Fences) -->
+<category> <pattern>DENZEL WASHINGTON NUMBER OF MOVIES</pattern>
+    <template>He was in 56 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES DENZEL WASHINGTON *</pattern>
     <template>
-        <srai>HI</srai>
+        <srai>DENZEL WASHINGTON NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>DENZEL WASHINGTON AGE</pattern>
+    <template>
+        He's 62 years old.
+    </template>
+</category>
+<category> <pattern>* DENZEL WASHINGTON AGE</pattern>
+    <template>
+        <srai>DENZEL WASHINGTON AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS DENZEL WASHINGTON</pattern>
+    <template>
+        <srai>DENZEL WASHINGTON AGE</srai>
+    </template>
+</category>
+<category> <pattern>DENZEL WASHINGTON BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        Glory (1989); Malcolm X (1992); Much Ado About Nothing (1993)
+    </template>
+</category>
+<category> <pattern>* DENZEL WASHINGTON BEST MOVIES</pattern>
+    <template>
+        <srai>DENZEL WASHINGTON BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* DENZEL WASHINGTON *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that he is only the second black actor to win Academy Award for Best Actor in a Leading Role (2001)?
+            The first was Sidney Poitier who won in 1963 and also received an honorary Academy Award in 2001.</li>
+            <li>Did you know that he holds the unique feat of more number of Oscar nominations by an African American, with a total of 6 nominations?</li>
+            <li>Did you know that Washington was ranked #39 on the list of “Greatest Movie Stars of All Time” by Premiere magazine in their “Stars in Our Constellation” feature?</li>
+        </random>
     </template>
 </category>
 
-<category> <pattern>HEY *</pattern>
+
+
+
+<!-- ACTRESS IN A LEADING ROLE -->
+    <!-- Isabelle Huppert (Elle)
+    Ruth Negga (Loving)
+    WINNER: Emma Stone (La La Land)
+    Natalie Portman (Jackie)
+    Meryl Streep (Florence Foster Jenkins) -->
+
+<!-- WINNER: Emma Stone (La La Land) -->
+<category> <pattern>EMMA STONE NUMBER OF MOVIES</pattern>
+    <template>She was in 41 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES EMMA STONE *</pattern>
     <template>
-        <srai>HI</srai>
+        <srai>EMMA STONE NUMBER OF MOVIES</srai>
     </template>
 </category>
+<category> <pattern>EMMA STONE AGE</pattern>
+    <template>
+        She's 28 years old.
+    </template>
+</category>
+<category> <pattern>* EMMA STONE AGE</pattern>
+    <template>
+        <srai>EMMA STONE AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS EMMA STONE</pattern>
+    <template>
+        <srai>EMMA STONE AGE</srai>
+    </template>
+</category>
+<category> <pattern>EMMA STONE BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        Zombieland (2009); Superbad (2007); Easy A (2010)
+    </template>
+</category>
+<category> <pattern>* EMMA STONE BEST MOVIES</pattern>
+    <template>
+        <srai>EMMA STONE BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* EMMA STONE *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that she grew up in Scottsdale, Arizona, and started acting in community theatre when she was 11?</li>
+            <li>Did you know that she used to build websites for free because she was trying to teach herself HTML?</li>
+            <li>Did you know that she lived with anxiety and panic attacks when she was a kid, which inspired her to write a book called I Am Bigger Than My Anxiety?</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* EMMA STONE</pattern>
+    <template>
+        <srai>* EMMA STONE *</srai>
+    </template>
+</category>
+<category> <pattern>EMMA STONE *</pattern>
+    <template>
+        <srai>* EMMA STONE *</srai>
+    </template>
+</category>
+
+
+<!-- Isabelle Huppert (Elle) -->
+<category> <pattern>ISABELLE HUPPERT NUMBER OF MOVIES</pattern>
+    <template>She was in 132 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES ISABELLE HUPPERT *</pattern>
+    <template>
+        <srai>ISABELLE HUPPERT NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>ISABELLE HUPPERT AGE</pattern>
+    <template>
+        She's 64 years old.
+    </template>
+</category>
+<category> <pattern>* ISABELLE HUPPERT AGE</pattern>
+    <template>
+        <srai>ISABELLE HUPPERT AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS ISABELLE HUPPERT</pattern>
+    <template>
+        <srai>ISABELLE HUPPERT AGE</srai>
+    </template>
+</category>
+<category> <pattern>ISABELLE HUPPERT BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        8 Women (2008); The Piano Teacher (2001); Loulou (1980)
+    </template>
+</category>
+<category> <pattern>* ISABELLE HUPPERT BEST MOVIES</pattern>
+    <template>
+        <srai>ISABELLE HUPPERT BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* ISABELLE HUPPERT *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that her father was born Jewish, and hid his background during World War II?
+                Huppert was raised in her mother’s Catholic faith</li>
+            <li>Did you know that she is the most nominated actress for the César Award, with 16 nominations?</li>
+            <li>Isabelle Huppert was encouraged by her mother to begin acting at a young age, and became a teenage star in Paris. She later attended Versailles Conservatoire, where she won a prize for her acting.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* ISABELLE HUPPERT</pattern>
+    <template>
+        <srai>* ISABELLE HUPPERT *</srai>
+    </template>
+</category>
+<category> <pattern>ISABELLE HUPPERT *</pattern>
+    <template>
+        <srai>* ISABELLE HUPPERT *</srai>
+    </template>
+</category>
+
+
+<!-- Ruth Negga (Loving) -->
+<category> <pattern>RUTH NEGGA NUMBER OF MOVIES</pattern>
+    <template>She was in 37 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES RUTH NEGGA *</pattern>
+    <template>
+        <srai>RUTH NEGGA NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>RUTH NEGGA AGE</pattern>
+    <template>
+        She's 35 years old.
+    </template>
+</category>
+<category> <pattern>* RUTH NEGGA AGE</pattern>
+    <template>
+        <srai>RUTH NEGGA AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS RUTH NEGGA</pattern>
+    <template>
+        <srai>RUTH NEGGA AGE</srai>
+    </template>
+</category>
+<category> <pattern>RUTH NEGGA BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        World War Z (2013); The Samaritan (2012); Warcraft - Two Worlds. One Home (2016)
+    </template>
+</category>
+<category> <pattern>* RUTH NEGGA BEST MOVIES</pattern>
+    <template>
+        <srai>RUTH NEGGA BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* RUTH NEGGA *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>As of 2007 she began working with the Irish theatrical group Pan Pan Theatre.
+                In 2010, she played Ophelia in the National Theatre’s production of Hamlet.</li>
+            <li>She filmed scenes for Steve McQueen’s Oscar-winning 12 Years a Slave,
+                but her role was ultimately cut from the movie.</li>
+            <li>She was chosen as Ireland’s Shooting Star for the 2006 Berlin Film Festival.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* RUTH NEGGA</pattern>
+    <template>
+        <srai>* RUTH NEGGA *</srai>
+    </template>
+</category>
+<category> <pattern>RUTH NEGGA *</pattern>
+    <template>
+        <srai>* RUTH NEGGA *</srai>
+    </template>
+</category>
+
+
+<!-- Natalie Portman (Jackie) -->
+<category> <pattern>NATALIE PORTMAN NUMBER OF MOVIES</pattern>
+    <template>She was in 55 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES NATALIE PORTMAN *</pattern>
+    <template>
+        <srai>NATALIE PORTMAN NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>NATALIE PORTMAN AGE</pattern>
+    <template>
+        She's 35 years old.
+    </template>
+</category>
+<category> <pattern>* NATALIE PORTMAN AGE</pattern>
+    <template>
+        <srai>NATALIE PORTMAN AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS NATALIE PORTMAN</pattern>
+    <template>
+        <srai>NATALIE PORTMAN AGE</srai>
+    </template>
+</category>
+<category> <pattern>NATALIE PORTMAN BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        V For Vendetta (2005); Black Swan (2010); Star Wars - Episode III - Revenge Of The Sith (2005)
+    </template>
+</category>
+<category> <pattern>* NATALIE PORTMAN BEST MOVIES</pattern>
+    <template>
+        <srai>NATALIE PORTMAN BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* NATALIE PORTMAN *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>She is a dual citizen of the United States and Israel.
+                Her grandparents lost most of their family members in the Holocaust including her paternal great grandparents who were killed at the Auschwitz concentration camp in Poland.</li>
+            <li>Natalie has been a vegetarian since she was just 8 years old.</li>
+            <li>Natalie is a near genius, with an IQ score of 140.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* NATALIE PORTMAN</pattern>
+    <template>
+        <srai>* NATALIE PORTMAN *</srai>
+    </template>
+</category>
+<category> <pattern>NATALIE PORTMAN *</pattern>
+    <template>
+        <srai>* NATALIE PORTMAN *</srai>
+    </template>
+</category>
+
+
+<!-- Meryl Streep (Florence Foster Jenkins) -->
+<category> <pattern>MERYL STREEP NUMBER OF MOVIES</pattern>
+    <template>She was in 79 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES MERYL STREEP *</pattern>
+    <template>
+        <srai>MERYL STREEP NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>MERYL STREEP AGE</pattern>
+    <template>
+        She's 67 years old.
+    </template>
+</category>
+<category> <pattern>* MERYL STREEP AGE</pattern>
+    <template>
+        <srai>MERYL STREEP AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS MERYL STREEP</pattern>
+    <template>
+        <srai>MERYL STREEP AGE</srai>
+    </template>
+</category>
+<category> <pattern>MERYL STREEP BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        The Devil Wears Prada (2006); Doubt (2008); Death Becomes Her (1992)
+    </template>
+</category>
+<category> <pattern>* MERYL STREEP BEST MOVIES</pattern>
+    <template>
+        <srai>MERYL STREEP BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* MERYL STREEP *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Streep is also a distant relative of William Penn, the founder of Pennsylvania,
+                records show that her family is among the first purchasers of land in the state.</li>
+            <li>Streep has also received 29 Golden Globe nominations, winning eight—more nominations,
+                and more competitive wins than any other actor (male or female).</li>
+            <li>In 2003, the government of France made her a Commander of the Order of Arts and Letters.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* MERYL STREEP</pattern>
+    <template>
+        <srai>* MERYL STREEP *</srai>
+    </template>
+</category>
+<category> <pattern>MERYL STREEP *</pattern>
+    <template>
+        <srai>* MERYL STREEP *</srai>
+    </template>
+</category>
+
+
+
+
+<!-- ACTOR IN A SUPPORTING ROLE -->
+    <!-- WINNER: Mahershala Ali (Moonlight)
+    Jeff Bridges (Hell or High Water)
+    Lucas Hedges (Manchester by the Sea)
+    Dev Patel (Lion)
+    Michael Shannon (Nocturnal Animals) -->
+
+<!-- WINNER: Mahershala Ali (Moonlight) -->
+<category> <pattern>MAHERSHALA ALI NUMBER OF MOVIES</pattern>
+    <template>He was in 37 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES MAHERSHALA ALI *</pattern>
+    <template>
+        <srai>MAHERSHALA ALI NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>MAHERSHALA ALI AGE</pattern>
+    <template>
+        He's 43 years old.
+    </template>
+</category>
+<category> <pattern>* MAHERSHALA ALI AGE</pattern>
+    <template>
+        <srai>MAHERSHALA ALI AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS MAHERSHALA ALI</pattern>
+    <template>
+        <srai>MAHERSHALA ALI AGE</srai>
+    </template>
+</category>
+<category> <pattern>MAHERSHALA ALI BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        House Of Cards (2013-2016); The Curious Case Of Benjamin Button (2008); The Place Beyond The Pines (2012)
+    </template>
+</category>
+<category> <pattern>* MAHERSHALA ALI BEST MOVIES</pattern>
+    <template>
+        <srai>MAHERSHALA ALI BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* MAHERSHALA ALI *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>His full name is Mahershalalhashbaz “Mahershala” Ali Gilmore.</li>
+            <li>Ali developed an interest in acting, particularly after taking part in a staging of Spunk that later landed him an apprenticeship at the California Shakespeare Theater following graduation.</li>
+            <li>Mahershala Ali is a Muslim and a member of the Ahmadiyya Muslim Community.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* MAHERSHALA ALI</pattern>
+    <template>
+        <srai>* MAHERSHALA ALI *</srai>
+    </template>
+</category>
+<category> <pattern>MAHERSHALA ALI *</pattern>
+    <template>
+        <srai>* MAHERSHALA ALI *</srai>
+    </template>
+</category>
+
+
+<!-- Jeff Bridges (Hell or High Water) -->
+<category> <pattern>JEFF BRIDGES NUMBER OF MOVIES</pattern>
+    <template>He was in 88 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES JEFF BRIDGES *</pattern>
+    <template>
+        <srai>JEFF BRIDGES NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>JEFF BRIDGES AGE</pattern>
+    <template>
+        He's 67 years old.
+    </template>
+</category>
+<category> <pattern>* JEFF BRIDGES AGE</pattern>
+    <template>
+        <srai>JEFF BRIDGES AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS JEFF BRIDGES</pattern>
+    <template>
+        <srai>JEFF BRIDGES AGE</srai>
+    </template>
+</category>
+<category> <pattern>JEFF BRIDGES BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        The Big Lebowski (1998); Iron Man (2008); Tron Legacy (2010)
+    </template>
+</category>
+<category> <pattern>* JEFF BRIDGES BEST MOVIES</pattern>
+    <template>
+        <srai>JEFF BRIDGES BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* JEFF BRIDGES *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Prior to becoming an actor, Jeff Bridges served as part of the United States Coast Guard.</li>
+            <li>When he is not acting, the actor dabbles in photography as a hobby. On the sets, when he is between takes, he is known to take snapshots of everything around him.</li>
+            <li>While a student at Brentwood Academy, Jeff Bridges was a football player.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* JEFF BRIDGES</pattern>
+    <template>
+        <srai>* JEFF BRIDGES *</srai>
+    </template>
+</category>
+<category> <pattern>JEFF BRIDGES *</pattern>
+    <template>
+        <srai>* JEFF BRIDGES *</srai>
+    </template>
+</category>
+
+
+<!-- Lucas Hedges (Manchester by the Sea) -->
+<category> <pattern>LUCAS HEDGES NUMBER OF MOVIES</pattern>
+    <template>He was in 15 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES LUCAS HEDGES *</pattern>
+    <template>
+        <srai>LUCAS HEDGES NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>LUCAS HEDGES AGE</pattern>
+    <template>
+        He's 20 years old.
+    </template>
+</category>
+<category> <pattern>* LUCAS HEDGES AGE</pattern>
+    <template>
+        <srai>LUCAS HEDGES AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS LUCAS HEDGES</pattern>
+    <template>
+        <srai>LUCAS HEDGES AGE</srai>
+    </template>
+</category>
+<category> <pattern>LUCAS HEDGES BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        The Grand Budapest Hotel (2014); The Zero Theorem (2013); Moonrise Kingdom (2012)
+    </template>
+</category>
+<category> <pattern>* LUCAS HEDGES BEST MOVIES</pattern>
+    <template>
+        <srai>LUCAS HEDGES BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* LUCAS HEDGES *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>A graduate of Saint Ann’s School, he is currently on a break from studying theatre at the University of North Carolina School of the Arts.</li>
+            <li>Lucas Hedges was born in Brooklyn Heights, New York, the second child of poet and actress Susan Bruce (Titman) and Oscar-nominated screenwriter and director Peter Hedges.</li>
+            <li>He grew up in Brooklyn Heights and Cobble Hill, frequently visiting his father’s film sets.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* LUCAS HEDGES</pattern>
+    <template>
+        <srai>* LUCAS HEDGES *</srai>
+    </template>
+</category>
+<category> <pattern>LUCAS HEDGES *</pattern>
+    <template>
+        <srai>* LUCAS HEDGES *</srai>
+    </template>
+</category>
+
+
+<!-- Dev Patel (Lion) -->
+<category> <pattern>DEV PATEL NUMBER OF MOVIES</pattern>
+    <template>He was in 17 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES DEV PATEL *</pattern>
+    <template>
+        <srai>DEV PATEL NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>DEV PATEL AGE</pattern>
+    <template>
+        He's 26 years old.
+    </template>
+</category>
+<category> <pattern>* DEV PATEL AGE</pattern>
+    <template>
+        <srai>DEV PATEL AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS DEV PATEL</pattern>
+    <template>
+        <srai>DEV PATEL AGE</srai>
+    </template>
+</category>
+<category> <pattern>DEV PATEL BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        Slumdog Millionaire (2008); Chappie (2015); The Last Airbender (2010)
+    </template>
+</category>
+<category> <pattern>* DEV PATEL BEST MOVIES</pattern>
+    <template>
+        <srai>DEV PATEL BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* DEV PATEL *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Dev Patel made his feature film debut when he was cast in the role of Jamal Malik, the central character in Danny Boyle’s film Slumdog Millionaire. The character Jamal Malik is an Indian Muslim boy born and brought up in the poverty of Bombay, India.</li>
+            <li>He won best actor for his very first performance. In his school's production Twelfth Night.</li>
+            <li>Did you know that he has a black belt in Taekwondo.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* DEV PATEL</pattern>
+    <template>
+        <srai>* DEV PATEL *</srai>
+    </template>
+</category>
+<category> <pattern>DEV PATEL *</pattern>
+    <template>
+        <srai>* DEV PATEL *</srai>
+    </template>
+</category>
+
+
+<!-- Michael Shannon (Nocturnal Animals) -->
+<category> <pattern>MICHAEL SHANNON NUMBER OF MOVIES</pattern>
+    <template>He was in 81 roles as an actor.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES MICHAEL SHANNON *</pattern>
+    <template>
+        <srai>MICHAEL SHANNON NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>MICHAEL SHANNON AGE</pattern>
+    <template>
+        He's 42 years old.
+    </template>
+</category>
+<category> <pattern>* MICHAEL SHANNON AGE</pattern>
+    <template>
+        <srai>MICHAEL SHANNON AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS MICHAEL SHANNON</pattern>
+    <template>
+        <srai>MICHAEL SHANNON AGE</srai>
+    </template>
+</category>
+<category> <pattern>MICHAEL SHANNON BEST MOVIES</pattern>
+    <template>
+        Here are some of his best performances:
+        Man Of Steel (2013); Take Shelter (2011); Midnight Special (2016)
+    </template>
+</category>
+<category> <pattern>* MICHAEL SHANNON BEST MOVIES</pattern>
+    <template>
+        <srai>MICHAEL SHANNON BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* MICHAEL SHANNON *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>He counts James Franco as one of his fans.</li>
+            <li>He began his career in theatre,
+                where his first acting role was in Winterset at the Illinois Theater Center.
+                Since then, Shannon has appeared in off-Broadway shows in New York as well as in London's West End, such as Killer Joe and Bug. He also co-founded a theater called the Red Orchid Theater in Chicago, where he still regularly performs.</li>
+            <li>Shannon's role in Revolutionary Road, alongside Kate Winslet and Leonardo DiCaprio, earned him an Academy Award nomination for 'Best Supporting Actor'. The actor admits to having an embarrassing encounter during the ceremony when he spoke in a fake British accent without realising during a chat with director Sam Mendes and fellow co-star Winslet.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* MICHAEL SHANNON</pattern>
+    <template>
+        <srai>* MICHAEL SHANNON *</srai>
+    </template>
+</category>
+<category> <pattern>MICHAEL SHANNON *</pattern>
+    <template>
+        <srai>* MICHAEL SHANNON *</srai>
+    </template>
+</category>
+
+
+
+
+<!-- ACTRESS IN A SUPPORTING ROLE -->
+    <!-- WINNER: Viola Davis (Fences)
+    Naomie Harris (Moonlight)
+    Nicole Kidman (Lion)
+    Octavia Spencer (Hidden Figures)
+    Michelle Williams (Manchester by the Sea) -->
+
+<!-- WINNER: Viola Davis (Fences) -->
+<category> <pattern>VIOLA DAVIS NUMBER OF MOVIES</pattern>
+    <template>She was in 76 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES VIOLA DAVIS *</pattern>
+    <template>
+        <srai>VIOLA DAVIS NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>VIOLA DAVIS AGE</pattern>
+    <template>
+        She's 51 years old.
+    </template>
+</category>
+<category> <pattern>* VIOLA DAVIS AGE</pattern>
+    <template>
+        <srai>VIOLA DAVIS AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS VIOLA DAVIS</pattern>
+    <template>
+        <srai>VIOLA DAVIS AGE</srai>
+    </template>
+</category>
+<category> <pattern>VIOLA DAVIS BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        The Help (2011); Prisoners (2013); Suicide Squad (2016)
+    </template>
+</category>
+<category> <pattern>* VIOLA DAVIS BEST MOVIES</pattern>
+    <template>
+        <srai>VIOLA DAVIS BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* VIOLA DAVIS *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Her roles in Doubt and The Help earned
+                her both Academy Award and Golden Globe nominations.</li>
+            <li>She was listed as one of the 100 Most Influential People in the world in 2002.</li>
+            <li>Born in South Carolina, she grew up in poverty in Rhode Island.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* VIOLA DAVIS</pattern>
+    <template>
+        <srai>* VIOLA DAVIS *</srai>
+    </template>
+</category>
+<category> <pattern>VIOLA DAVIS *</pattern>
+    <template>
+        <srai>* VIOLA DAVIS *</srai>
+    </template>
+</category>
+
+
+<!-- Naomie Harris (Moonlight) -->
+<category> <pattern>NAOMIE HARRIS NUMBER OF MOVIES</pattern>
+    <template>She was in 43 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES NAOMIE HARRIS *</pattern>
+    <template>
+        <srai>NAOMIE HARRIS NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>NAOMIE HARRIS AGE</pattern>
+    <template>
+        She's 40 years old.
+    </template>
+</category>
+<category> <pattern>* NAOMIE HARRIS AGE</pattern>
+    <template>
+        <srai>NAOMIE HARRIS AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS NAOMIE HARRIS</pattern>
+    <template>
+        <srai>NAOMIE HARRIS AGE</srai>
+    </template>
+</category>
+<category> <pattern>NAOMIE HARRIS BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        007 Skyfall (2012); 28 Days Later (2002); Collateral Beauty (2016)
+    </template>
+</category>
+<category> <pattern>* NAOMIE HARRIS BEST MOVIES</pattern>
+    <template>
+        <srai>NAOMIE HARRIS BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* NAOMIE HARRIS *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Naomie Harris has appeared in television and film since she was nine, including a starring role
+                on the remake of the science fiction series The Tomorrow People.</li>
+            <li>She is the first black actress to play Moneypenny.</li>
+            <li>Naomie Harris portrayed Winnie Mandela in the biopic Mandela: Long Walk to Freedom,
+                based on the book of the same name, opposite actor Idris Elba.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* NAOMIE HARRIS</pattern>
+    <template>
+        <srai>* NAOMIE HARRIS *</srai>
+    </template>
+</category>
+<category> <pattern>NAOMIE HARRIS *</pattern>
+    <template>
+        <srai>* NAOMIE HARRIS *</srai>
+    </template>
+</category>
+
+
+<!-- Nicole Kidman (Lion) -->
+<category> <pattern>NICOLE KIDMAN NUMBER OF MOVIES</pattern>
+    <template>She was in 77 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES NICOLE KIDMAN *</pattern>
+    <template>
+        <srai>NICOLE KIDMAN NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>NICOLE KIDMAN AGE</pattern>
+    <template>
+        She's 49 years old.
+    </template>
+</category>
+<category> <pattern>* NICOLE KIDMAN AGE</pattern>
+    <template>
+        <srai>NICOLE KIDMAN AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS NICOLE KIDMAN</pattern>
+    <template>
+        <srai>NICOLE KIDMAN AGE</srai>
+    </template>
+</category>
+<category> <pattern>NICOLE KIDMAN BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        The Others (2001); The Hours (2002); Eyes Wide Shut (1999)
+    </template>
+</category>
+<category> <pattern>* NICOLE KIDMAN BEST MOVIES</pattern>
+    <template>
+        <srai>NICOLE KIDMAN BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* NICOLE KIDMAN *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Nicole Kidman was originally cast for Mr. and Mrs. Smith, as Mrs.
+                Smith but the producers thought there is more chemistry between Angelina Jolie and Brad Pitt.</li>
+            <li>Despite being 41 at the time,
+                she was voted fifth sexiest movie star alive by Empire Magazine, in 2008.</li>
+            <li>She has listed the classic film “Gone With The Wind” as one of her favorites!</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* NICOLE KIDMAN</pattern>
+    <template>
+        <srai>* NICOLE KIDMAN *</srai>
+    </template>
+</category>
+<category> <pattern>NICOLE KIDMAN *</pattern>
+    <template>
+        <srai>* NICOLE KIDMAN *</srai>
+    </template>
+</category>
+
+
+<!-- Octavia Spencer (Hidden Figures) -->
+<category> <pattern>OCTAVIA SPENCER NUMBER OF MOVIES</pattern>
+    <template>She was in 120 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES OCTAVIA SPENCER *</pattern>
+    <template>
+        <srai>OCTAVIA SPENCER NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>OCTAVIA SPENCER AGE</pattern>
+    <template>
+        She's 46 years old.
+    </template>
+</category>
+<category> <pattern>* OCTAVIA SPENCER AGE</pattern>
+    <template>
+        <srai>OCTAVIA SPENCER AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS OCTAVIA SPENCER</pattern>
+    <template>
+        <srai>OCTAVIA SPENCER AGE</srai>
+    </template>
+</category>
+<category> <pattern>OCTAVIA SPENCER BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        Being John Malkovich (1999); Zootopia (2016); The Help (2011)
+    </template>
+</category>
+<category> <pattern>* OCTAVIA SPENCER BEST MOVIES</pattern>
+    <template>
+        <srai>OCTAVIA SPENCER BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* OCTAVIA SPENCER *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>In April 2009, Entertainment Weekly listed Spencer as among its “25 Funniest Actresses in Hollywood.”</li>
+            <li>In August 2010, Spencer joined Viola Davis, Emma Stone and Bryce Dallas Howard in The Help, an adaptation of the novel.
+                She played the feisty and unflappable Minny Jackson.</li>
+            <li>From September 2014 until February 2015, she starred in Steven Spielberg’s Fox drama television series Red Band Society.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* OCTAVIA SPENCER</pattern>
+    <template>
+        <srai>* OCTAVIA SPENCER *</srai>
+    </template>
+</category>
+<category> <pattern>OCTAVIA SPENCER *</pattern>
+    <template>
+        <srai>* OCTAVIA SPENCER *</srai>
+    </template>
+</category>
+
+
+<!-- Michelle Williams (Manchester by the Sea) -->
+<category> <pattern>MICHELLE WILLIAMS NUMBER OF MOVIES</pattern>
+    <template>She was in 49 roles as an actress.</template>
+</category>
+<category> <pattern>HOW MANY MOVIES MICHELLE WILLIAMS *</pattern>
+    <template>
+        <srai>MICHELLE WILLIAMS NUMBER OF MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>MICHELLE WILLIAMS AGE</pattern>
+    <template>
+        She's 36 years old.
+    </template>
+</category>
+<category> <pattern>* MICHELLE WILLIAMS AGE</pattern>
+    <template>
+        <srai>MICHELLE WILLIAMS AGE</srai>
+    </template>
+</category>
+<category> <pattern>* OLD IS MICHELLE WILLIAMS</pattern>
+    <template>
+        <srai>MICHELLE WILLIAMS AGE</srai>
+    </template>
+</category>
+<category> <pattern>MICHELLE WILLIAMS BEST MOVIES</pattern>
+    <template>
+        Here are some of her best performances:
+        Shutter Island (2010); Dawson's Creek (1998-2003); Blue Valentine (2010)
+    </template>
+</category>
+<category> <pattern>* MICHELLE WILLIAMS BEST MOVIES</pattern>
+    <template>
+        <srai>MICHELLE WILLIAMS BEST MOVIES</srai>
+    </template>
+</category>
+<category> <pattern>* MICHELLE WILLIAMS *</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Her first mainstream production
+                was in the slasher film Halloween H20: 20 Years Later (1998).</li>
+            <li>One of her career highlights was Brokeback Mountain (2005), which earned Williams a Best Supporting Actress nomination from the Academy Awards for her role as the wife of Ennis Del Mar.</li>
+            <li>In 2014 she made her Broadway debut in a revival of Cabaret as Sally Bowles.</li>
+        </random>
+    </template>
+</category>
+<category> <pattern>* MICHELLE WILLIAMS</pattern>
+    <template>
+        <srai>* MICHELLE WILLIAMS *</srai>
+    </template>
+</category>
+<category> <pattern>MICHELLE WILLIAMS *</pattern>
+    <template>
+        <srai>* MICHELLE WILLIAMS *</srai>
+    </template>
+</category>
+
+
 </aiml>
