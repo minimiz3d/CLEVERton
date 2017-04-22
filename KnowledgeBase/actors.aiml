@@ -1260,9 +1260,9 @@
 <category> <pattern>ANDREW GARFIELD RANDOM</pattern>
     <template>
         <random>
-            <li>Did you know that Garfield was a gymnast and a swimmer during his early years.</li>
-            <li>Did you know that Garfield made his British television debut in 2005 appearing in the Channel 4 teen drama Sugar Rush.</li>
-            <li>Did you know that Garfield customarily gives interviews about his work, but does not publicly discuss details of his private life.</li>
+            <li>Did you know that Garfield was a gymnast and a swimmer during his early years?</li>
+            <li>Did you know that Garfield made his British television debut in 2005 appearing in the Channel 4 teen drama Sugar Rush?</li>
+            <li>Did you know that Garfield customarily gives interviews about his work, but does not publicly discuss details of his private life?</li>
         </random>
     </template>
 </category>
