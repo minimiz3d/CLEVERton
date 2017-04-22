@@ -1,5 +1,6 @@
 // PERGUNTAS:
 qual o nome do ator de "TalPersonagem"?
+who
 
 
 <category> <pattern>SETTING UP  NAME</pattern>
@@ -20,6 +21,11 @@ qual o nome do ator de "TalPersonagem"?
     </template>
 </category>
 
+
+
+<think><set name = "CharacterMovie"></set></think>
+<think><set name = "CharacterInfo"></set></think>
+In the movie <get name = "CharacterInfo"></get>
 
 <!--ACTOR IN A LEADING ROLE - LIST
     WINNER: Casey Affleck (Manchester by the Sea)

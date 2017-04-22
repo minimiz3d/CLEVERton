@@ -14,7 +14,7 @@
         <srai><get name = "ActorName"/> NUMBER OF MOVIES</srai>
     </template>
 </category>
-<category> <pattern>HOW MANY MOVIES HE DID *</pattern>
+<category> <pattern>HOW MANY MOVIES HE *</pattern>
     <template>
         <srai>HOW MANY MOVIES HE DID</srai>
     </template>
@@ -24,11 +24,91 @@
         <srai><get name = "ActressName"/> NUMBER OF MOVIES</srai>
     </template>
 </category>
-<category> <pattern>HOW MANY MOVIES SHE DID *</pattern>
+<category> <pattern>HOW MANY MOVIES SHE *</pattern>
     <template>
         <srai>HOW MANY MOVIES SHE DID</srai>
     </template>
 </category>
+
+<category> <pattern>HOW OLD HE IS</pattern>
+    <template>
+        <srai><get name = "ActorName"/> AGE</srai>
+    </template>
+</category>
+<category> <pattern>HOW OLD SHE IS</pattern>
+    <template>
+        <srai><get name = "ActressName"/> AGE</srai>
+    </template>
+</category>
+<category> <pattern>WHAT IS HIS AGE</pattern>
+    <template>
+        <srai><get name = "ActorName"/> AGE</srai>
+    </template>
+</category>
+<category> <pattern>WHATS IS HER AGE</pattern>
+    <template>
+        <srai><get name = "ActressName"/> AGE</srai>
+    </template>
+</category>
+
+<category> <pattern>ROLE</pattern>
+    <template>
+        <get name = "CharacterInfo"/>
+    </template>
+</category>
+<category> <pattern>* HIS ROLE</pattern>
+    <template>
+        <srai>ROLE</srai>
+    </template>
+</category>
+<category> <pattern>HIS ROLE *</pattern>
+    <template>
+        <srai>ROLE</srai>
+    </template>
+</category>
+<category> <pattern>* HIS ROLE *</pattern>
+    <template>
+        <srai>ROLE</srai>
+    </template>
+</category>
+<category> <pattern>* HER ROLE</pattern>
+    <template>
+        <srai>ROLE</srai>
+    </template>
+</category>
+<category> <pattern>HER ROLE *</pattern>
+    <template>
+        <srai>ROLE</srai>
+    </template>
+</category>
+<category> <pattern>* HER ROLE *</pattern>
+    <template>
+        <srai>ROLE</srai>
+    </template>
+</category>
+
+<category> <pattern>* ABOUT HIM</pattern>
+    <template>
+        <srai><get name = "ActorName"/> RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>* ABOUT HIM *</pattern>
+    <template>
+        <srai><get name = "ActorName"/> RANDOM</srai>
+    </template>
+</category>
+
+<category> <pattern>* ABOUT HER</pattern>
+    <template>
+        <srai><get name = "ActressName"/> RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>* ABOUT HER *</pattern>
+    <template>
+        <srai><get name = "ActressName"/> RANDOM</srai>
+    </template>
+</category>
+
 
 <!-- Win/Lost oscar in this year templates (based on "OscarWinnerThisYear" variable) -->
 <category> <pattern>DID HE WIN</pattern>
@@ -126,7 +206,7 @@
 <category> <pattern>DID SHE WIN</pattern>
     <template>
         <condition name = "OscarWinnerThisYear" value = "yes">
-            Yes, she won this year.
+            Yes, she won in this year.
         </condition>
         <condition name = "OscarWinnerThisYear" value = "no">
             No. she lost in this year :/
@@ -221,16 +301,15 @@
     Então por ex, se o cara mandar só um: Casey, sacar q é o casey affleck...
 -->
 
-<!-- TODO: Adicionar nome do personagem do ator no filme!
-    Usar variavel "CharacterName"
--->
-
 <!-- Setting actor name: -->
 <category> <pattern>SETTING UP CASEY AFFLECK NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Manchester By The Sea</set></think>
         <think><set name = "CharacterName">Lee Chandler</set></think>
         <think><set name = "ActorName">Casey Affleck</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
+        <think><set name = "CharacterInfo">he's a janitor and handyman in Quincy,
+            Massachusetts who lives a solitary life in a basement studio apartment.</set></think>
     </template>
 </category>
 <category> <pattern>CASEY AFFLECK</pattern>
@@ -247,9 +326,12 @@
 
 <category> <pattern>SETTING UP ANDREW GARFIELD NAME</pattern>
     <template>
-        <think><set name = "CharacterName">Desmond Moss</set></think>
+        <think><set name = "CharacterMovie">Hacksaw Ridge</set></think>
+        <think><set name = "CharacterName">Desmond Doss</set></think>
         <think><set name = "ActorName">Andrew Garfield</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "CharacterInfo">he's an American pacificist combat medic who was a Seventh-day Adventist Christian,
+        refusing to carry or use a firearm or weapons of any kind.</set></think>
     </template>
 </category>
 <category> <pattern>ANDREW GARFIELD</pattern>
@@ -266,9 +348,11 @@
 
 <category> <pattern>SETTING UP RYAN GOSLING NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">La La Land</set></think>
         <think><set name = "CharacterName">Sebastian</set></think>
         <think><set name = "ActorName">Ryan Gosling</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
+        <think><set name = "CharacterInfo">he's a struggling jazz pianist.</set></think>
     </template>
 </category>
 <category> <pattern>RYAN GOSLING</pattern>
@@ -285,6 +369,9 @@
 
 <category> <pattern>SETTING UP VIGGO MORTENSEN NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Captain Fantastic</set></think>
+        <think><set name = "CharacterInfo">Ben and Leslie are disillusioned with capitalism and American life, and chose to instill survivalist skills, left wing politics, and philosophy in their children – educating them to think critically, training them to be self-reliant,
+            physically fit and athletic, guiding them without technology, demonstrating the beauty of coexisting with nature and celebrating "Noam Chomsky Day" instead of Christmas.</set></think>
         <think><set name = "CharacterName">Ben</set></think>
         <think><set name = "ActorName">Viggo Mortensen</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
@@ -304,6 +391,9 @@
 
 <category> <pattern>SETTING UP DENZEL WASHINGTON NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Fences</set></think>
+        <think><set name = "CharacterInfo">Troy Maxson makes his living as a sanitation worker in 1950s Pittsburgh. Maxson once dreamed of becoming a professional baseball player,
+            but was deemed too old when the major leagues began admitting black athletes.</set></think>
         <think><set name = "CharacterName">Troy Maxson</set></think>
         <think><set name = "ActorName">Denzel Washington</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
@@ -323,6 +413,8 @@
 
 <category> <pattern>SETTING UP MAHERSHALA ALI NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Moonlight</set></think>
+        <think><set name = "CharacterInfo">he's a drug dealer.</set></think>
         <think><set name = "CharacterName">Juan</set></think>
         <think><set name = "ActorName">Mahershala Ali</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
@@ -342,6 +434,8 @@
 
 <category> <pattern>SETTING UP JEFF BRIDGES NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Hell or High Water</set></think>
+        <think><set name = "CharacterInfo">he's a Texas Ranger, he's looking at a mandatory-retirement notice.</set></think>
         <think><set name = "CharacterName">Marcus Hamilton</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName" >Jeff Bridges</set></think>
@@ -361,6 +455,9 @@
 
 <category> <pattern>SETTING UP LUCAS HEDGES NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Manchester By The Sea</set></think>
+        <think><set name = "CharacterInfo">Patrick, a darkly humorous, hockey-loving teen whose emotionally distant uncle (Casey Affleck)
+            becomes his guardian after the death of his father (Kyle Chandler)</set></think>
         <think><set name = "CharacterName">Patrick</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName">Lucas Hedges</set></think>
@@ -380,6 +477,9 @@
 
 <category> <pattern>SETTING UP DEV PATEL NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Lion</set></think>
+        <think><set name = "CharacterInfo">Saroo Brierley (born 1981) is an Indian-born Australian businessman who, at age 5, was separated from his biological mother. He was adopted by an Australian couple,
+            and 25 years later reunited with his biological mother.</set></think>
         <think><set name = "CharacterName">Saroo Brierley</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName">Dev Patel</set></think>
@@ -399,6 +499,9 @@
 
 <category> <pattern>SETTING UP MICHAEL SHANNON NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Nocturnal Animals</set></think>
+        <think><set name = "CharacterInfo">he's a hard-bitten Texan cop named Bobby Andes,
+            who comes to the aid of Jake Gyllenhaal’s devastated out-of-towner Tony Hastings.</set></think>
         <think><set name = "CharacterName">Bobby Andes</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName"></set></think>
@@ -420,6 +523,8 @@
 <!-- Setting actress name: -->
 <category> <pattern>SETTING UP ISABELLE HUPPERT NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Elle</set></think>
+        <think><set name = "CharacterInfo">she's a businesswoman, who is raped in her home by a masked assailant and decides not to report it due to her past experience with police.</set></think>
         <think><set name = "CharacterName">Michele Leblanc</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Isabelle Huppert</set></think>
@@ -439,6 +544,9 @@
 
 <category> <pattern>SETTING UP RUTH NEGGA NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Loving</set></think>
+        <think><set name = "CharacterInfo">Richard and Mildred Loving made history when their fight for the state
+            of Virginia to recognize their interracial marriage made it all the way to the Supreme Court in 1967.</set></think>
         <think><set name = "CharacterName">Mildred Loving</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Ruth Negga</set></think>
@@ -458,6 +566,8 @@
 
 <category> <pattern>SETTING UP EMMA STONE NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">La La Land</set></think>
+        <think><set name = "CharacterInfo">she's an aspiring actress.</set></think>
         <think><set name = "CharacterName">Mia</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
         <think><set name = "ActressName"></set>Emma Stone</think>
@@ -477,6 +587,9 @@
 
 <category> <pattern>SETTING UP NATALIE PORTMAN NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Jackie</set></think>
+        <think><set name = "CharacterInfo">The film
+            tells the story about her life after the 1963 assassination of her husband John F. Kennedy.</set></think>
         <think><set name = "CharacterName">Jackie Kennedy</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Natalie Portman</set></think>
@@ -496,6 +609,9 @@
 
 <category> <pattern>SETTING UP MERYL STREEP NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Florence Foster Jenkins</set></think>
+        <think><set name = "CharacterInfo">She was an American socialite and amateur soprano who was known and mocked for her
+            flamboyant performance costumes and notably poor singing ability.</set></think>
         <think><set name = "CharacterName">Florence Foster Jenkins</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Meryl Streep</set></think>
@@ -515,6 +631,8 @@
 
 <category> <pattern>SETTING UP VIOLA DAVIS NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Fences</set></think>
+        <think><set name = "CharacterInfo">She's wife to Troy and mother of Cory, Rose represents the maternal gentleness of the Maxson household.</set></think>
         <think><set name = "CharacterName">Rose Maxson</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
         <think><set name = "ActressName">Viola Davis</set></think>
@@ -534,6 +652,8 @@
 
 <category> <pattern>SETTING UP NAOMIE HARRIS NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Moonlight</set></think>
+        <think><set name = "CharacterInfo">She's a nurse with a crack addiction, who alternates between overbearing affection and cruel neglect.</set></think>
         <think><set name = "CharacterName">Paula</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Naomie Harris</set></think>
@@ -553,6 +673,9 @@
 
 <category> <pattern>SETTING UP NICOLE KIDMAN NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Lion</set></think>
+        <think><set name = "CharacterInfo">She and husband John Brierley are the adoptive parents of Indian writer Saroo Brierley,
+            the life story of whom was portrayed in the acclaimed film Lion (2016).</set></think>
         <think><set name = "CharacterName">Sue Brierley</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Nicole Kidman</set></think>
@@ -572,6 +695,9 @@
 
 <category> <pattern>SETTING UP OCTAVIA SPENCER NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Hidden Figures</set></think>
+        <think><set name = "CharacterInfo">She was an African American mathematician and human computer who worked for the National Advisory Committee for Aeronautics (NACA), and NASA, at Langley Research Center in Hampton, Virginia. In 1949, she became acting supervisor of the West Area Computers,
+            the first African-American woman to supervise a staff at the center.</set></think>
         <think><set name = "CharacterName">Dorothy Vaughan</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Octavia Spencer</set></think>
@@ -591,6 +717,8 @@
 
 <category> <pattern>SETTING UP MICHELLE WILLIAMS NAME</pattern>
     <template>
+        <think><set name = "CharacterMovie">Manchester By The Sea</set></think>
+        <think><set name = "CharacterInfo">as Lee’s wife Randi, Williams makes a huge impression despite appearing in just a handful of short scenes. </set></think>
         <think><set name = "CharacterName">Randi</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Michelle Williams</set></think>
@@ -614,12 +742,43 @@
         <srai> <star/> </srai>
     </template>
 </category>
+<category> <pattern> WHO IS * IN * </pattern>
+    <template>
+        <srai> <star/> PLAYED </srai>
+    </template>
+</category>
+<category> <pattern> WHO IS * ON * </pattern>
+    <template>
+        <srai> <star/> PLAYED </srai>
+    </template>
+</category>
+<category> <pattern> WHO PLAYED * </pattern>
+    <template>
+        <srai> <star/> </srai>
+    </template>
+</category>
+<category> <pattern> WHO INTERPRETED * </pattern>
+    <template>
+        <srai> <star/> </srai>
+    </template>
+</category>
+<category> <pattern> WHO * INTERPRETED IN * </pattern>
+    <template>
+        <srai> <star/> PLAYED </srai>
+    </template>
+</category>
+<category> <pattern> WHO * PLAYED IN * </pattern>
+    <template>
+        <srai> <star/> PLAYED </srai>
+    </template>
+</category>
+
 
 <!-- Character (actor) - Main Role -->
 <category> <pattern> LEE CHANDLER </pattern>
     <template>
-        He's Casey Affleck.
-        <srai>SETTING UP CASEY AFFLECK NAME</srai>
+        He was interpreted by Casey Affleck.
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> LEE CHANDLER * </pattern>
@@ -627,23 +786,35 @@
         <srai> LEE CHANDLER </srai>
     </template>
 </category>
-
-<category> <pattern> DESMOND MOSS </pattern>
+<category> <pattern> CASEY AFFLECK PLAYED </pattern>
     <template>
-        He's Andrew Garfield.
-        <srai>SETTING UP ANDREW GARFIELD NAME</srai>
+        He played Lee Chandler.
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
-<category> <pattern> DESMOND MOSS * </pattern>
+
+<category> <pattern> DESMOND DOSS </pattern>
     <template>
-        <srai> DESMOND MOSS </srai>
+        He was interpreted by Andrew Garfield.
+        <srai>SETTING UP ANDREW GARFIELD NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
+<category> <pattern> DESMOND DOSS * </pattern>
+    <template>
+        <srai> DESMOND DOSS </srai>
+    </template>
+</category>
+<category> <pattern> ANDREW GARFIELD PLAYED </pattern>
+    <template>
+        He played Desmond Doss.
+        <srai>SETTING UP ANDREW GARFIELD NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 
 <category> <pattern> SEBASTIAN </pattern>
     <template>
-        He's Ryan Gosling.
-        <srai>SETTING UP RYAN GOSLING NAME</srai>
+        He was interpreted by Ryan Gosling.
+        <srai>SETTING UP RYAN GOSLING NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> SEBASTIAN * </pattern>
@@ -651,11 +822,17 @@
         <srai> SEBASTIAN </srai>
     </template>
 </category>
+<category> <pattern> RYAN GOSLING PLAYED </pattern>
+    <template>
+        He played Sebastian.
+        <srai>SETTING UP RYAN GOSLING NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> BEN </pattern>
     <template>
-        He's Viggo Mortensen.
-        <srai>SETTING UP VIGGO MORTENSEN NAME</srai>
+        He was interpreted by Viggo Mortensen.
+        <srai>SETTING UP VIGGO MORTENSEN NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> BEN * </pattern>
@@ -663,11 +840,17 @@
         <srai> BEN </srai>
     </template>
 </category>
+<category> <pattern> VIGGO MORTENSEN PLAYED </pattern>
+    <template>
+        He played Ben.
+        <srai>SETTING UP VIGGO MORTENSEN NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> TROY MAXSON </pattern>
     <template>
-        He's Denzel Washington.
-        <srai>SETTING UP DENZEL WASHINGTON NAME</srai>
+        He was interpreted by Denzel Washington.
+        <srai>SETTING UP DENZEL WASHINGTON NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> TROY MAXSON * </pattern>
@@ -675,12 +858,19 @@
         <srai> TROY MAXSON </srai>
     </template>
 </category>
+<category> <pattern> DENZEL WASHINGTON PLAYED </pattern>
+    <template>
+        He played Troy Maxson.
+        <srai>SETTING UP DENZEL WASHINGTON NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
+
 
 <!-- Character (actor) - Supporting Role -->
 <category> <pattern> JUAN </pattern>
     <template>
-        He's Mahershala Ali.
-        <srai>SETTING UP MAHERSHALA ALI NAME</srai>
+        He was interpreted by Mahershala Ali.
+        <srai>SETTING UP MAHERSHALA ALI NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> JUAN * </pattern>
@@ -688,11 +878,17 @@
         <srai> JUAN </srai>
     </template>
 </category>
+<category> <pattern> MAHERSHALA ALI PLAYED </pattern>
+    <template>
+        He played Juan.
+        <srai>SETTING UP MAHERSHALA ALI NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> MARCUS HAMILTON </pattern>
     <template>
-        He's Jeff Bridges.
-        <srai>SETTING UP JEFF BRIDGES NAME</srai>
+        He was interpreted by Jeff Bridges.
+        <srai>SETTING UP JEFF BRIDGES NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> MARCUS HAMILTON * </pattern>
@@ -700,11 +896,17 @@
         <srai> MARCUS HAMILTON </srai>
     </template>
 </category>
+<category> <pattern> JEFF BRIDGES PLAYED </pattern>
+    <template>
+        He played Marcus Hamilton.
+        <srai>SETTING UP JEFF BRIDGES NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> PATRICK </pattern>
     <template>
-        He's Lucas Hedges.
-        <srai>SETTING UP LUCAS HEDGES NAME</srai>
+        He was interpreted by Lucas Hedges.
+        <srai>SETTING UP LUCAS HEDGES NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> PATRICK * </pattern>
@@ -712,11 +914,17 @@
         <srai> PATRICK </srai>
     </template>
 </category>
+<category> <pattern> LUCAS HEDGES PLAYED </pattern>
+    <template>
+        He played Patrick.
+        <srai>SETTING UP LUCAS HEDGES NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> SAROO BRIERLEY </pattern>
     <template>
-        He's Dev Patel.
-        <srai>SETTING UP DEV PATEL NAME</srai>
+        He was interpreted by Dev Patel.
+        <srai>SETTING UP DEV PATEL NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> SAROO BRIERLEY * </pattern>
@@ -724,11 +932,17 @@
         <srai> SAROO BRIERLEY </srai>
     </template>
 </category>
+<category> <pattern> DEV PATEL PLAYED </pattern>
+    <template>
+        He played Saroo Brierley.
+        <srai>SETTING UP DEV PATEL NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> BOBBY ANDES </pattern>
     <template>
-        He's Michael Shannon.
-        <srai>SETTING UP MICHAEL SHANNON NAME</srai>
+        He was interpreted by Michael Shannon.
+        <srai>SETTING UP MICHAEL SHANNON NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> BOBBY ANDES * </pattern>
@@ -736,12 +950,18 @@
         <srai> BOBBY ANDES </srai>
     </template>
 </category>
+<category> <pattern> MICHAEL SHANNON PLAYED </pattern>
+    <template>
+        He played Bobby Andes.
+        <srai>SETTING UP MICHAEL SHANNON NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <!-- Character (actress) - Main Role -->
 <category> <pattern> MICHELE LEBLANC </pattern>
     <template>
-        She's Isabelle Huppert.
-        <srai>SETTING UP ISABELLE HUPPERT NAME</srai>
+        She was interpreted by Isabelle Huppert.
+        <srai>SETTING UP ISABELLE HUPPERT NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> MICHELE LEBLANC * </pattern>
@@ -749,11 +969,17 @@
         <srai> MICHELE LEBLANC </srai>
     </template>
 </category>
+<category> <pattern> ISABELLE HUPPERT PLAYED </pattern>
+    <template>
+        She played Michele Leblanc.
+        <srai>SETTING UP ISABELLE HUPPERT NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> MILDRED LOVING </pattern>
     <template>
-        She's Ruth Negga.
-        <srai>SETTING UP RUTH NEGGA NAME</srai>
+        She was interpreted by Ruth Negga.
+        <srai>SETTING UP RUTH NEGGA NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> MILDRED LOVING * </pattern>
@@ -761,11 +987,17 @@
         <srai> MILDRED LOVING </srai>
     </template>
 </category>
+<category> <pattern> RUTH NEGGA PLAYED </pattern>
+    <template>
+        She played Mildred Loving.
+        <srai>SETTING UP RUTH NEGGA NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> MIA </pattern>
     <template>
-        She's Emma Stone.
-        <srai>SETTING UP EMMA STONE NAME</srai>
+        She was interpreted by Emma Stone.
+        <srai>SETTING UP EMMA STONE NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> MIA * </pattern>
@@ -773,11 +1005,17 @@
         <srai> MIA </srai>
     </template>
 </category>
+<category> <pattern> EMMA STONE PLAYED </pattern>
+    <template>
+        She played Mia.
+        <srai>SETTING UP EMMA STONE NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> JACKIE KENNEDY </pattern>
     <template>
-        She's Natalie Portman.
-        <srai>SETTING UP NATALIE PORTMAN NAME</srai>
+        She was interpreted by Natalie Portman.
+        <srai>SETTING UP NATALIE PORTMAN NAME</srai><get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> JACKIE KENNEDY * </pattern>
@@ -785,11 +1023,17 @@
         <srai> JACKIE KENNEDY </srai>
     </template>
 </category>
+<category> <pattern> NATALIE PORTMAN PLAYED </pattern>
+    <template>
+        She played Jackie Kennedy.
+        <srai>SETTING UP NATALIE PORTMAN NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> FLORENCE FOSTER JENKINS </pattern>
     <template>
-        She's Meryl Streep.
-        <srai>SETTING UP MERYL STREEP NAME</srai>
+        She was interpreted by Meryl Streep.
+        <srai>SETTING UP MERYL STREEP NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> FLORENCE FOSTER JENKINS * </pattern>
@@ -797,12 +1041,18 @@
         <srai> FLORENCE FOSTER JENKINS </srai>
     </template>
 </category>
+<category> <pattern> MERYL STREEP PLAYED </pattern>
+    <template>
+        She played Florence Foster Jenkins.
+        <srai>SETTING UP MERYL STREEP NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <!-- Character (actress) - Supporting Role -->
 <category> <pattern> ROSE MAXSON </pattern>
     <template>
-        She's Viola Davis.
-        <srai>SETTING UP VIOLA DAVIS NAME</srai>
+        She was interpreted by Viola Davis.
+        <srai>SETTING UP VIOLA DAVIS NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> ROSE MAXSON * </pattern>
@@ -810,11 +1060,17 @@
         <srai> ROSE MAXSON </srai>
     </template>
 </category>
+<category> <pattern> VIOLA DAVIS PLAYED </pattern>
+    <template>
+        She played Rose Maxson.
+        <srai>SETTING UP VIOLA DAVIS NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> PAULA </pattern>
     <template>
-        She's Naomie Harris.
-        <srai>SETTING UP NAOMIE HARRIS NAME</srai>
+        She was interpreted by Naomie Harris.
+        <srai>SETTING UP NAOMIE HARRIS NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> PAULA * </pattern>
@@ -822,11 +1078,17 @@
         <srai> PAULA </srai>
     </template>
 </category>
+<category> <pattern> NAOMIE HARRIS PLAYED </pattern>
+    <template>
+        She played Paula.
+        <srai>SETTING UP NAOMIE HARRIS NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> SUE BRIERLEY </pattern>
     <template>
-        She's Nicole Kidman.
-        <srai>SETTING UP NICOLE KIDMAN NAME</srai>
+        She was interpreted by Nicole Kidman.
+        <srai>SETTING UP NICOLE KIDMAN NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> SUE BRIERLEY * </pattern>
@@ -834,11 +1096,17 @@
         <srai> SUE BRIERLEY </srai>
     </template>
 </category>
+<category> <pattern> NICOLE KIDMAN PLAYED </pattern>
+    <template>
+        She played Sue Brierley.
+        <srai>SETTING UP NICOLE KIDMAN NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> DOROTHY VAUGHAN </pattern>
     <template>
-        She's Octavia Spencer.
-        <srai>SETTING UP OCTAVIA SPENCER NAME</srai>
+        She was interpreted by Octavia Spencer.
+        <srai>SETTING UP OCTAVIA SPENCER NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> DOROTHY VAUGHAN * </pattern>
@@ -846,11 +1114,17 @@
         <srai> DOROTHY VAUGHAN </srai>
     </template>
 </category>
+<category> <pattern> OCTAVIA SPENCER PLAYED </pattern>
+    <template>
+        She played Dorothy Vaughan.
+        <srai>SETTING UP OCTAVIA SPENCER NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 <category> <pattern> RANDI </pattern>
     <template>
-        She's Michelle Williams.
-        <srai>SETTING UP MICHELLE WILLIAMS NAME</srai>
+        She was interpreted by Michelle Williams.
+        <srai>SETTING UP MICHELLE WILLIAMS NAME</srai>In the movie <get name = "CharacterInfo"></get>
     </template>
 </category>
 <category> <pattern> RANDI * </pattern>
@@ -858,7 +1132,12 @@
         <srai> RANDI </srai>
     </template>
 </category>
-
+<category> <pattern> MICHELLE WILLIAMS PLAYED </pattern>
+    <template>
+        She played Randi.
+        <srai>SETTING UP MICHELLE WILLIAMS NAME</srai>In the movie <get name = "CharacterInfo"></get>
+    </template>
+</category>
 
 
 <!--TEMPLATES:
@@ -922,6 +1201,11 @@
 </category>
 <category> <pattern>* CASEY AFFLECK *</pattern>
     <template>
+        <srai>CASEY AFFLECK RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>CASEY AFFLECK RANDOM</pattern>
+    <template>
         <random>
             <!-- General curiosities -->
             <li>Did you know that Caleb Casey Affleck was born on August 12, 1975, in Falmouth, Massachusetts?</li>
@@ -970,10 +1254,15 @@
 </category>
 <category> <pattern>* ANDREW GARFIELD *</pattern>
     <template>
+        <srai>ANDREW GARFIELD RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>ANDREW GARFIELD RANDOM</pattern>
+    <template>
         <random>
-            <li>Did you know that </li>
-            <li>Did you know that </li>
-            <li>Did you know that </li>
+            <li>Did you know that Garfield was a gymnast and a swimmer during his early years.</li>
+            <li>Did you know that Garfield made his British television debut in 2005 appearing in the Channel 4 teen drama Sugar Rush.</li>
+            <li>Did you know that Garfield customarily gives interviews about his work, but does not publicly discuss details of his private life.</li>
         </random>
     </template>
 </category>
@@ -1016,8 +1305,13 @@
 </category>
 <category> <pattern>* RYAN GOSLING *</pattern>
     <template>
+        <srai>RYAN GOSLING RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>RYAN GOSLING RANDOM</pattern>
+    <template>
         <random>
-            <li>Did you know that he's also an accomplished jazz guitarist and singer?</li>
+            <li>Did you know that He was interpreted by also an accomplished jazz guitarist and singer?</li>
             <li>Did you know that when he was a kid, he could do an absolutely epic rendition of “Everybody Dance Now”?
             Check it out: https://youtu.be/dJQvXCoNDzM</li>
             <li>Did you know that he’s in a band called Dead Man’s Bones where he sings about paranormal phenomena?</li>
@@ -1062,6 +1356,11 @@
     </template>
 </category>
 <category> <pattern>* VIGGO MORTENSEN *</pattern>
+    <template>
+        <srai>VIGGO MORTENSEN RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>VIGGO MORTENSEN RANDOM</pattern>
     <template>
         <random>
             <!-- General curiosities -->
@@ -1110,6 +1409,11 @@
     </template>
 </category>
 <category> <pattern>* DENZEL WASHINGTON *</pattern>
+    <template>
+        <srai>DENZEL WASHINGTON RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>DENZEL WASHINGTON RANDOM</pattern>
     <template>
         <random>
             <!-- General curiosities -->
@@ -1168,12 +1472,7 @@
 </category>
 <category> <pattern>* EMMA STONE *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Did you know that she grew up in Scottsdale, Arizona, and started acting in community theatre when she was 11?</li>
-            <li>Did you know that she used to build websites for free because she was trying to teach herself HTML?</li>
-            <li>Did you know that she lived with anxiety and panic attacks when she was a kid, which inspired her to write a book called I Am Bigger Than My Anxiety?</li>
-        </random>
+        <srai>EMMA STONE RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* EMMA STONE</pattern>
@@ -1184,6 +1483,16 @@
 <category> <pattern>EMMA STONE *</pattern>
     <template>
         <srai>* EMMA STONE *</srai>
+    </template>
+</category>
+<category> <pattern>EMMA STONE RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that she grew up in Scottsdale, Arizona, and started acting in community theatre when she was 11?</li>
+            <li>Did you know that she used to build websites for free because she was trying to teach herself HTML?</li>
+            <li>Did you know that she lived with anxiety and panic attacks when she was a kid, which inspired her to write a book called I Am Bigger Than My Anxiety?</li>
+        </random>
     </template>
 </category>
 
@@ -1225,13 +1534,7 @@
 </category>
 <category> <pattern>* ISABELLE HUPPERT *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Did you know that her father was born Jewish, and hid his background during World War II?
-                Huppert was raised in her mother’s Catholic faith</li>
-            <li>Did you know that she is the most nominated actress for the César Award, with 16 nominations?</li>
-            <li>Isabelle Huppert was encouraged by her mother to begin acting at a young age, and became a teenage star in Paris. She later attended Versailles Conservatoire, where she won a prize for her acting.</li>
-        </random>
+        <srai>ISABELLE HUPPERT RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* ISABELLE HUPPERT</pattern>
@@ -1242,6 +1545,17 @@
 <category> <pattern>ISABELLE HUPPERT *</pattern>
     <template>
         <srai>* ISABELLE HUPPERT *</srai>
+    </template>
+</category>
+<category> <pattern>ISABELLE HUPPERT RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Did you know that her father was born Jewish, and hid his background during World War II?
+                Huppert was raised in her mother’s Catholic faith</li>
+            <li>Did you know that she is the most nominated actress for the César Award, with 16 nominations?</li>
+            <li>Isabelle Huppert was encouraged by her mother to begin acting at a young age, and became a teenage star in Paris. She later attended Versailles Conservatoire, where she won a prize for her acting.</li>
+        </random>
     </template>
 </category>
 
@@ -1342,13 +1656,7 @@
 </category>
 <category> <pattern>* NATALIE PORTMAN *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>She is a dual citizen of the United States and Israel.
-                Her grandparents lost most of their family members in the Holocaust including her paternal great grandparents who were killed at the Auschwitz concentration camp in Poland.</li>
-            <li>Natalie has been a vegetarian since she was just 8 years old.</li>
-            <li>Natalie is a near genius, with an IQ score of 140.</li>
-        </random>
+        <srai>NATALIE PORTMAN RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* NATALIE PORTMAN</pattern>
@@ -1359,6 +1667,17 @@
 <category> <pattern>NATALIE PORTMAN *</pattern>
     <template>
         <srai>* NATALIE PORTMAN *</srai>
+    </template>
+</category>
+<category> <pattern>NATALIE PORTMAN RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>She is a dual citizen of the United States and Israel.
+                Her grandparents lost most of their family members in the Holocaust including her paternal great grandparents who were killed at the Auschwitz concentration camp in Poland.</li>
+            <li>Natalie has been a vegetarian since she was just 8 years old.</li>
+            <li>Natalie is a near genius, with an IQ score of 140.</li>
+        </random>
     </template>
 </category>
 
@@ -1400,14 +1719,7 @@
 </category>
 <category> <pattern>* MERYL STREEP *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Streep is also a distant relative of William Penn, the founder of Pennsylvania,
-                records show that her family is among the first purchasers of land in the state.</li>
-            <li>Streep has also received 29 Golden Globe nominations, winning eight—more nominations,
-                and more competitive wins than any other actor (male or female).</li>
-            <li>In 2003, the government of France made her a Commander of the Order of Arts and Letters.</li>
-        </random>
+        <srai>MERYL STREEP RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* MERYL STREEP</pattern>
@@ -1418,6 +1730,18 @@
 <category> <pattern>MERYL STREEP *</pattern>
     <template>
         <srai>* MERYL STREEP *</srai>
+    </template>
+</category>
+<category> <pattern>MERYL STREEP RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Streep is also a distant relative of William Penn, the founder of Pennsylvania,
+                records show that her family is among the first purchasers of land in the state.</li>
+            <li>Streep has also received 29 Golden Globe nominations, winning eight—more nominations,
+                and more competitive wins than any other actor (male or female).</li>
+            <li>In 2003, the government of France made her a Commander of the Order of Arts and Letters.</li>
+        </random>
     </template>
 </category>
 
@@ -1468,12 +1792,7 @@
 </category>
 <category> <pattern>* MAHERSHALA ALI *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>His full name is Mahershalalhashbaz “Mahershala” Ali Gilmore.</li>
-            <li>Ali developed an interest in acting, particularly after taking part in a staging of Spunk that later landed him an apprenticeship at the California Shakespeare Theater following graduation.</li>
-            <li>Mahershala Ali is a Muslim and a member of the Ahmadiyya Muslim Community.</li>
-        </random>
+        <srai>MAHERSHALA ALI RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* MAHERSHALA ALI</pattern>
@@ -1484,6 +1803,16 @@
 <category> <pattern>MAHERSHALA ALI *</pattern>
     <template>
         <srai>* MAHERSHALA ALI *</srai>
+    </template>
+</category>
+<category> <pattern>MAHERSHALA ALI RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>His full name is Mahershalalhashbaz “Mahershala” Ali Gilmore.</li>
+            <li>Ali developed an interest in acting, particularly after taking part in a staging of Spunk that later landed him an apprenticeship at the California Shakespeare Theater following graduation.</li>
+            <li>Mahershala Ali is a Muslim and a member of the Ahmadiyya Muslim Community.</li>
+        </random>
     </template>
 </category>
 
@@ -1525,12 +1854,7 @@
 </category>
 <category> <pattern>* JEFF BRIDGES *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Prior to becoming an actor, Jeff Bridges served as part of the United States Coast Guard.</li>
-            <li>When he is not acting, the actor dabbles in photography as a hobby. On the sets, when he is between takes, he is known to take snapshots of everything around him.</li>
-            <li>While a student at Brentwood Academy, Jeff Bridges was a football player.</li>
-        </random>
+        <srai>JEFF BRIDGES RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* JEFF BRIDGES</pattern>
@@ -1541,6 +1865,16 @@
 <category> <pattern>JEFF BRIDGES *</pattern>
     <template>
         <srai>* JEFF BRIDGES *</srai>
+    </template>
+</category>
+<category> <pattern>JEFF BRIDGES RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Prior to becoming an actor, Jeff Bridges served as part of the United States Coast Guard.</li>
+            <li>When he is not acting, the actor dabbles in photography as a hobby. On the sets, when he is between takes, he is known to take snapshots of everything around him.</li>
+            <li>While a student at Brentwood Academy, Jeff Bridges was a football player.</li>
+        </random>
     </template>
 </category>
 
@@ -1556,7 +1890,7 @@
 </category>
 <category> <pattern>LUCAS HEDGES AGE</pattern>
     <template>
-        He's 20 years old.
+        He's by 20 years old.
     </template>
 </category>
 <category> <pattern>* LUCAS HEDGES AGE</pattern>
@@ -1582,12 +1916,7 @@
 </category>
 <category> <pattern>* LUCAS HEDGES *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>A graduate of Saint Ann’s School, he is currently on a break from studying theatre at the University of North Carolina School of the Arts.</li>
-            <li>Lucas Hedges was born in Brooklyn Heights, New York, the second child of poet and actress Susan Bruce (Titman) and Oscar-nominated screenwriter and director Peter Hedges.</li>
-            <li>He grew up in Brooklyn Heights and Cobble Hill, frequently visiting his father’s film sets.</li>
-        </random>
+        <srai>LUCAS HEDGES RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* LUCAS HEDGES</pattern>
@@ -1598,6 +1927,16 @@
 <category> <pattern>LUCAS HEDGES *</pattern>
     <template>
         <srai>* LUCAS HEDGES *</srai>
+    </template>
+</category>
+<category> <pattern>LUCAS HEDGES RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>A graduate of Saint Ann’s School, he is currently on a break from studying theatre at the University of North Carolina School of the Arts.</li>
+            <li>Lucas Hedges was born in Brooklyn Heights, New York, the second child of poet and actress Susan Bruce (Titman) and Oscar-nominated screenwriter and director Peter Hedges.</li>
+            <li>He grew up in Brooklyn Heights and Cobble Hill, frequently visiting his father’s film sets.</li>
+        </random>
     </template>
 </category>
 
@@ -1639,12 +1978,7 @@
 </category>
 <category> <pattern>* DEV PATEL *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Dev Patel made his feature film debut when he was cast in the role of Jamal Malik, the central character in Danny Boyle’s film Slumdog Millionaire. The character Jamal Malik is an Indian Muslim boy born and brought up in the poverty of Bombay, India.</li>
-            <li>He won best actor for his very first performance. In his school's production Twelfth Night.</li>
-            <li>Did you know that he has a black belt in Taekwondo.</li>
-        </random>
+        <srai>DEV PATEL RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* DEV PATEL</pattern>
@@ -1655,6 +1989,16 @@
 <category> <pattern>DEV PATEL *</pattern>
     <template>
         <srai>* DEV PATEL *</srai>
+    </template>
+</category>
+<category> <pattern>DEV PATEL RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Dev Patel made his feature film debut when he was cast in the role of Jamal Malik, the central character in Danny Boyle’s film Slumdog Millionaire. The character Jamal Malik is an Indian Muslim boy born and brought up in the poverty of Bombay, India.</li>
+            <li>He won best actor for his very first performance. In his school's production Twelfth Night.</li>
+            <li>Did you know that he has a black belt in Taekwondo.</li>
+        </random>
     </template>
 </category>
 
@@ -1696,14 +2040,7 @@
 </category>
 <category> <pattern>* MICHAEL SHANNON *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>He counts James Franco as one of his fans.</li>
-            <li>He began his career in theatre,
-                where his first acting role was in Winterset at the Illinois Theater Center.
-                Since then, Shannon has appeared in off-Broadway shows in New York as well as in London's West End, such as Killer Joe and Bug. He also co-founded a theater called the Red Orchid Theater in Chicago, where he still regularly performs.</li>
-            <li>Shannon's role in Revolutionary Road, alongside Kate Winslet and Leonardo DiCaprio, earned him an Academy Award nomination for 'Best Supporting Actor'. The actor admits to having an embarrassing encounter during the ceremony when he spoke in a fake British accent without realising during a chat with director Sam Mendes and fellow co-star Winslet.</li>
-        </random>
+        <srai>MICHAEL SHANNON RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* MICHAEL SHANNON</pattern>
@@ -1714,6 +2051,18 @@
 <category> <pattern>MICHAEL SHANNON *</pattern>
     <template>
         <srai>* MICHAEL SHANNON *</srai>
+    </template>
+</category>
+<category> <pattern>MICHAEL SHANNON RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>He counts James Franco as one of his fans.</li>
+            <li>He began his career in theatre,
+                where his first acting role was in Winterset at the Illinois Theater Center.
+                Since then, Shannon has appeared in off-Broadway shows in New York as well as in London's West End, such as Killer Joe and Bug. He also co-founded a theater called the Red Orchid Theater in Chicago, where he still regularly performs.</li>
+            <li>Shannon's role in Revolutionary Road, alongside Kate Winslet and Leonardo DiCaprio, earned him an Academy Award nomination for 'Best Supporting Actor'. The actor admits to having an embarrassing encounter during the ceremony when he spoke in a fake British accent without realising during a chat with director Sam Mendes and fellow co-star Winslet.</li>
+        </random>
     </template>
 </category>
 
@@ -1764,13 +2113,7 @@
 </category>
 <category> <pattern>* VIOLA DAVIS *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Her roles in Doubt and The Help earned
-                her both Academy Award and Golden Globe nominations.</li>
-            <li>She was listed as one of the 100 Most Influential People in the world in 2002.</li>
-            <li>Born in South Carolina, she grew up in poverty in Rhode Island.</li>
-        </random>
+        <srai>VIOLA DAVIS RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* VIOLA DAVIS</pattern>
@@ -1781,6 +2124,17 @@
 <category> <pattern>VIOLA DAVIS *</pattern>
     <template>
         <srai>* VIOLA DAVIS *</srai>
+    </template>
+</category>
+<category> <pattern>VIOLA DAVIS RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Her roles in Doubt and The Help earned
+                her both Academy Award and Golden Globe nominations.</li>
+            <li>She was listed as one of the 100 Most Influential People in the world in 2002.</li>
+            <li>Born in South Carolina, she grew up in poverty in Rhode Island.</li>
+        </random>
     </template>
 </category>
 
@@ -1822,14 +2176,7 @@
 </category>
 <category> <pattern>* NAOMIE HARRIS *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Naomie Harris has appeared in television and film since she was nine, including a starring role
-                on the remake of the science fiction series The Tomorrow People.</li>
-            <li>She is the first black actress to play Moneypenny.</li>
-            <li>Naomie Harris portrayed Winnie Mandela in the biopic Mandela: Long Walk to Freedom,
-                based on the book of the same name, opposite actor Idris Elba.</li>
-        </random>
+        <srai>NAOMIE HARRIS RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* NAOMIE HARRIS</pattern>
@@ -1840,6 +2187,18 @@
 <category> <pattern>NAOMIE HARRIS *</pattern>
     <template>
         <srai>* NAOMIE HARRIS *</srai>
+    </template>
+</category>
+<category> <pattern>NAOMIE HARRIS RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Naomie Harris has appeared in television and film since she was nine, including a starring role
+                on the remake of the science fiction series The Tomorrow People.</li>
+            <li>She is the first black actress to play Moneypenny.</li>
+            <li>Naomie Harris portrayed Winnie Mandela in the biopic Mandela: Long Walk to Freedom,
+                based on the book of the same name, opposite actor Idris Elba.</li>
+        </random>
     </template>
 </category>
 
@@ -1881,14 +2240,7 @@
 </category>
 <category> <pattern>* NICOLE KIDMAN *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Nicole Kidman was originally cast for Mr. and Mrs. Smith, as Mrs.
-                Smith but the producers thought there is more chemistry between Angelina Jolie and Brad Pitt.</li>
-            <li>Despite being 41 at the time,
-                she was voted fifth sexiest movie star alive by Empire Magazine, in 2008.</li>
-            <li>She has listed the classic film “Gone With The Wind” as one of her favorites!</li>
-        </random>
+        <srai>NICOLE KIDMAN RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* NICOLE KIDMAN</pattern>
@@ -1899,6 +2251,18 @@
 <category> <pattern>NICOLE KIDMAN *</pattern>
     <template>
         <srai>* NICOLE KIDMAN *</srai>
+    </template>
+</category>
+<category> <pattern>NICOLE KIDMAN RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Nicole Kidman was originally cast for Mr. and Mrs. Smith, as Mrs.
+                Smith but the producers thought there is more chemistry between Angelina Jolie and Brad Pitt.</li>
+            <li>Despite being 41 at the time,
+                she was voted fifth sexiest movie star alive by Empire Magazine, in 2008.</li>
+            <li>She has listed the classic film “Gone With The Wind” as one of her favorites!</li>
+        </random>
     </template>
 </category>
 
@@ -1940,13 +2304,7 @@
 </category>
 <category> <pattern>* OCTAVIA SPENCER *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>In April 2009, Entertainment Weekly listed Spencer as among its “25 Funniest Actresses in Hollywood.”</li>
-            <li>In August 2010, Spencer joined Viola Davis, Emma Stone and Bryce Dallas Howard in The Help, an adaptation of the novel.
-                She played the feisty and unflappable Minny Jackson.</li>
-            <li>From September 2014 until February 2015, she starred in Steven Spielberg’s Fox drama television series Red Band Society.</li>
-        </random>
+        <srai>OCTAVIA SPENCER RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* OCTAVIA SPENCER</pattern>
@@ -1957,6 +2315,17 @@
 <category> <pattern>OCTAVIA SPENCER *</pattern>
     <template>
         <srai>* OCTAVIA SPENCER *</srai>
+    </template>
+</category>
+<category> <pattern>OCTAVIA SPENCER RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>In April 2009, Entertainment Weekly listed Spencer as among its “25 Funniest Actresses in Hollywood.”</li>
+            <li>In August 2010, Spencer joined Viola Davis, Emma Stone and Bryce Dallas Howard in The Help, an adaptation of the novel.
+                She played the feisty and unflappable Minny Jackson.</li>
+            <li>From September 2014 until February 2015, she starred in Steven Spielberg’s Fox drama television series Red Band Society.</li>
+        </random>
     </template>
 </category>
 
@@ -1998,13 +2367,7 @@
 </category>
 <category> <pattern>* MICHELLE WILLIAMS *</pattern>
     <template>
-        <random>
-            <!-- General curiosities -->
-            <li>Her first mainstream production
-                was in the slasher film Halloween H20: 20 Years Later (1998).</li>
-            <li>One of her career highlights was Brokeback Mountain (2005), which earned Williams a Best Supporting Actress nomination from the Academy Awards for her role as the wife of Ennis Del Mar.</li>
-            <li>In 2014 she made her Broadway debut in a revival of Cabaret as Sally Bowles.</li>
-        </random>
+        <srai>MICHELLE WILLIAMS RANDOM</srai>
     </template>
 </category>
 <category> <pattern>* MICHELLE WILLIAMS</pattern>
@@ -2015,6 +2378,17 @@
 <category> <pattern>MICHELLE WILLIAMS *</pattern>
     <template>
         <srai>* MICHELLE WILLIAMS *</srai>
+    </template>
+</category>
+<category> <pattern>MICHELLE WILLIAMS RANDOM</pattern>
+    <template>
+        <random>
+            <!-- General curiosities -->
+            <li>Her first mainstream production
+                was in the slasher film Halloween H20: 20 Years Later (1998).</li>
+            <li>One of her career highlights was Brokeback Mountain (2005), which earned Williams a Best Supporting Actress nomination from the Academy Awards for her role as the wife of Ennis Del Mar.</li>
+            <li>In 2014 she made her Broadway debut in a revival of Cabaret as Sally Bowles.</li>
+        </random>
     </template>
 </category>
 
