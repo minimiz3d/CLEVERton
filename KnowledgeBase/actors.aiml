@@ -34,7 +34,7 @@
 <category> <pattern>DID HE WIN</pattern>
     <template>
         <condition name = "OscarWinnerThisYear" value = "yes">
-            Yes, he won this year.
+            Yes, he won in this year.
         </condition>
         <condition name = "OscarWinnerThisYear" value = "no">
             No. He lost in this year :/
@@ -480,7 +480,7 @@
     </template>
 </category>
 
-<category> <pattern>SETTING UP  NAME</pattern>
+<category> <pattern>SETTING UP MERYL STREEP NAME</pattern>
     <template>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Meryl Streep</set></think>
@@ -587,6 +587,258 @@
         <srai>MICHELLE WILLIAMS</srai>
     </template>
 </category>
+
+<!-- Setting character/actor/actress name -->
+<category> <pattern> WHO IS * </pattern>
+    <template>
+        <srai> <star/> </srai>
+    </template>
+</category>
+
+<!-- Character (actor) - Main Role -->
+<category> <pattern> LEE CHANDLER </pattern>
+    <template>
+        He's Casey Affleck.
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>
+    </template>
+</category>
+<category> <pattern> LEE CHANDLER * </pattern>
+    <template>
+        <srai> LEE CHANDLER </srai>
+    </template>
+</category>
+
+<category> <pattern> DESMOND MOSS </pattern>
+    <template>
+        He's Andrew Garfield.
+        <srai>SETTING UP ANDREW GARFIELD NAME</srai>
+    </template>
+</category>
+<category> <pattern> DESMOND MOSS * </pattern>
+    <template>
+        <srai> DESMOND MOSS </srai>
+    </template>
+</category>
+
+<category> <pattern> SEBASTIAN </pattern>
+    <template>
+        He's Ryan Gosling.
+        <srai>SETTING UP RYAN GOSLING NAME</srai>
+    </template>
+</category>
+<category> <pattern> SEBASTIAN * </pattern>
+    <template>
+        <srai> SEBASTIAN </srai>
+    </template>
+</category>
+
+<category> <pattern> BEN </pattern>
+    <template>
+        He's Viggo Mortensen.
+        <srai>SETTING UP VIGGO MORTENSEN NAME</srai>
+    </template>
+</category>
+<category> <pattern> BEN * </pattern>
+    <template>
+        <srai> BEN </srai>
+    </template>
+</category>
+
+<category> <pattern> TROY MAXSON </pattern>
+    <template>
+        He's Denzel Washington.
+        <srai>SETTING UP DENZEL WASHINGTON NAME</srai>
+    </template>
+</category>
+<category> <pattern> TROY MAXSON * </pattern>
+    <template>
+        <srai> TROY MAXSON </srai>
+    </template>
+</category>
+
+<!-- Character (actor) - Supporting Role -->
+<category> <pattern> JUAN </pattern>
+    <template>
+        He's Mahershala Ali.
+        <srai>SETTING UP MAHERSHALA ALI NAME</srai>
+    </template>
+</category>
+<category> <pattern> JUAN * </pattern>
+    <template>
+        <srai> JUAN </srai>
+    </template>
+</category>
+
+<category> <pattern> MARCUS HAMILTON </pattern>
+    <template>
+        He's Jeff Bridges.
+        <srai>SETTING UP JEFF BRIDGES NAME</srai>
+    </template>
+</category>
+<category> <pattern> MARCUS HAMILTON * </pattern>
+    <template>
+        <srai> MARCUS HAMILTON </srai>
+    </template>
+</category>
+
+<category> <pattern> PATRICK </pattern>
+    <template>
+        He's Lucas Hedges.
+        <srai>SETTING UP LUCAS HEDGES NAME</srai>
+    </template>
+</category>
+<category> <pattern> PATRICK * </pattern>
+    <template>
+        <srai> PATRICK </srai>
+    </template>
+</category>
+
+<category> <pattern> SAROO BRIERLEY </pattern>
+    <template>
+        He's Dev Patel.
+        <srai>SETTING UP DEV PATEL NAME</srai>
+    </template>
+</category>
+<category> <pattern> SAROO BRIERLEY * </pattern>
+    <template>
+        <srai> SAROO BRIERLEY </srai>
+    </template>
+</category>
+
+<category> <pattern> BOBBY ANDES </pattern>
+    <template>
+        He's Michael Shannon.
+        <srai>SETTING UP MICHAEL SHANNON NAME</srai>
+    </template>
+</category>
+<category> <pattern> BOBBY ANDES * </pattern>
+    <template>
+        <srai> BOBBY ANDES </srai>
+    </template>
+</category>
+
+<!-- Character (actress) - Main Role -->
+<category> <pattern> MICHELE LEBLANC </pattern>
+    <template>
+        She's Isabelle Huppert.
+        <srai>SETTING UP ISABELLE HUPPERT NAME</srai>
+    </template>
+</category>
+<category> <pattern> MICHELE LEBLANC * </pattern>
+    <template>
+        <srai> MICHELE LEBLANC </srai>
+    </template>
+</category>
+
+<category> <pattern> MILDRED LOVING </pattern>
+    <template>
+        She's Ruth Negga.
+        <srai>SETTING UP RUTH NEGGA NAME</srai>
+    </template>
+</category>
+<category> <pattern> MILDRED LOVING * </pattern>
+    <template>
+        <srai> MILDRED LOVING </srai>
+    </template>
+</category>
+
+<category> <pattern> MIA </pattern>
+    <template>
+        She's Emma Stone.
+        <srai>SETTING UP EMMA STONE NAME</srai>
+    </template>
+</category>
+<category> <pattern> MIA * </pattern>
+    <template>
+        <srai> MIA </srai>
+    </template>
+</category>
+
+<category> <pattern> JACKIE KENNEDY </pattern>
+    <template>
+        She's Natalie Portman.
+        <srai>SETTING UP NATALIE PORTMAN NAME</srai>
+    </template>
+</category>
+<category> <pattern> JACKIE KENNEDY * </pattern>
+    <template>
+        <srai> JACKIE KENNEDY </srai>
+    </template>
+</category>
+
+<category> <pattern> FLORENCE FOSTER JENKINS </pattern>
+    <template>
+        She's Meryl Streep.
+        <srai>SETTING UP MERYL STREEP NAME</srai>
+    </template>
+</category>
+<category> <pattern> FLORENCE FOSTER JENKINS * </pattern>
+    <template>
+        <srai> FLORENCE FOSTER JENKINS </srai>
+    </template>
+</category>
+
+<!-- Character (actress) - Supporting Role -->
+<category> <pattern> ROSE MAXSON </pattern>
+    <template>
+        She's Viola Davis.
+        <srai>SETTING UP VIOLA DAVIS NAME</srai>
+    </template>
+</category>
+<category> <pattern> ROSE MAXSON * </pattern>
+    <template>
+        <srai> ROSE MAXSON </srai>
+    </template>
+</category>
+
+<category> <pattern> PAULA </pattern>
+    <template>
+        She's Naomie Harris.
+        <srai>SETTING UP NAOMIE HARRIS NAME</srai>
+    </template>
+</category>
+<category> <pattern> PAULA * </pattern>
+    <template>
+        <srai> PAULA </srai>
+    </template>
+</category>
+
+<category> <pattern> SUE BRIERLEY </pattern>
+    <template>
+        She's Nicole Kidman.
+        <srai>SETTING UP NICOLE KIDMAN NAME</srai>
+    </template>
+</category>
+<category> <pattern> SUE BRIERLEY * </pattern>
+    <template>
+        <srai> SUE BRIERLEY </srai>
+    </template>
+</category>
+
+<category> <pattern> DOROTHY VAUGHAN </pattern>
+    <template>
+        She's Octavia Spencer.
+        <srai>SETTING UP OCTAVIA SPENCER NAME</srai>
+    </template>
+</category>
+<category> <pattern> DOROTHY VAUGHAN * </pattern>
+    <template>
+        <srai> DOROTHY VAUGHAN </srai>
+    </template>
+</category>
+
+<category> <pattern> RANDI </pattern>
+    <template>
+        She's Michelle Williams.
+        <srai>SETTING UP MICHELLE WILLIAMS NAME</srai>
+    </template>
+</category>
+<category> <pattern> RANDI * </pattern>
+    <template>
+        <srai> RANDI </srai>
+    </template>
+</category>
+
 
 
 <!--TEMPLATES:

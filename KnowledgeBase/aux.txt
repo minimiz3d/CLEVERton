@@ -1,3 +1,7 @@
+// PERGUNTAS:
+qual o nome do ator de "TalPersonagem"?
+
+
 <category> <pattern>SETTING UP  NAME</pattern>
     <template>
         <think><set name = "OscarWinnerThisYear">no</set></think>
