@@ -222,12 +222,13 @@
 -->
 
 <!-- TODO: Adicionar nome do personagem do ator no filme!
-    Usar variavel "characterName"
+    Usar variavel "CharacterName"
 -->
 
 <!-- Setting actor name: -->
 <category> <pattern>SETTING UP CASEY AFFLECK NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Lee Chandler</set></think>
         <think><set name = "ActorName">Casey Affleck</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
     </template>
@@ -246,6 +247,7 @@
 
 <category> <pattern>SETTING UP ANDREW GARFIELD NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Desmond Moss</set></think>
         <think><set name = "ActorName">Andrew Garfield</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
     </template>
@@ -264,6 +266,7 @@
 
 <category> <pattern>SETTING UP RYAN GOSLING NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Sebastian</set></think>
         <think><set name = "ActorName">Ryan Gosling</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
     </template>
@@ -282,6 +285,7 @@
 
 <category> <pattern>SETTING UP VIGGO MORTENSEN NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Ben</set></think>
         <think><set name = "ActorName">Viggo Mortensen</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
     </template>
@@ -300,6 +304,7 @@
 
 <category> <pattern>SETTING UP DENZEL WASHINGTON NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Troy Maxson</set></think>
         <think><set name = "ActorName">Denzel Washington</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
     </template>
@@ -318,6 +323,7 @@
 
 <category> <pattern>SETTING UP MAHERSHALA ALI NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Juan</set></think>
         <think><set name = "ActorName">Mahershala Ali</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
     </template>
@@ -336,6 +342,7 @@
 
 <category> <pattern>SETTING UP JEFF BRIDGES NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Marcus Hamilton</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName" >Jeff Bridges</set></think>
     </template>
@@ -354,6 +361,7 @@
 
 <category> <pattern>SETTING UP LUCAS HEDGES NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Patrick</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName">Lucas Hedges</set></think>
     </template>
@@ -372,6 +380,7 @@
 
 <category> <pattern>SETTING UP DEV PATEL NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Saroo Brierley</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName">Dev Patel</set></think>
     </template>
@@ -390,6 +399,7 @@
 
 <category> <pattern>SETTING UP MICHAEL SHANNON NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Bobby Andes</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActorName"></set></think>
     </template>
@@ -410,6 +420,7 @@
 <!-- Setting actress name: -->
 <category> <pattern>SETTING UP ISABELLE HUPPERT NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Michele Leblanc</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Isabelle Huppert</set></think>
     </template>
@@ -428,6 +439,7 @@
 
 <category> <pattern>SETTING UP RUTH NEGGA NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Mildred Loving</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Ruth Negga</set></think>
     </template>
@@ -446,6 +458,7 @@
 
 <category> <pattern>SETTING UP EMMA STONE NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Mia</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
         <think><set name = "ActressName"></set>Emma Stone</think>
     </template>
@@ -464,6 +477,7 @@
 
 <category> <pattern>SETTING UP NATALIE PORTMAN NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Jackie Kennedy</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Natalie Portman</set></think>
     </template>
@@ -482,6 +496,7 @@
 
 <category> <pattern>SETTING UP MERYL STREEP NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Florence Foster Jenkins</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Meryl Streep</set></think>
     </template>
@@ -500,6 +515,7 @@
 
 <category> <pattern>SETTING UP VIOLA DAVIS NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Rose Maxson</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
         <think><set name = "ActressName">Viola Davis</set></think>
     </template>
@@ -518,6 +534,7 @@
 
 <category> <pattern>SETTING UP NAOMIE HARRIS NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Paula</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Naomie Harris</set></think>
     </template>
@@ -536,6 +553,7 @@
 
 <category> <pattern>SETTING UP NICOLE KIDMAN NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Sue Brierley</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Nicole Kidman</set></think>
     </template>
@@ -554,6 +572,7 @@
 
 <category> <pattern>SETTING UP OCTAVIA SPENCER NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Dorothy Vaughan</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Octavia Spencer</set></think>
     </template>
@@ -572,6 +591,7 @@
 
 <category> <pattern>SETTING UP MICHELLE WILLIAMS NAME</pattern>
     <template>
+        <think><set name = "CharacterName">Randi</set></think>
         <think><set name = "OscarWinnerThisYear">no</set></think>
         <think><set name = "ActressName">Michelle Williams</set></think>
     </template>
