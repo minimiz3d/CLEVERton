@@ -3,26 +3,26 @@
 import aiml
 import time
 import signal
-
-TIMEOUT = 3 # number of seconds to wait before another user input
+import re
 
 # this is used for colored output
 class colors:
     USER = '\033[92m'
     CLEVERTON = '\033[94m'
 
-# called when user didn't input anything for some time
-def timedout(signum, frame):
-    print "interrupted"
+def uppercase(matchobj):
+    return matchobj.group(0).upper()
 
-signal.signal(signal.SIGALRM, timedout)
+def capitalizeAfterPunctuation(s):
+    # essa bosta nao eh de deus
+    return re.sub('^([a-z])|[\.|\?|\!]\s*([a-z])|\s+([a-z])(?=\.)', uppercase, s)
 
-def user_input():
-    try:
-        input = raw_input(colors.USER + username + ": ")
-        return input
-    except:
-        return "timedout"
+# returns a list of strings that should be capitalized when formatting responses
+def retrieveNames():
+    with open('KnowledgeBase/names.txt') as f:
+        names = f.read().splitlines()
+
+    return names
 
 # The Kernel object is the public interface to the AIML interpreter.
 k = aiml.Kernel()
@@ -39,13 +39,13 @@ k.respond("load aiml cn")
 username = "User"     # "User" by default
 k.setPredicate("TalkerName", username)
 
+names = retrieveNames()
+
 # Loop forever, reading user input from the command
 # line and printing respones
 while True:
-    #signal.alarm(TIMEOUT) # sets time limit for answer
     input = raw_input(colors.USER + username + ": ")
     time.sleep(0.2)     # a little bit of delay for responses makes for a more comfortable conversation
-    #signal.alarm(0)     # disable alarm after getting input
 
     if "date" or "day" in input:
         curr_date = str(time.ctime()[0:11])
@@ -55,8 +55,16 @@ while True:
         curr_time = str(time.ctime()[11:19])    # get only current hour
         k.setPredicate("time", curr_time)
 
-    # makes sure only the first letter of the response string is upper case
-    response = k.respond(input).capitalize()
+    response = k.respond(input)
+    # if response is all caps we need to reformat it
+    if response.isupper():
+        response = response.capitalize()
+        for name in names:
+            if name.lower() in response:
+                response = response.replace(name.lower(), name) # replaces lowercase name with capitalized one
+        # after fixing own names, fix for punctuation
+        response = capitalizeAfterPunctuation(response)
+
     print colors.CLEVERTON + "CLEVERton: " + response
 
     if "name" or "im" in input:
