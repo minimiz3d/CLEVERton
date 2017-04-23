@@ -30,12 +30,12 @@
     </template>
 </category>
 
-<category> <pattern>HOW OLD HE IS</pattern>
+<category> <pattern>HOW OLD IS HE</pattern>
     <template>
         <srai><get name = "ActorName"/> AGE</srai>
     </template>
 </category>
-<category> <pattern>HOW OLD SHE IS</pattern>
+<category> <pattern>HOW OLD IS SHE</pattern>
     <template>
         <srai><get name = "ActressName"/> AGE</srai>
     </template>
@@ -570,7 +570,7 @@
         <think><set name = "CharacterInfo">she's an aspiring actress.</set></think>
         <think><set name = "CharacterName">Mia</set></think>
         <think><set name = "OscarWinnerThisYear">yes</set></think>
-        <think><set name = "ActressName"></set>Emma Stone</think>
+        <think><set name = "ActressName">Emma Stone</set></think>
     </template>
 </category>
 <category> <pattern>EMMA STONE</pattern>
