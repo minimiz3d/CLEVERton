@@ -11,3 +11,46 @@ Example Questions:
 
 Movies:
 
+Actors:
+- Casey Affleck
+- Andrew Garfield
+- Ryan Gosling
+- Viggo Mortensen
+- Denzel Washington
+- Isabelle Huppert
+- Ruth Negga
+- Emma Stone
+- Natalie Portman
+- Meryl Streep
+- Mahershala Ali
+- Jeff Bridges
+- Lucas Hedges
+- Dev Patel
+- Michael Shannon
+- Viola Davis
+- Naomie Harris
+- Nicole Kidman
+- Octavia Spencer
+- Michelle Williams
+
+Characters:
+- Lee Chandler
+- Desmond Doss
+- Sebastian
+- Ben
+- Troy Maxson
+- Michele Leblanc
+- Mildred Loving
+- Mia
+- Jackie Kennedy
+- Florence Foster Jenkins
+- Juan
+- Marcus Hamilton
+- Patrick
+- Saroo Brierley
+- Bobby Andes
+- Rose Maxson
+- Paula
+- Sue Brierley
+- Dorothy Vaughan
+- Randi
