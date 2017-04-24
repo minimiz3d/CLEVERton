@@ -109,6 +109,93 @@
     </template>
 </category>
 
+<category> <pattern>* HIS LIFE</pattern>
+    <template>
+        <srai><get name = "ActorName"/> RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>* HER LIFE</pattern>
+    <template>
+        <srai><get name = "ActressName"/> RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>* HIS CAREER</pattern>
+    <template>
+        <srai><get name = "ActorName"/> RANDOM</srai>
+    </template>
+</category>
+<category> <pattern>* HER CAREER</pattern>
+    <template>
+        <srai><get name = "ActressName"/> RANDOM</srai>
+    </template>
+</category>
+
+<category> <pattern>* ACTORS * WON *</pattern>
+    <template>
+        <srai>WHICH ACTORS WON AWARDS</srai>
+    </template>
+</category>
+<category> <pattern>* ACTORS * WON</pattern>
+    <template>
+        <srai>WHICH ACTORS WON AWARDS</srai>
+    </template>
+</category>
+<category> <pattern>WHICH ACTORS WON AWARDS</pattern>
+    <template>
+        Here are the winners:
+        Actor in a leading role: Casey Affleck (Manchester By The Sea) and
+        Actor in a supporting role: Mahershala Ali (Moonlight)
+    </template>
+</category>
+<category> <pattern>WHICH ACTORS WON AWARDS *</pattern>
+    <template>
+        <srai>WHICH ACTORS WON AWARDS</srai>
+    </template>
+</category>
+<category> <pattern>* ACTRESSES * WON *</pattern>
+    <template>
+        <srai>WHICH ACTRESSES WON AWARDS</srai>
+    </template>
+</category>
+<category> <pattern>* ACTRESSES * WON</pattern>
+    <template>
+        <srai>WHICH ACTRESSES WON AWARDS</srai>
+    </template>
+</category>
+<category> <pattern>WHICH ACTRESSES WON AWARDS</pattern>
+    <template>
+        Here are the winners:
+        Actress in a leading role: Emma Stone (La La Land) and
+        Actress in a supporting role: Viola Davis (Fences)
+    </template>
+</category>
+<category> <pattern>WHICH ACTRESSES WON AWARDS *</pattern>
+    <template>
+        <srai>WHICH ACTRESSES WON AWARDS</srai>
+    </template>
+</category>
+<category> <pattern>WHO ARE THE WINNERS</pattern>
+    <template>
+        Here are the winners:
+        Actor in a leading role: Casey Affleck (Manchester By The Sea) and
+        Actor in a supporting role: Mahershala Ali (Moonlight)
+        Actress in a leading role: Emma Stone (La La Land) and
+        Actress in a supporting role: Viola Davis (Fences)
+    </template>
+</category>
+<category> <pattern>* THE WINNERS</pattern>
+    <template>
+        <srai>WHO ARE THE WINNERS</srai>
+    </template>
+</category>
+<category> <pattern>* THE WINNERS *</pattern>
+    <template>
+        <srai>WHO ARE THE WINNERS</srai>
+    </template>
+</category>
+
+
+
 
 <!-- Win/Lost oscar in this year templates (based on "OscarWinnerThisYear" variable) -->
 <category> <pattern>DID HE WIN</pattern>
@@ -301,9 +388,58 @@
     Então por ex, se o cara mandar só um: Casey, sacar q é o casey affleck...
 -->
 
+<category> <pattern>OTHER ROLES</pattern>
+    <template>
+        <get name = "OtherRoles"/>
+    </template>
+</category>
+<category> <pattern>* ROLES DID HE *</pattern>
+    <template>
+        <srai>OTHER ROLES</srai>
+    </template>
+</category>
+<category> <pattern>* ROLES * HE *</pattern>
+    <template>
+        <srai>OTHER ROLES</srai>
+    </template>
+</category>
+<category> <pattern>* ROLES DID SHE *</pattern>
+    <template>
+        <srai>OTHER ROLES</srai>
+    </template>
+</category>
+<category> <pattern>* ROLES * SHE *</pattern>
+    <template>
+        <srai>OTHER ROLES</srai>
+    </template>
+</category>
+<category> <pattern>* ROLES *</pattern>
+    <template>
+        <srai>OTHER ROLES</srai>
+    </template>
+</category>
+<category> <pattern>* ROLES * PLAY</pattern>
+    <template>
+        <srai><star index = "2"/> OTHER ROLES</srai>
+    </template>
+</category>
+<category> <pattern>* ROLES THAT * PLAY</pattern>
+    <template>
+        <srai><star index = "2"/> OTHER ROLES</srai>
+    </template>
+</category>
+
+<category> <pattern>CASEY AFFLECK OTHER ROLES</pattern>
+    <template>
+        <srai>SETTING UP CASEY AFFLECK NAME</srai>
+        <srai>OTHER ROLES</srai>
+    </template>
+</category>
+
 <!-- Setting actor name: -->
 <category> <pattern>SETTING UP CASEY AFFLECK NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Tom Myers (american pie, american pie 2), Virgil Malloy (oceans eleven), Tom (Interestellar)</set></think>
         <think><set name = "CharacterMovie">Manchester By The Sea</set></think>
         <think><set name = "CharacterName">Lee Chandler</set></think>
         <think><set name = "ActorName">Casey Affleck</set></think>
@@ -323,9 +459,59 @@
         <srai>CASEY AFFLECK</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST CASEY AFFLECK</pattern>
+    <template>Did you mean Casey Affleck?</template>
+</category>
+<category>
+    <pattern>CASEY</pattern>
+    <template>
+        <srai>TEST CASEY AFFLECK</srai>
+    </template>
+</category>
+<category>
+    <pattern>AFFLECK</pattern>
+    <template>
+        <srai>TEST CASEY AFFLECK</srai>
+    </template>
+</category>
+<category>
+    <pattern> * AFFLECK</pattern>
+    <template>
+        <srai>TEST CASEY AFFLECK</srai>
+    </template>
+</category>
+<category>
+    <pattern>CASEY *</pattern>
+    <template>
+        <srai>TEST CASEY AFFLECK</srai>
+    </template>
+</category>
+<category>
+    <pattern>* CASEY</pattern>
+    <template>
+        <srai>TEST CASEY AFFLECK</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN CASEY AFFLECK</that>
+    <template>
+        <srai>CASEY AFFLECK</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN CASEY AFFLECK</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP ANDREW GARFIELD NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Peter Parker(The Amazing Spider Man 1 e 2), Eduardo Saverin (The Social Network)</set></think>
         <think><set name = "CharacterMovie">Hacksaw Ridge</set></think>
         <think><set name = "CharacterName">Desmond Doss</set></think>
         <think><set name = "ActorName">Andrew Garfield</set></think>
@@ -345,9 +531,59 @@
         <srai>ANDREW GARFIELD</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST ANDREW GARFIELD</pattern>
+    <template>Did you mean Andrew Garfield?</template>
+</category>
+<category>
+    <pattern>ANDREW</pattern>
+    <template>
+        <srai>TEST ANDREW GARFIELD</srai>
+    </template>
+</category>
+<category>
+    <pattern>GARFIELD</pattern>
+    <template>
+        <srai>TEST ANDREW GARFIELD</srai>
+    </template>
+</category>
+<category>
+    <pattern> * GARFIELD</pattern>
+    <template>
+        <srai>TEST ANDREW GARFIELD</srai>
+    </template>
+</category>
+<category>
+    <pattern>ANDREW *</pattern>
+    <template>
+        <srai>TEST ANDREW GARFIELD</srai>
+    </template>
+</category>
+<category>
+    <pattern>* ANDREW</pattern>
+    <template>
+        <srai>TEST ANDREW GARFIELD</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN ANDREW GARFIELD</that>
+    <template>
+        <srai>ANDREW GARFIELD</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN ANDREW GARFIELD</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP RYAN GOSLING NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Holland March(The Nice Guys), Jared Vennett(The Big Short)</set></think>
         <think><set name = "CharacterMovie">La La Land</set></think>
         <think><set name = "CharacterName">Sebastian</set></think>
         <think><set name = "ActorName">Ryan Gosling</set></think>
@@ -357,7 +593,7 @@
 </category>
 <category> <pattern>RYAN GOSLING</pattern>
     <template>
-        WHAT ABOUT HIM? HE PLAYED THE MAIN ROLE IN LA LA LAND (2016). ALMOST WON.
+        What about him? He played the main role in La La Land (2016). ALMOST won.
         <srai>SETTING UP RYAN GOSLING NAME</srai>
     </template>
 </category>
@@ -366,9 +602,59 @@
         <srai>RYAN GOSLING</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST RYAN GOSLING</pattern>
+    <template>Did you mean Ryan Gosling?</template>
+</category>
+<category>
+    <pattern>RYAN</pattern>
+    <template>
+        <srai>TEST RYAN GOSLING</srai>
+    </template>
+</category>
+<category>
+    <pattern>GOSLING</pattern>
+    <template>
+        <srai>TEST RYAN GOSLING</srai>
+    </template>
+</category>
+<category>
+    <pattern> * GOSLING</pattern>
+    <template>
+        <srai>TEST RYAN GOSLING</srai>
+    </template>
+</category>
+<category>
+    <pattern>RYAN *</pattern>
+    <template>
+        <srai>TEST RYAN GOSLING</srai>
+    </template>
+</category>
+<category>
+    <pattern>* RYAN</pattern>
+    <template>
+        <srai>TEST RYAN GOSLING</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN RYAN GOSLING</that>
+    <template>
+        <srai>RYAN GOSLING</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN RYAN GOSLING</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP VIGGO MORTENSEN NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Chester MacFarland(The Two Faces of January), Sigmund Freud(A Dangerous Method)</set></think>
         <think><set name = "CharacterMovie">Captain Fantastic</set></think>
         <think><set name = "CharacterInfo">Ben and Leslie are disillusioned with capitalism and American life, and chose to instill survivalist skills, left wing politics, and philosophy in their children – educating them to think critically, training them to be self-reliant,
             physically fit and athletic, guiding them without technology, demonstrating the beauty of coexisting with nature and celebrating "Noam Chomsky Day" instead of Christmas.</set></think>
@@ -388,9 +674,59 @@
         <srai>VIGGO MORTENSEN</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST VIGGO MORTENSEN</pattern>
+    <template>Did you mean Viggo Mortensen?</template>
+</category>
+<category>
+    <pattern>VIGGO </pattern>
+    <template>
+        <srai>TEST VIGGO MORTENSEN</srai>
+    </template>
+</category>
+<category>
+    <pattern>MORTENSEN</pattern>
+    <template>
+        <srai>TEST VIGGO MORTENSEN</srai>
+    </template>
+</category>
+<category>
+    <pattern> * MORTENSEN</pattern>
+    <template>
+        <srai>TEST VIGGO MORTENSEN</srai>
+    </template>
+</category>
+<category>
+    <pattern>VIGGO  *</pattern>
+    <template>
+        <srai>TEST VIGGO MORTENSEN</srai>
+    </template>
+</category>
+<category>
+    <pattern>* VIGGO </pattern>
+    <template>
+        <srai>TEST VIGGO MORTENSEN</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN VIGGO MORTENSEN</that>
+    <template>
+        <srai>VIGGO MORTENSEN</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN VIGGO MORTENSEN</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP DENZEL WASHINGTON NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Alonzo Harris(Training Day), Malcom X (Malcom X), Rubin Carter(The Hurricane)</set></think>
         <think><set name = "CharacterMovie">Fences</set></think>
         <think><set name = "CharacterInfo">Troy Maxson makes his living as a sanitation worker in 1950s Pittsburgh. Maxson once dreamed of becoming a professional baseball player,
             but was deemed too old when the major leagues began admitting black athletes.</set></think>
@@ -410,9 +746,59 @@
         <srai>DENZEL WASHINGTON</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST DENZEL WASHINGTON</pattern>
+    <template>Did you mean Denzel Washington?</template>
+</category>
+<category>
+    <pattern>DENZEL </pattern>
+    <template>
+        <srai>TEST DENZEL WASHINGTON</srai>
+    </template>
+</category>
+<category>
+    <pattern>WASHINGTON</pattern>
+    <template>
+        <srai>TEST DENZEL WASHINGTON</srai>
+    </template>
+</category>
+<category>
+    <pattern> * WASHINGTON</pattern>
+    <template>
+        <srai>TEST DENZEL WASHINGTON</srai>
+    </template>
+</category>
+<category>
+    <pattern>DENZEL  *</pattern>
+    <template>
+        <srai>TEST DENZEL WASHINGTON</srai>
+    </template>
+</category>
+<category>
+    <pattern>* DENZEL </pattern>
+    <template>
+        <srai>TEST DENZEL WASHINGTON</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN DENZEL WASHINGTON</that>
+    <template>
+        <srai>DENZEL WASHINGTON</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN DENZEL WASHINGTON</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP MAHERSHALA ALI NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Jim Johnson(Hidden Figures), Tizzy (The Curious Case of Benjamin Button)</set></think>
         <think><set name = "CharacterMovie">Moonlight</set></think>
         <think><set name = "CharacterInfo">he's a drug dealer.</set></think>
         <think><set name = "CharacterName">Juan</set></think>
@@ -431,9 +817,59 @@
         <srai>SETTING UP MAHERSHALA ALI NAME</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST MAHERSHALA ALI</pattern>
+    <template>Did you mean Mahershala Ali?</template>
+</category>
+<category>
+    <pattern>MAHERSHALA</pattern>
+    <template>
+        <srai>TEST MAHERSHALA ALI</srai>
+    </template>
+</category>
+<category>
+    <pattern>ALI</pattern>
+    <template>
+        <srai>TEST MAHERSHALA ALI</srai>
+    </template>
+</category>
+<category>
+    <pattern> * ALI</pattern>
+    <template>
+        <srai>TEST MAHERSHALA ALI</srai>
+    </template>
+</category>
+<category>
+    <pattern>MAHERSHALA *</pattern>
+    <template>
+        <srai>TEST MAHERSHALA ALI</srai>
+    </template>
+</category>
+<category>
+    <pattern>* MAHERSHALA </pattern>
+    <template>
+        <srai>TEST MAHERSHALA ALI</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN MAHERSHALA ALI</that>
+    <template>
+        <srai>MAHERSHALA ALI</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN MAHERSHALA ALI</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP JEFF BRIDGES NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Rooster Cogburn(True Grit), Obadiah Stane(Iron Man), Kevin Flynn(Tron)</set></think>
         <think><set name = "CharacterMovie">Hell or High Water</set></think>
         <think><set name = "CharacterInfo">he's a Texas Ranger, he's looking at a mandatory-retirement notice.</set></think>
         <think><set name = "CharacterName">Marcus Hamilton</set></think>
@@ -452,9 +888,59 @@
         <srai>JEFF BRIDGES</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST JEFF BRIDGES</pattern>
+    <template>Did you mean Jeff Bridges?</template>
+</category>
+<category>
+    <pattern>JEFF</pattern>
+    <template>
+        <srai>TEST JEFF BRIDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>BRIDGES</pattern>
+    <template>
+        <srai>TEST JEFF BRIDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern> * BRIDGES</pattern>
+    <template>
+        <srai>TEST JEFF BRIDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>JEFF *</pattern>
+    <template>
+        <srai>TEST JEFF BRIDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>* JEFF </pattern>
+    <template>
+        <srai>TEST JEFF BRIDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN JEFF BRIDGES</that>
+    <template>
+        <srai>JEFF BRIDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN JEFF BRIDGES</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP LUCAS HEDGES NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Richard(Labor Day), Bob (The Zero Theorem)</set></think>
         <think><set name = "CharacterMovie">Manchester By The Sea</set></think>
         <think><set name = "CharacterInfo">Patrick, a darkly humorous, hockey-loving teen whose emotionally distant uncle (Casey Affleck)
             becomes his guardian after the death of his father (Kyle Chandler)</set></think>
@@ -474,9 +960,59 @@
         <srai>LUCAS HEDGES</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST LUCAS HEDGES</pattern>
+    <template>Did you mean Lucas Hedges?</template>
+</category>
+<category>
+    <pattern>LUCAS</pattern>
+    <template>
+        <srai>TEST LUCAS HEDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>HEDGES</pattern>
+    <template>
+        <srai>TEST LUCAS HEDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern> * HEDGES</pattern>
+    <template>
+        <srai>TEST LUCAS HEDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>LUCAS *</pattern>
+    <template>
+        <srai>TEST LUCAS HEDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>* LUCAS </pattern>
+    <template>
+        <srai>TEST LUCAS HEDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN LUCAS HEDGES</that>
+    <template>
+        <srai>LUCAS HEDGES</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN LUCAS HEDGES</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP DEV PATEL NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Deon(Chappie), Srinivasa Ramanujan(The Man Who Knew Infinity)</set></think>
         <think><set name = "CharacterMovie">Lion</set></think>
         <think><set name = "CharacterInfo">Saroo Brierley (born 1981) is an Indian-born Australian businessman who, at age 5, was separated from his biological mother. He was adopted by an Australian couple,
             and 25 years later reunited with his biological mother.</set></think>
@@ -496,9 +1032,59 @@
         <srai>DEV PATEL</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST DEV PATEL</pattern>
+    <template>Did you mean Dev Patel?</template>
+</category>
+<category>
+    <pattern>DEV</pattern>
+    <template>
+        <srai>TEST DEV PATEL</srai>
+    </template>
+</category>
+<category>
+    <pattern>PATEL</pattern>
+    <template>
+        <srai>TEST DEV PATEL</srai>
+    </template>
+</category>
+<category>
+    <pattern> * PATEL</pattern>
+    <template>
+        <srai>TEST DEV PATEL</srai>
+    </template>
+</category>
+<category>
+    <pattern>DEV *</pattern>
+    <template>
+        <srai>TEST DEV PATEL</srai>
+    </template>
+</category>
+<category>
+    <pattern>* DEV </pattern>
+    <template>
+        <srai>TEST DEV PATEL</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN DEV PATEL</that>
+    <template>
+        <srai>DEV PATEL</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN DEV PATEL</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP MICHAEL SHANNON NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">General Zod(Man of Steel), Roy(Midnight Special)</set></think>
         <think><set name = "CharacterMovie">Nocturnal Animals</set></think>
         <think><set name = "CharacterInfo">he's a hard-bitten Texan cop named Bobby Andes,
             who comes to the aid of Jake Gyllenhaal’s devastated out-of-towner Tony Hastings.</set></think>
@@ -518,11 +1104,60 @@
         <srai>MICHAEL SHANNON</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST MICHAEL SHANNON</pattern>
+    <template>Did you mean Michael Shannon?</template>
+</category>
+<category>
+    <pattern>MICHAEL</pattern>
+    <template>
+        <srai>TEST MICHAEL SHANNON</srai>
+    </template>
+</category>
+<category>
+    <pattern>SHANNON</pattern>
+    <template>
+        <srai>TEST MICHAEL SHANNON</srai>
+    </template>
+</category>
+<category>
+    <pattern> * SHANNON</pattern>
+    <template>
+        <srai>TEST MICHAEL SHANNON</srai>
+    </template>
+</category>
+<category>
+    <pattern>MICHAEL *</pattern>
+    <template>
+        <srai>TEST MICHAEL SHANNON</srai>
+    </template>
+</category>
+<category>
+    <pattern>* MICHAEL </pattern>
+    <template>
+        <srai>TEST MICHAEL SHANNON</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN MICHAEL SHANNON</that>
+    <template>
+        <srai>MICHAEL SHANNON</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN MICHAEL SHANNON</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
 
 
 <!-- Setting actress name: -->
 <category> <pattern>SETTING UP ISABELLE HUPPERT NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Eva (Amour), Erika Khut(La pianiste)</set></think>
         <think><set name = "CharacterMovie">Elle</set></think>
         <think><set name = "CharacterInfo">she's a businesswoman, who is raped in her home by a masked assailant and decides not to report it due to her past experience with police.</set></think>
         <think><set name = "CharacterName">Michele Leblanc</set></think>
@@ -541,9 +1176,59 @@
         <srai>ISABELLE HUPPERT</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST ISABELLE HUPPERT</pattern>
+    <template>Did you mean Isabelle Huppert?</template>
+</category>
+<category>
+    <pattern>ISABELLE</pattern>
+    <template>
+        <srai>TEST ISABELLE HUPPERT</srai>
+    </template>
+</category>
+<category>
+    <pattern>HUPPERT</pattern>
+    <template>
+        <srai>TEST ISABELLE HUPPERT</srai>
+    </template>
+</category>
+<category>
+    <pattern> * HUPPERT</pattern>
+    <template>
+        <srai>TEST ISABELLE HUPPERT</srai>
+    </template>
+</category>
+<category>
+    <pattern>ISABELLE *</pattern>
+    <template>
+        <srai>TEST ISABELLE HUPPERT</srai>
+    </template>
+</category>
+<category>
+    <pattern>* ISABELLE </pattern>
+    <template>
+        <srai>TEST ISABELLE HUPPERT</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN ISABELLE HUPPERT</that>
+    <template>
+        <srai>ISABELLE HUPPERT</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN ISABELLE HUPPERT</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP RUTH NEGGA NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Lady Taria(Warcraft), W.H.O Doctor(World War Z)</set></think>
         <think><set name = "CharacterMovie">Loving</set></think>
         <think><set name = "CharacterInfo">Richard and Mildred Loving made history when their fight for the state
             of Virginia to recognize their interracial marriage made it all the way to the Supreme Court in 1967.</set></think>
@@ -563,9 +1248,59 @@
         <srai>RUTH NEGGA</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST RUTH NEGGA</pattern>
+    <template>Did you mean Ruth Negga?</template>
+</category>
+<category>
+    <pattern>RUTH</pattern>
+    <template>
+        <srai>TEST RUTH NEGGA</srai>
+    </template>
+</category>
+<category>
+    <pattern>NEGGA</pattern>
+    <template>
+        <srai>TEST RUTH NEGGA</srai>
+    </template>
+</category>
+<category>
+    <pattern> * NEGGA</pattern>
+    <template>
+        <srai>TEST RUTH NEGGA</srai>
+    </template>
+</category>
+<category>
+    <pattern>RUTH *</pattern>
+    <template>
+        <srai>TEST RUTH NEGGA</srai>
+    </template>
+</category>
+<category>
+    <pattern>* RUTH </pattern>
+    <template>
+        <srai>TEST RUTH NEGGA</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN RUTH NEGGA</that>
+    <template>
+        <srai>RUTH NEGGA</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN RUTH NEGGA</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP EMMA STONE NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Gwen Stacy (The amazing Spider Man 1 e 2), Sam Thompson (Birdman), Hannah Weaver(Crazy Stupid Love)</set></think>
         <think><set name = "CharacterMovie">La La Land</set></think>
         <think><set name = "CharacterInfo">she's an aspiring actress.</set></think>
         <think><set name = "CharacterName">Mia</set></think>
@@ -584,9 +1319,59 @@
         <srai>EMMA STONE</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST EMMA STONE</pattern>
+    <template>Did you mean Emma Stone?</template>
+</category>
+<category>
+    <pattern>EMMA</pattern>
+    <template>
+        <srai>TEST EMMA STONE</srai>
+    </template>
+</category>
+<category>
+    <pattern>STONE</pattern>
+    <template>
+        <srai>TEST EMMA STONE</srai>
+    </template>
+</category>
+<category>
+    <pattern> * STONE</pattern>
+    <template>
+        <srai>TEST EMMA STONE</srai>
+    </template>
+</category>
+<category>
+    <pattern>EMMA *</pattern>
+    <template>
+        <srai>TEST EMMA STONE</srai>
+    </template>
+</category>
+<category>
+    <pattern>* EMMA </pattern>
+    <template>
+        <srai>TEST EMMA STONE</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN EMMA STONE</that>
+    <template>
+        <srai>EMMA STONE</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN EMMA STONE</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP NATALIE PORTMAN NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Jane Foster(Thor, Thor: The dark world), Nina Sayers(Black Swan), Evey Hammond(V for Vendetta)</set></think>
         <think><set name = "CharacterMovie">Jackie</set></think>
         <think><set name = "CharacterInfo">The film
             tells the story about her life after the 1963 assassination of her husband John F. Kennedy.</set></think>
@@ -606,9 +1391,59 @@
         <srai>NATALIE PORTMAN</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST NATALIE PORTMAN</pattern>
+    <template>Did you mean Natalie Portman?</template>
+</category>
+<category>
+    <pattern>NATALIE</pattern>
+    <template>
+        <srai>TEST NATALIE PORTMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>PORTMAN</pattern>
+    <template>
+        <srai>TEST NATALIE PORTMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern> * PORTMAN</pattern>
+    <template>
+        <srai>TEST NATALIE PORTMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>NATALIE *</pattern>
+    <template>
+        <srai>TEST NATALIE PORTMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>* NATALIE </pattern>
+    <template>
+        <srai>TEST NATALIE PORTMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN NATALIE PORTMAN</that>
+    <template>
+        <srai>NATALIE PORTMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN NATALIE PORTMAN</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP MERYL STREEP NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Margaret Thatcher(The Iron Lady), Sofia Zawistowski(Sophie's Choice)</set></think>
         <think><set name = "CharacterMovie">Florence Foster Jenkins</set></think>
         <think><set name = "CharacterInfo">She was an American socialite and amateur soprano who was known and mocked for her
             flamboyant performance costumes and notably poor singing ability.</set></think>
@@ -628,9 +1463,59 @@
         <srai>MERYL STREEP</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST MERYL STREEP</pattern>
+    <template>Did you mean Meryl Streep?</template>
+</category>
+<category>
+    <pattern>MERYL</pattern>
+    <template>
+        <srai>TEST MERYL STREEP</srai>
+    </template>
+</category>
+<category>
+    <pattern>STREEP</pattern>
+    <template>
+        <srai>TEST MERYL STREEP</srai>
+    </template>
+</category>
+<category>
+    <pattern> * STREEP</pattern>
+    <template>
+        <srai>TEST MERYL STREEP</srai>
+    </template>
+</category>
+<category>
+    <pattern>MERYL *</pattern>
+    <template>
+        <srai>TEST MERYL STREEP</srai>
+    </template>
+</category>
+<category>
+    <pattern>* MERYL </pattern>
+    <template>
+        <srai>TEST MERYL STREEP</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN MERYL STREEP</that>
+    <template>
+        <srai>MERYL STREEP</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN MERYL STREEP</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP VIOLA DAVIS NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Amanda Waller(Suicide Squad), April Henry(Law Abiding Citizien)</set></think>
         <think><set name = "CharacterMovie">Fences</set></think>
         <think><set name = "CharacterInfo">She's wife to Troy and mother of Cory, Rose represents the maternal gentleness of the Maxson household.</set></think>
         <think><set name = "CharacterName">Rose Maxson</set></think>
@@ -649,9 +1534,59 @@
         <srai>VIOLA DAVIS</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST VIOLA DAVIS</pattern>
+    <template>Did you mean Viola Davis?</template>
+</category>
+<category>
+    <pattern>VIOLA</pattern>
+    <template>
+        <srai>TEST VIOLA DAVIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>DAVIS</pattern>
+    <template>
+        <srai>TEST VIOLA DAVIS</srai>
+    </template>
+</category>
+<category>
+    <pattern> * DAVIS</pattern>
+    <template>
+        <srai>TEST VIOLA DAVIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>VIOLA *</pattern>
+    <template>
+        <srai>TEST VIOLA DAVIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>* VIOLA </pattern>
+    <template>
+        <srai>TEST VIOLA DAVIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN VIOLA DAVIS</that>
+    <template>
+        <srai>VIOLA DAVIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN VIOLA DAVIS</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP NAOMIE HARRIS NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Miss Moneypenny(007 Spectre, 007 Skyfall), Tia Dalma (Pirates of Caribbean: At Worlds End, Pirates of Caribbean: Dead Man's Chest)</set></think>
         <think><set name = "CharacterMovie">Moonlight</set></think>
         <think><set name = "CharacterInfo">She's a nurse with a crack addiction, who alternates between overbearing affection and cruel neglect.</set></think>
         <think><set name = "CharacterName">Paula</set></think>
@@ -670,9 +1605,59 @@
         <srai>NAOMIE HARRIS</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST NAOMIE HARRIS</pattern>
+    <template>Did you mean NaomiE HarriS?</template>
+</category>
+<category>
+    <pattern>NAOMIE</pattern>
+    <template>
+        <srai>TEST NAOMIE HARRIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>HARRIS</pattern>
+    <template>
+        <srai>TEST NAOMIE HARRIS</srai>
+    </template>
+</category>
+<category>
+    <pattern> * HARRIS</pattern>
+    <template>
+        <srai>TEST NAOMIE HARRIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>NAOMIE *</pattern>
+    <template>
+        <srai>TEST NAOMIE HARRIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>* NAOMIE </pattern>
+    <template>
+        <srai>TEST NAOMIE HARRIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN NAOMIE HARRIS</that>
+    <template>
+        <srai>NAOMIE HARRIS</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN NAOMIE HARRIS</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP NICOLE KIDMAN NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Aline Bernstein(Genius), Gertrude Bell(Queen of the Desert)</set></think>
         <think><set name = "CharacterMovie">Lion</set></think>
         <think><set name = "CharacterInfo">She and husband John Brierley are the adoptive parents of Indian writer Saroo Brierley,
             the life story of whom was portrayed in the acclaimed film Lion (2016).</set></think>
@@ -692,9 +1677,59 @@
         <srai>NICOLE KIDMAN</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST NICOLE KIDMAN</pattern>
+    <template>Did you mean Nicole Kidman?</template>
+</category>
+<category>
+    <pattern>NICOLE</pattern>
+    <template>
+        <srai>TEST NICOLE KIDMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>KIDMAN</pattern>
+    <template>
+        <srai>TEST NICOLE KIDMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern> * KIDMAN</pattern>
+    <template>
+        <srai>TEST NICOLE KIDMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>NICOLE *</pattern>
+    <template>
+        <srai>TEST NICOLE KIDMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>* NICOLE </pattern>
+    <template>
+        <srai>TEST NICOLE KIDMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN NICOLE KIDMAN</that>
+    <template>
+        <srai>NICOLE KIDMAN</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN NICOLE KIDMAN</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP OCTAVIA SPENCER NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">God(The Shack), Martha(Percy Jackson: Sea of Monsters)</set></think>
         <think><set name = "CharacterMovie">Hidden Figures</set></think>
         <think><set name = "CharacterInfo">She was an African American mathematician and human computer who worked for the National Advisory Committee for Aeronautics (NACA), and NASA, at Langley Research Center in Hampton, Virginia. In 1949, she became acting supervisor of the West Area Computers,
             the first African-American woman to supervise a staff at the center.</set></think>
@@ -714,9 +1749,59 @@
         <srai>OCTAVIA SPENCER</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST OCTAVIA SPENCER</pattern>
+    <template>Did you mean Octavia Spencer?</template>
+</category>
+<category>
+    <pattern>OCTAVIA</pattern>
+    <template>
+        <srai>TEST OCTAVIA SPENCER</srai>
+    </template>
+</category>
+<category>
+    <pattern>SPENCER</pattern>
+    <template>
+        <srai>TEST OCTAVIA SPENCER</srai>
+    </template>
+</category>
+<category>
+    <pattern> * SPENCER</pattern>
+    <template>
+        <srai>TEST OCTAVIA SPENCER</srai>
+    </template>
+</category>
+<category>
+    <pattern>OCTAVIA *</pattern>
+    <template>
+        <srai>TEST OCTAVIA SPENCER</srai>
+    </template>
+</category>
+<category>
+    <pattern>* OCTAVIA </pattern>
+    <template>
+        <srai>TEST OCTAVIA SPENCER</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN OCTAVIA SPENCER</that>
+    <template>
+        <srai>OCTAVIA SPENCER</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN OCTAVIA SPENCER</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <category> <pattern>SETTING UP MICHELLE WILLIAMS NAME</pattern>
     <template>
+        <think><set name = "OtherRoles">Cindy(Blue Valentine), Alma(Brokeback Mountain)</set></think>
         <think><set name = "CharacterMovie">Manchester By The Sea</set></think>
         <think><set name = "CharacterInfo">as Lee’s wife Randi, Williams makes a huge impression despite appearing in just a handful of short scenes. </set></think>
         <think><set name = "CharacterName">Randi</set></think>
@@ -735,6 +1820,55 @@
         <srai>MICHELLE WILLIAMS</srai>
     </template>
 </category>
+<category>
+    <pattern>TEST MICHELLE WILLIAMS</pattern>
+    <template>Did you mean Michelle Williams?</template>
+</category>
+<category>
+    <pattern>MICHELLE</pattern>
+    <template>
+        <srai>TEST MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+<category>
+    <pattern>WILLIAMS</pattern>
+    <template>
+        <srai>TEST MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+<category>
+    <pattern> * WILLIAMS</pattern>
+    <template>
+        <srai>TEST MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+<category>
+    <pattern>MICHELLE *</pattern>
+    <template>
+        <srai>TEST MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+<category>
+    <pattern>* MICHELLE </pattern>
+    <template>
+        <srai>TEST MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+<category>
+    <pattern>YES</pattern>
+    <that>DID YOU MEAN MICHELLE WILLIAMS</that>
+    <template>
+        <srai>MICHELLE WILLIAMS</srai>
+    </template>
+</category>
+<category>
+    <pattern>NO</pattern>
+    <that>DID YOU MEAN MICHELLE WILLIAMS</that>
+    <template>
+        Hmm, could you be more specific?
+    </template>
+</category>
+
 
 <!-- Setting character/actor/actress name -->
 <category> <pattern> WHO IS * </pattern>
@@ -786,6 +1920,16 @@
         <srai> LEE CHANDLER </srai>
     </template>
 </category>
+<category> <pattern> * LEE CHANDLER </pattern>
+    <template>
+        <srai> LEE CHANDLER </srai>
+    </template>
+</category>
+<category> <pattern> * LEE CHANDLER * </pattern>
+    <template>
+        <srai> LEE CHANDLER </srai>
+    </template>
+</category>
 <category> <pattern> CASEY AFFLECK PLAYED </pattern>
     <template>
         He played Lee Chandler.
@@ -800,6 +1944,16 @@
     </template>
 </category>
 <category> <pattern> DESMOND DOSS * </pattern>
+    <template>
+        <srai> DESMOND DOSS </srai>
+    </template>
+</category>
+<category> <pattern> * DESMOND DOSS </pattern>
+    <template>
+        <srai> DESMOND DOSS </srai>
+    </template>
+</category>
+<category> <pattern> * DESMOND DOSS * </pattern>
     <template>
         <srai> DESMOND DOSS </srai>
     </template>
@@ -822,6 +1976,16 @@
         <srai> SEBASTIAN </srai>
     </template>
 </category>
+<category> <pattern> * SEBASTIAN </pattern>
+    <template>
+        <srai> SEBASTIAN </srai>
+    </template>
+</category>
+<category> <pattern> * SEBASTIAN * </pattern>
+    <template>
+        <srai> SEBASTIAN </srai>
+    </template>
+</category>
 <category> <pattern> RYAN GOSLING PLAYED </pattern>
     <template>
         He played Sebastian.
@@ -840,6 +2004,16 @@
         <srai> BEN </srai>
     </template>
 </category>
+<category> <pattern> * BEN </pattern>
+    <template>
+        <srai> BEN </srai>
+    </template>
+</category>
+<category> <pattern> * BEN * </pattern>
+    <template>
+        <srai> BEN </srai>
+    </template>
+</category>
 <category> <pattern> VIGGO MORTENSEN PLAYED </pattern>
     <template>
         He played Ben.
@@ -854,6 +2028,16 @@
     </template>
 </category>
 <category> <pattern> TROY MAXSON * </pattern>
+    <template>
+        <srai> TROY MAXSON </srai>
+    </template>
+</category>
+<category> <pattern> * TROY MAXSON </pattern>
+    <template>
+        <srai> TROY MAXSON </srai>
+    </template>
+</category>
+<category> <pattern> * TROY MAXSON * </pattern>
     <template>
         <srai> TROY MAXSON </srai>
     </template>
@@ -878,6 +2062,16 @@
         <srai> JUAN </srai>
     </template>
 </category>
+<category> <pattern> * JUAN </pattern>
+    <template>
+        <srai> JUAN </srai>
+    </template>
+</category>
+<category> <pattern> * JUAN * </pattern>
+    <template>
+        <srai> JUAN </srai>
+    </template>
+</category>
 <category> <pattern> MAHERSHALA ALI PLAYED </pattern>
     <template>
         He played Juan.
@@ -892,6 +2086,16 @@
     </template>
 </category>
 <category> <pattern> MARCUS HAMILTON * </pattern>
+    <template>
+        <srai> MARCUS HAMILTON </srai>
+    </template>
+</category>
+<category> <pattern> * MARCUS HAMILTON </pattern>
+    <template>
+        <srai> MARCUS HAMILTON </srai>
+    </template>
+</category>
+<category> <pattern> * MARCUS HAMILTON * </pattern>
     <template>
         <srai> MARCUS HAMILTON </srai>
     </template>
@@ -914,6 +2118,16 @@
         <srai> PATRICK </srai>
     </template>
 </category>
+<category> <pattern> * PATRICK </pattern>
+    <template>
+        <srai> PATRICK </srai>
+    </template>
+</category>
+<category> <pattern> * PATRICK * </pattern>
+    <template>
+        <srai> PATRICK </srai>
+    </template>
+</category>
 <category> <pattern> LUCAS HEDGES PLAYED </pattern>
     <template>
         He played Patrick.
@@ -932,6 +2146,16 @@
         <srai> SAROO BRIERLEY </srai>
     </template>
 </category>
+<category> <pattern> * SAROO BRIERLEY </pattern>
+    <template>
+        <srai> SAROO BRIERLEY </srai>
+    </template>
+</category>
+<category> <pattern> * SAROO BRIERLEY * </pattern>
+    <template>
+        <srai> SAROO BRIERLEY </srai>
+    </template>
+</category>
 <category> <pattern> DEV PATEL PLAYED </pattern>
     <template>
         He played Saroo Brierley.
@@ -946,6 +2170,16 @@
     </template>
 </category>
 <category> <pattern> BOBBY ANDES * </pattern>
+    <template>
+        <srai> BOBBY ANDES </srai>
+    </template>
+</category>
+<category> <pattern> * BOBBY ANDES </pattern>
+    <template>
+        <srai> BOBBY ANDES </srai>
+    </template>
+</category>
+<category> <pattern> * BOBBY ANDES * </pattern>
     <template>
         <srai> BOBBY ANDES </srai>
     </template>
@@ -969,6 +2203,16 @@
         <srai> MICHELE LEBLANC </srai>
     </template>
 </category>
+<category> <pattern> * MICHELE LEBLANC </pattern>
+    <template>
+        <srai> MICHELE LEBLANC </srai>
+    </template>
+</category>
+<category> <pattern> * MICHELE LEBLANC * </pattern>
+    <template>
+        <srai> MICHELE LEBLANC </srai>
+    </template>
+</category>
 <category> <pattern> ISABELLE HUPPERT PLAYED </pattern>
     <template>
         She played Michele Leblanc.
@@ -983,6 +2227,16 @@
     </template>
 </category>
 <category> <pattern> MILDRED LOVING * </pattern>
+    <template>
+        <srai> MILDRED LOVING </srai>
+    </template>
+</category>
+<category> <pattern> * MILDRED LOVING </pattern>
+    <template>
+        <srai> MILDRED LOVING </srai>
+    </template>
+</category>
+<category> <pattern> * MILDRED LOVING * </pattern>
     <template>
         <srai> MILDRED LOVING </srai>
     </template>
@@ -1005,6 +2259,16 @@
         <srai> MIA </srai>
     </template>
 </category>
+<category> <pattern> * MIA </pattern>
+    <template>
+        <srai> MIA </srai>
+    </template>
+</category>
+<category> <pattern> * MIA * </pattern>
+    <template>
+        <srai> MIA </srai>
+    </template>
+</category>
 <category> <pattern> EMMA STONE PLAYED </pattern>
     <template>
         She played Mia.
@@ -1023,6 +2287,16 @@
         <srai> JACKIE KENNEDY </srai>
     </template>
 </category>
+<category> <pattern> * JACKIE KENNEDY </pattern>
+    <template>
+        <srai> JACKIE KENNEDY </srai>
+    </template>
+</category>
+<category> <pattern> * JACKIE KENNEDY * </pattern>
+    <template>
+        <srai> JACKIE KENNEDY </srai>
+    </template>
+</category>
 <category> <pattern> NATALIE PORTMAN PLAYED </pattern>
     <template>
         She played Jackie Kennedy.
@@ -1037,6 +2311,16 @@
     </template>
 </category>
 <category> <pattern> FLORENCE FOSTER JENKINS * </pattern>
+    <template>
+        <srai> FLORENCE FOSTER JENKINS </srai>
+    </template>
+</category>
+<category> <pattern> * FLORENCE FOSTER JENKINS </pattern>
+    <template>
+        <srai> FLORENCE FOSTER JENKINS </srai>
+    </template>
+</category>
+<category> <pattern> * FLORENCE FOSTER JENKINS * </pattern>
     <template>
         <srai> FLORENCE FOSTER JENKINS </srai>
     </template>
@@ -1060,6 +2344,16 @@
         <srai> ROSE MAXSON </srai>
     </template>
 </category>
+<category> <pattern> * ROSE MAXSON </pattern>
+    <template>
+        <srai> ROSE MAXSON </srai>
+    </template>
+</category>
+<category> <pattern> * ROSE MAXSON * </pattern>
+    <template>
+        <srai> ROSE MAXSON </srai>
+    </template>
+</category>
 <category> <pattern> VIOLA DAVIS PLAYED </pattern>
     <template>
         She played Rose Maxson.
@@ -1074,6 +2368,16 @@
     </template>
 </category>
 <category> <pattern> PAULA * </pattern>
+    <template>
+        <srai> PAULA </srai>
+    </template>
+</category>
+<category> <pattern> * PAULA </pattern>
+    <template>
+        <srai> PAULA </srai>
+    </template>
+</category>
+<category> <pattern> * PAULA * </pattern>
     <template>
         <srai> PAULA </srai>
     </template>
@@ -1096,6 +2400,16 @@
         <srai> SUE BRIERLEY </srai>
     </template>
 </category>
+<category> <pattern> * SUE BRIERLEY </pattern>
+    <template>
+        <srai> SUE BRIERLEY </srai>
+    </template>
+</category>
+<category> <pattern> * SUE BRIERLEY * </pattern>
+    <template>
+        <srai> SUE BRIERLEY </srai>
+    </template>
+</category>
 <category> <pattern> NICOLE KIDMAN PLAYED </pattern>
     <template>
         She played Sue Brierley.
@@ -1114,6 +2428,16 @@
         <srai> DOROTHY VAUGHAN </srai>
     </template>
 </category>
+<category> <pattern> * DOROTHY VAUGHAN </pattern>
+    <template>
+        <srai> DOROTHY VAUGHAN </srai>
+    </template>
+</category>
+<category> <pattern> * DOROTHY VAUGHAN * </pattern>
+    <template>
+        <srai> DOROTHY VAUGHAN </srai>
+    </template>
+</category>
 <category> <pattern> OCTAVIA SPENCER PLAYED </pattern>
     <template>
         She played Dorothy Vaughan.
@@ -1128,6 +2452,16 @@
     </template>
 </category>
 <category> <pattern> RANDI * </pattern>
+    <template>
+        <srai> RANDI </srai>
+    </template>
+</category>
+<category> <pattern> * RANDI </pattern>
+    <template>
+        <srai> RANDI </srai>
+    </template>
+</category>
+<category> <pattern> * RANDI * </pattern>
     <template>
         <srai> RANDI </srai>
     </template>
