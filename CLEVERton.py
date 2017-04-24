@@ -43,6 +43,7 @@ names = retrieveNames()
 
 # Loop forever, reading user input from the command
 # line and printing respones
+print colors.CLEVERTON + 'CLEVERton: ' + "Hello, human, I'm a chatbot specialized in 2017's Oscar, want to talk about it?"
 while True:
     input = raw_input(colors.USER + username + ": ")
     time.sleep(0.2)     # a little bit of delay for responses makes for a more comfortable conversation

@@ -1,0 +1,13 @@
+CLEVERton is a chatbot that specializes in 2017's Oscar, meaning it can answer questions about movies that were released in 2016 and nominated for the Oscar, including directors, actors and characters of the movies.
+CLEVERton can respond questions within a context to some degree.
+
+Example Questions:
+- Which movies were nominated for original screenplay?
+- Who is Emma Stone?
+- Tell me about Moonlight.
+- Who is Sebastian?
+
+-- Topics for Reference --
+
+Movies:
+

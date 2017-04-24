@@ -2,15 +2,73 @@
 
 <aiml version="1.0">
 
-<!-- This is the knowledge base that will -->
-<!-- hold the Oscar 2017 information -->
+<!-- This is the knowledge base that -->
+<!-- holds the Oscars 17 information -->
 
 <meta name="author" content="IAzeros"/>
 <meta name="language" content="en"/>
 
 <!-- Best picture -->
 <category>
-	<pattern>BEST PICTURE</pattern>
+	<pattern>WON BEST PICTURE</pattern>
+	<template>
+		<random>
+			<li>The winner for best picture was Moonlight (not La La Land!).</li>
+			<li>Moonlight got the prize for best picture. La La Land thought it did, but it didn't.</li>
+			<li>The winner for best picture was La La Land! KIDDING. It was actually Moonlight.</li>
+			<li>Moonlight won as best picture. Not La La Land. Moonlight.</li>
+			<li>The winner for best picture was Moonlight.</li>
+			<li>Moonlight took the prize for best picture.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON BEST PICTURE *</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ WON BEST PICTURE </pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ WON BEST PICTURE *</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>WINNER BEST PICTURE</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>WINNER BEST PICTURE *</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER BEST PICTURE</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER BEST PICTURE *</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * BEST PICTURE</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * BEST PICTURE *</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * BEST PICTURE </pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * BEST PICTURE *</pattern>
+	<template><srai>WON BEST PICTURE</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES BEST PICTURE</pattern>
 	<template>
 		<random>
 			<li>The nominees for best picture were Arrival, Fences, Hacksaw Ridge, Hell or High Water, Hidden Figures, La La Land, Lion, Manchester by the Sea and Moonlight.</li>
@@ -20,26 +78,125 @@
 	</template>
 </category>
 <category>
-	<pattern>BEST PICTURE *</pattern>
-	<template><srai>BEST PICTURE</srai></template>
+	<pattern>NOMINEES BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
 </category>
 <category>
-	<pattern>_ BEST PICTURE </pattern>
-	<template><srai>BEST PICTURE</srai></template>
+	<pattern>_ NOMINEES BEST PICTURE </pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
 </category>
 <category>
-	<pattern>_ BEST PICTURE? </pattern>
-	<template><srai>BEST PICTURE</srai></template>
+	<pattern>_ NOMINEES BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
 </category>
 <category>
-	<pattern>_ BEST PICTURE *</pattern>
-	<template><srai>BEST PICTURE</srai></template>
+	<pattern>NOMINEES * BEST PICTURE</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
 </category>
-<!-- TODO: Fazer quem venceu -->
+<category>
+	<pattern>NOMINEES * BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * BEST PICTURE </pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED BEST PICTURE</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED BEST PICTURE </pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * BEST PICTURE</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * BEST PICTURE </pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * BEST PICTURE *</pattern>
+	<template><srai>NOMINEES BEST PICTURE</srai></template>
+</category>
 
 <!-- Actor in leading role -->
 <category>
-	<pattern>ACTOR IN A LEADING ROLE</pattern>
+	<pattern>WON ACTOR IN A LEADING ROLE</pattern>
+	<template>
+		<random>
+			<li>The winner for actor in a leading role was Casey Affleck, in Manchester by the Sea.</li>
+			<li>Casey Affleck got the prize for actor in a leading role in the movie Manchester by the Sea.</li>
+			<li>The winner for actor in a leading role was Casey Affleck, in Manchester by the Sea.</li>
+			<li>Casey Affleck, in Manchester by the Sea, won as actor in a leading role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTOR IN A LEADING ROLE </pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTOR IN A LEADING ROLE</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTOR IN A LEADING ROLE</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTOR IN A LEADING ROLE</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTOR IN A LEADING ROLE </pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A LEADING ROLE</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ACTOR IN A LEADING ROLE</pattern>
 	<template>
 		<random>
 			<li>The nominees for actor in a leading role were Casey Affleck, Andrew Garfield, Ryan Gosling, Viggo Mortensen and Denzel Washington.</li>
@@ -49,25 +206,125 @@
 	</template>
 </category>
 <category>
-	<pattern>_ ACTOR IN A LEADING ROLE</pattern>
-	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+	<pattern>NOMINEES ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTOR IN A LEADING ROLE?</pattern>
-	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTOR IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
 </category>
 <category>
-	<pattern>ACTOR IN A LEADING ROLE *</pattern>
-	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTOR IN A LEADING ROLE * </pattern>
-	<template><srai>ACTOR IN A LEADING ROLE</srai></template>
+	<pattern>NOMINEES * ACTOR IN A LEADING ROLE</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTOR IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTOR IN A LEADING ROLE</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTOR IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTOR IN A LEADING ROLE</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTOR IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTOR IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A LEADING ROLE</srai></template>
 </category>
 
 <!-- Actress in a leading role -->
 <category>
-	<pattern>ACTRESS IN A LEADING ROLE</pattern>
+	<pattern>WON ACTRESS IN A LEADING ROLE</pattern>
+	<template>
+		<random>
+			<li>The winner for actress in a leading role was Emma Stone, in La La Land.</li>
+			<li>Emma Stone got the prize for actress in a leading role in the movie La La Land.</li>
+			<li>The winner for actress in a leading role was Emma Stone, in La La Land.</li>
+			<li>Emma Stone, in La La Land, won as actress in a leading role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTRESS IN A LEADING ROLE </pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTRESS IN A LEADING ROLE</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTRESS IN A LEADING ROLE</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTRESS IN A LEADING ROLE</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTRESS IN A LEADING ROLE </pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ACTRESS IN A LEADING ROLE</pattern>
 	<template>
 		<random>
 			<li>The nominees for actress in a leading role were Isabelle Huppert, Ruth Negga, Natalie Portman, Emma Stone and Meryl Streep.</li>
@@ -77,25 +334,125 @@
 	</template>
 </category>
 <category>
-	<pattern>_ ACTRESS IN A LEADING ROLE</pattern>
-	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+	<pattern>NOMINEES ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTRESS IN A LEADING ROLE?</pattern>
-	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTRESS IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
 </category>
 <category>
-	<pattern>ACTRESS IN A LEADING ROLE *</pattern>
-	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTRESS IN A LEADING ROLE *</pattern>
-	<template><srai>ACTRESS IN A LEADING ROLE</srai></template>
+	<pattern>NOMINEES * ACTRESS IN A LEADING ROLE</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTRESS IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTRESS IN A LEADING ROLE</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTRESS IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTRESS IN A LEADING ROLE</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTRESS IN A LEADING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTRESS IN A LEADING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A LEADING ROLE</srai></template>
 </category>
 
 <!-- Actor in a supporting role -->
 <category>
-	<pattern>ACTOR IN A SUPPORTING ROLE</pattern>
+	<pattern>WON ACTOR IN A SUPPORTING ROLE</pattern>
+	<template>
+		<random>
+			<li>The winner for actor in a supporting role was Mahershala Ali, in Moonlight.</li>
+			<li>Mahershala Ali got the prize for actor in a supporting role in the movie Moonlight.</li>
+			<li>The winner for actor in a supporting role was Mahershala Ali, in Moonlight.</li>
+			<li>Mahershala Ali, in Moonlight, won as actor in a supporting role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTOR IN A SUPPORTING ROLE </pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTOR IN A SUPPORTING ROLE</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTOR IN A SUPPORTING ROLE</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTOR IN A SUPPORTING ROLE</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTOR IN A SUPPORTING ROLE </pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ACTOR IN A SUPPORTING ROLE</pattern>
 	<template>
 		<random>
 			<li>The nominees for actor in a supporting role were Mahershala Ali, Jeff Bridges, Lucas Hedges, Dev Patel and Michael Shannon.</li>
@@ -105,25 +462,125 @@
 	</template>
 </category>
 <category>
-	<pattern>_ ACTOR IN A SUPPORTING ROLE</pattern>
-	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+	<pattern>NOMINEES ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTOR IN A SUPPORTING ROLE?</pattern>
-	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTOR IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
 </category>
 <category>
-	<pattern>ACTOR IN A SUPPORTING ROLE *</pattern>
-	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTOR IN A SUPPORTING ROLE *</pattern>
-	<template><srai>ACTOR IN A SUPPORTING ROLE</srai></template>
+	<pattern>NOMINEES * ACTOR IN A SUPPORTING ROLE</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTOR IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTOR IN A SUPPORTING ROLE</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTOR IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTOR IN A SUPPORTING ROLE</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTOR IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTOR IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTOR IN A SUPPORTING ROLE</srai></template>
 </category>
 
 <!-- Actress in a supporting role -->
 <category>
-	<pattern>ACTRESS IN A SUPPORTING ROLE</pattern>
+	<pattern>WON ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template>
+		<random>
+			<li>The winner for actress in a supporting role was Viola Davis, in Fences.</li>
+			<li>Viola Davis got the prize for actress in a supporting role in the movie Fences.</li>
+			<li>The winner for actress in a supporting role was Viola Davis, in Fences.</li>
+			<li>Viola Davis, in Fences, won as actress in a supporting role.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTRESS IN A SUPPORTING ROLE </pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WON ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTRESS IN A SUPPORTING ROLE </pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>WON ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ACTRESS IN A SUPPORTING ROLE</pattern>
 	<template>
 		<random>
 			<li>The nominees for actress in a supporting role were Viola Davis, Naomie Harris, Nicole Kidman, Octavia Spencer and Michelle Williams.</li>
@@ -133,25 +590,124 @@
 	</template>
 </category>
 <category>
-	<pattern>_ ACTRESS IN A SUPPORTING ROLE</pattern>
-	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+	<pattern>NOMINEES ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTRESS IN A SUPPORTING ROLE?</pattern>
-	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTRESS IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
 </category>
 <category>
-	<pattern>ACTRESS IN A SUPPORTING ROLE *</pattern>
-	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+	<pattern>_ NOMINEES ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
 </category>
 <category>
-	<pattern>_ ACTRESS IN A SUPPORTING ROLE *</pattern>
-	<template><srai>ACTRESS IN A SUPPORTING ROLE</srai></template>
+	<pattern>NOMINEES * ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTRESS IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTRESS IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTRESS IN A SUPPORTING ROLE</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTRESS IN A SUPPORTING ROLE </pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ACTRESS IN A SUPPORTING ROLE *</pattern>
+	<template><srai>NOMINEES ACTRESS IN A SUPPORTING ROLE</srai></template>
 </category>
 
 <!-- Animated feature film -->
 <category>
-	<pattern>ANIMATED FEATURE FILM</pattern>
+	<pattern>WON ANIMATED FEATURE FILM</pattern>
+	<template>
+		<random>
+			<li>The winner for animated feature film was Zootopia.</li>
+			<li>Zootopia got the prize for animated feature film.</li>
+			<li>Zootopia won as animated feature film.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ANIMATED FEATURE FILM *</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ WON ANIMATED FEATURE FILM </pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ WON ANIMATED FEATURE FILM *</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>WINNER ANIMATED FEATURE FILM</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>WINNER ANIMATED FEATURE FILM *</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ANIMATED FEATURE FILM</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ANIMATED FEATURE FILM *</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ANIMATED FEATURE FILM</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ANIMATED FEATURE FILM *</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ANIMATED FEATURE FILM </pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ANIMATED FEATURE FILM *</pattern>
+	<template><srai>WON ANIMATED FEATURE FILM</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ANIMATED FEATURE FILM</pattern>
 	<template>
 		<random>
 			<li>The nominees for animated feature film were Kubo and the Two Strings, Moana, My Life as a Zucchini, The Red Turtle and Zootopia.</li>
@@ -161,25 +717,124 @@
 	</template>
 </category>
 <category>
-	<pattern>_ ANIMATED FEATURE FILM</pattern>
-	<template><srai>ANIMATED FEATURE FILM</srai></template>
+	<pattern>NOMINEES ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
 </category>
 <category>
-	<pattern>_ ANIMATED FEATURE FILM?</pattern>
-	<template><srai>ANIMATED FEATURE FILM</srai></template>
+	<pattern>_ NOMINEES ANIMATED FEATURE FILM </pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
 </category>
 <category>
-	<pattern>ANIMATED FEATURE FILM *</pattern>
-	<template><srai>ANIMATED FEATURE FILM</srai></template>
+	<pattern>_ NOMINEES ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
 </category>
 <category>
-	<pattern>_ ANIMATED FEATURE FILM *</pattern>
-	<template><srai>ANIMATED FEATURE FILM</srai></template>
+	<pattern>NOMINEES * ANIMATED FEATURE FILM</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ANIMATED FEATURE FILM </pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ANIMATED FEATURE FILM</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ANIMATED FEATURE FILM </pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ANIMATED FEATURE FILM</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ANIMATED FEATURE FILM </pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ANIMATED FEATURE FILM *</pattern>
+	<template><srai>NOMINEES ANIMATED FEATURE FILM</srai></template>
 </category>
 
 <!-- Cinematograpy -->
 <category>
-	<pattern>CINEMATOGRAPHY</pattern>
+	<pattern>WON CINEMATOGRAPHY</pattern>
+	<template>
+		<random>
+			<li>The winner for cinematography was La La Land.</li>
+			<li>La La Land got the prize for cinematography.</li>
+			<li>La La Land won as cinematography.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON CINEMATOGRAPHY *</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ WON CINEMATOGRAPHY </pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ WON CINEMATOGRAPHY *</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>WINNER CINEMATOGRAPHY</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>WINNER CINEMATOGRAPHY *</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER CINEMATOGRAPHY</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER CINEMATOGRAPHY *</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * CINEMATOGRAPHY</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * CINEMATOGRAPHY *</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * CINEMATOGRAPHY </pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * CINEMATOGRAPHY *</pattern>
+	<template><srai>WON CINEMATOGRAPHY</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES CINEMATOGRAPHY</pattern>
 	<template>
 		<random>
 			<li>The nominees for cinematography were Arrival, La La Land, Lion, Moonlight and Silence.</li>
@@ -189,25 +844,124 @@
 	</template>
 </category>
 <category>
-	<pattern>_ CINEMATOGRAPHY</pattern>
-	<template><srai>CINEMATOGRAPHY</srai></template>
+	<pattern>NOMINEES CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
 </category>
 <category>
-	<pattern>_ CINEMATOGRAPHY?</pattern>
-	<template><srai>CINEMATOGRAPHY</srai></template>
+	<pattern>_ NOMINEES CINEMATOGRAPHY </pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
 </category>
 <category>
-	<pattern>CINEMATOGRAPHY *</pattern>
-	<template><srai>CINEMATOGRAPHY</srai></template>
+	<pattern>_ NOMINEES CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
 </category>
 <category>
-	<pattern>_ CINEMATOGRAPHY *</pattern>
-	<template><srai>CINEMATOGRAPHY</srai></template>
+	<pattern>NOMINEES * CINEMATOGRAPHY</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * CINEMATOGRAPHY </pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED CINEMATOGRAPHY</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED CINEMATOGRAPHY </pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * CINEMATOGRAPHY</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * CINEMATOGRAPHY </pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * CINEMATOGRAPHY *</pattern>
+	<template><srai>NOMINEES CINEMATOGRAPHY</srai></template>
 </category>
 
 <!-- Costume design -->
 <category>
-	<pattern>COSTUME DESIGN</pattern>
+	<pattern>WON COSTUME DESIGN</pattern>
+	<template>
+		<random>
+			<li>The winner for costume design was Fantastic Beasts and Where to Find Them.</li>
+			<li>Fantastic Beasts and Where to Find Them got the prize for costume design.</li>
+			<li>Fantastic Beasts and Where to Find Them won as costume design.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON COSTUME DESIGN *</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WON COSTUME DESIGN </pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WON COSTUME DESIGN *</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER COSTUME DESIGN</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER COSTUME DESIGN *</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER COSTUME DESIGN</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER COSTUME DESIGN *</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER * COSTUME DESIGN</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER * COSTUME DESIGN *</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * COSTUME DESIGN </pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * COSTUME DESIGN *</pattern>
+	<template><srai>WON COSTUME DESIGN</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES COSTUME DESIGN</pattern>
 	<template>
 		<random>
 			<li>The nominees for costume design were Allied, Fantastic Beasts and Where to Find Them, Florence Foster Jenkins, Jackie and La La Land.</li>
@@ -217,25 +971,124 @@
 	</template>
 </category>
 <category>
-	<pattern>_ COSTUME DESIGN</pattern>
-	<template><srai>COSTUME DESIGN</srai></template>
+	<pattern>NOMINEES COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
 </category>
 <category>
-	<pattern>_ COSTUME DESIGN?</pattern>
-	<template><srai>COSTUME DESIGN</srai></template>
+	<pattern>_ NOMINEES COSTUME DESIGN </pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
 </category>
 <category>
-	<pattern>COSTUME DESIGN *</pattern>
-	<template><srai>COSTUME DESIGN</srai></template>
+	<pattern>_ NOMINEES COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
 </category>
 <category>
-	<pattern>_ COSTUME DESIGN *</pattern>
-	<template><srai>COSTUME DESIGN</srai></template>
+	<pattern>NOMINEES * COSTUME DESIGN</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * COSTUME DESIGN </pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED COSTUME DESIGN</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED COSTUME DESIGN </pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * COSTUME DESIGN</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * COSTUME DESIGN </pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * COSTUME DESIGN *</pattern>
+	<template><srai>NOMINEES COSTUME DESIGN</srai></template>
 </category>
 
 <!-- Directing -->
 <category>
-	<pattern>DIRECTING</pattern>
+	<pattern>WON DIRECTING</pattern>
+	<template>
+		<random>
+			<li>The winner for directing was La La Land.</li>
+			<li>La La Land got the prize for directing.</li>
+			<li>La La Land won as directing.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON DIRECTING *</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ WON DIRECTING </pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ WON DIRECTING *</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>WINNER DIRECTING</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>WINNER DIRECTING *</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER DIRECTING</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER DIRECTING *</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * DIRECTING</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * DIRECTING *</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * DIRECTING </pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * DIRECTING *</pattern>
+	<template><srai>WON DIRECTING</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES DIRECTING</pattern>
 	<template>
 		<random>
 			<li>The nominees for directing were Arrival, Hacksaw Ridge, La La Land, Manchester by the Sea, Moonlight.</li>
@@ -245,21 +1098,124 @@
 	</template>
 </category>
 <category>
-	<pattern>_ DIRECTING</pattern>
-	<template><srai>DIRECTING</srai></template>
+	<pattern>NOMINEES DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
 </category>
 <category>
-	<pattern>DIRECTING *</pattern>
-	<template><srai>DIRECTING</srai></template>
+	<pattern>_ NOMINEES DIRECTING </pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
 </category>
 <category>
-	<pattern>_ DIRECTING *</pattern>
-	<template><srai>DIRECTING</srai></template>
+	<pattern>_ NOMINEES DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * DIRECTING</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * DIRECTING </pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED DIRECTING</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED DIRECTING </pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * DIRECTING</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * DIRECTING </pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * DIRECTING *</pattern>
+	<template><srai>NOMINEES DIRECTING</srai></template>
 </category>
 
 <!-- Documentary (feature) -->
 <category>
-	<pattern>FEATURE DOCUMENTARY</pattern>
+	<pattern>WON FEATURE DOCUMENTARY</pattern>
+	<template>
+		<random>
+			<li>The winner for feature documentary was O.J.: Made in America.</li>
+			<li>O.J.: Made in America got the prize for feature documentary.</li>
+			<li>O.J.: Made in America won as feature documentary.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON FEATURE DOCUMENTARY *</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WON FEATURE DOCUMENTARY </pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WON FEATURE DOCUMENTARY *</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER FEATURE DOCUMENTARY</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER FEATURE DOCUMENTARY *</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FEATURE DOCUMENTARY</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FEATURE DOCUMENTARY *</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FEATURE DOCUMENTARY</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FEATURE DOCUMENTARY *</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FEATURE DOCUMENTARY </pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FEATURE DOCUMENTARY *</pattern>
+	<template><srai>WON FEATURE DOCUMENTARY</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES FEATURE DOCUMENTARY</pattern>
 	<template>
 		<random>
 			<li>The nominees for feature documentary were Fire at Sea, I Am Not Your Negro, Life, Animated, O.J.: Made in America and 13th.</li>
@@ -269,19 +1225,170 @@
 	</template>
 </category>
 <category>
-	<pattern>_ FEATURE DOCUMENTARY</pattern>
-	<template><srai>FEATURE DOCUMENTARY</srai></template>
+	<pattern>NOMINEES FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>FEATURE DOCUMENTARY *</pattern>
-	<template><srai>FEATURE DOCUMENTARY</srai></template>
+	<pattern>_ NOMINEES FEATURE DOCUMENTARY </pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>_ FEATURE DOCUMENTARY *</pattern>
-	<template><srai>FEATURE DOCUMENTARY</srai></template>
+	<pattern>_ NOMINEES FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FEATURE DOCUMENTARY</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FEATURE DOCUMENTARY </pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FEATURE DOCUMENTARY</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FEATURE DOCUMENTARY </pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FEATURE DOCUMENTARY</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FEATURE DOCUMENTARY </pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FEATURE DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES FEATURE DOCUMENTARY</srai></template>
 </category>
 
 <!-- Documentary (short subject) -->
+<category>
+	<pattern>WON SHORT SUBJECT DOCUMENTARY</pattern>
+	<template>
+		<random>
+			<li>The winner for short subject documentary was The White Helmets.</li>
+			<li>The White Helmets got the prize for short subject documentary.</li>
+			<li>The White Helmets won as short subject documentary.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WON SHORT SUBJECT DOCUMENTARY </pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WON SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER SHORT SUBJECT DOCUMENTARY</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SHORT SUBJECT DOCUMENTARY</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SHORT SUBJECT DOCUMENTARY</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SHORT SUBJECT DOCUMENTARY </pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WON SHORT DOCUMENTARY</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WON SHORT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WON SHORT DOCUMENTARY </pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WON SHORT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER SHORT DOCUMENTARY</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER SHORT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SHORT DOCUMENTARY</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SHORT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SHORT DOCUMENTARY</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SHORT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SHORT DOCUMENTARY </pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SHORT DOCUMENTARY *</pattern>
+	<template><srai>WON SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+
 <category>
 	<pattern>SHORT SUBJECT DOCUMENTARY</pattern>
 	<template>
@@ -293,37 +1400,236 @@
 	</template>
 </category>
 <category>
-	<pattern>_ SHORT SUBJECT DOCUMENTARY</pattern>
-	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+	<pattern>NOMINEES SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>SHORT SUBJECT DOCUMENTARY *</pattern>
-	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+	<pattern>_ NOMINEES SHORT SUBJECT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>_ SHORT SUBJECT DOCUMENTARY *</pattern>
-	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+	<pattern>_ NOMINEES SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>SHORT DOCUMENTARY</pattern>
-	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+	<pattern>NOMINEES * SHORT SUBJECT DOCUMENTARY</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>_ SHORT DOCUMENTARY</pattern>
-	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+	<pattern>NOMINEES * SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>SHORT DOCUMENTARY *</pattern>
-	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+	<pattern>_ NOMINEES * SHORT SUBJECT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
 </category>
 <category>
-	<pattern>_ SHORT DOCUMENTARY *</pattern>
-	<template><srai>SHORT SUBJECT DOCUMENTARY</srai></template>
+	<pattern>_ NOMINEES * SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SHORT SUBJECT DOCUMENTARY</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SHORT SUBJECT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SHORT SUBJECT DOCUMENTARY</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SHORT SUBJECT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SHORT SUBJECT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES SHORT DOCUMENTARY</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SHORT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SHORT DOCUMENTARY</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SHORT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SHORT DOCUMENTARY</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SHORT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SHORT DOCUMENTARY</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SHORT DOCUMENTARY </pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SHORT DOCUMENTARY *</pattern>
+	<template><srai>NOMINEES SHORT SUBJECT DOCUMENTARY</srai></template>
 </category>
 
 <!-- Film editing -->
 <category>
-	<pattern>EDITING</pattern>
+	<pattern>WON FILM EDITING</pattern>
+	<template>
+		<random>
+			<li>The winner for film editing was Hacksaw Ridge.</li>
+			<li>Hacksaw Ridge got the prize for film editing.</li>
+			<li>Hacksaw Ridge won as film editing.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON FILM EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WON FILM EDITING </pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WON FILM EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER FILM EDITING</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER FILM EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FILM EDITING</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FILM EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FILM EDITING</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FILM EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FILM EDITING </pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FILM EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WON EDITING</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WON EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WON EDITING </pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WON EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER EDITING</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER EDITING</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * EDITING</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * EDITING </pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * EDITING *</pattern>
+	<template><srai>WON FILM EDITING</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES FILM EDITING</pattern>
 	<template>
 		<random>
 			<li>The nominees for film editing were Arrival, Hacksaw Ridge, Hell or High Water, La La Land and Moonlight.</li>
@@ -333,21 +1639,236 @@
 	</template>
 </category>
 <category>
-	<pattern>_ EDITING</pattern>
-	<template><srai>EDITING</srai></template>
+	<pattern>NOMINEES FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
 </category>
 <category>
-	<pattern>EDITING *</pattern>
-	<template><srai>EDITING</srai></template>
+	<pattern>_ NOMINEES FILM EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
 </category>
 <category>
-	<pattern>_ EDITING *</pattern>
-	<template><srai>EDITING</srai></template>
+	<pattern>_ NOMINEES FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FILM EDITING</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FILM EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FILM EDITING</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FILM EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FILM EDITING</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FILM EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FILM EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES EDITING</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * EDITING</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED EDITING</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * EDITING</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * EDITING </pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * EDITING *</pattern>
+	<template><srai>NOMINEES FILM EDITING</srai></template>
 </category>
 
 <!-- Foreign language film -->
 <category>
-	<pattern>FOREIGN</pattern>
+	<pattern>WON FOREIGN LANGUAGE</pattern>
+	<template>
+		<random>
+			<li>The winner for foreign language film was The Salesman.</li>
+			<li>The Salesman got the prize for foreign language film.</li>
+			<li>The Salesman won as foreign language film.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON FOREIGN LANGUAGE *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WON FOREIGN LANGUAGE </pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WON FOREIGN LANGUAGE *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER FOREIGN LANGUAGE</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER FOREIGN LANGUAGE *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FOREIGN LANGUAGE</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FOREIGN LANGUAGE *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FOREIGN LANGUAGE</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FOREIGN LANGUAGE *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FOREIGN LANGUAGE </pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FOREIGN LANGUAGE *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WON FOREIGN</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WON FOREIGN *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WON FOREIGN </pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WON FOREIGN *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER FOREIGN</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER FOREIGN *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FOREIGN</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER FOREIGN *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FOREIGN</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * FOREIGN *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FOREIGN </pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * FOREIGN *</pattern>
+	<template><srai>WON FOREIGN LANGUAGE</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES FOREIGN LANGUAGE</pattern>
 	<template>
 		<random>
 			<li>The nominees for foreign language film were Land of Mine, A Man Called Ove, The Salesman, Tanna, Toni Erdmann.</li>
@@ -357,21 +1878,284 @@
 	</template>
 </category>
 <category>
-	<pattern>_ FOREIGN</pattern>
-	<template><srai>FOREIGN</srai></template>
+	<pattern>NOMINEES FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
 </category>
 <category>
-	<pattern>FOREIGN *</pattern>
-	<template><srai>FOREIGN</srai></template>
+	<pattern>_ NOMINEES FOREIGN LANGUAGE </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
 </category>
 <category>
-	<pattern>_ FOREIGN *</pattern>
-	<template><srai>FOREIGN</srai></template>
+	<pattern>_ NOMINEES FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FOREIGN LANGUAGE</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FOREIGN LANGUAGE </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FOREIGN LANGUAGE</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FOREIGN LANGUAGE </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FOREIGN LANGUAGE</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FOREIGN LANGUAGE </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FOREIGN LANGUAGE *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES FOREIGN</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES FOREIGN </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FOREIGN</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FOREIGN </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FOREIGN</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FOREIGN </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FOREIGN</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FOREIGN </pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * FOREIGN *</pattern>
+	<template><srai>NOMINEES FOREIGN LANGUAGE</srai></template>
 </category>
 
 <!-- Makeup and Hairstyling -->
 <category>
-	<pattern>MAKEUP AND HAIRSTYLING</pattern>
+	<pattern>WON MAKEUP AND HAIRSTYLING</pattern>
+	<template>
+		<random>
+			<li>The winner for makeup and hairstyling was Suicide Squad.</li>
+			<li>Suicide Squad got the prize for makeup and hairstyling.</li>
+			<li>Suicide Squad won as makeup and hairstyling.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WON MAKEUP AND HAIRSTYLING </pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WON MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER MAKEUP AND HAIRSTYLING</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER MAKEUP AND HAIRSTYLING</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * MAKEUP AND HAIRSTYLING</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * MAKEUP AND HAIRSTYLING </pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WON MAKEUP</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WON MAKEUP *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WON MAKEUP </pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WON MAKEUP *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER MAKEUP</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER MAKEUP *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER MAKEUP</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER MAKEUP *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * MAKEUP</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * MAKEUP *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * MAKEUP </pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * MAKEUP *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WON HAIRSTYLING</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WON HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WON HAIRSTYLING </pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WON HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER HAIRSTYLING</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER HAIRSTYLING</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * HAIRSTYLING</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * HAIRSTYLING </pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * HAIRSTYLING *</pattern>
+	<template><srai>WON MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES MAKEUP AND HAIRSTYLING</pattern>
 	<template>
 		<random>
 			<li>The nominees for makeup and hairstyling were A Man Called Ove, Star Trek Beyond and Suicide Squad.</li>
@@ -381,48 +2165,1478 @@
 	</template>
 </category>
 <category>
-	<pattern>_ MAKEUP AND HAIRSTYLING</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>NOMINEES MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>MAKEUP AND HAIRSTYLING *</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>_ NOMINEES MAKEUP AND HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>_ MAKEUP AND HAIRSTYLING *</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>_ NOMINEES MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>MAKEUP</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>NOMINEES * MAKEUP AND HAIRSTYLING</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>_ MAKEUP</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>NOMINEES * MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>MAKEUP *</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>_ NOMINEES * MAKEUP AND HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>_ MAKEUP *</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>_ NOMINEES * MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>HAIRSTYLING</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>NOMINATED MAKEUP AND HAIRSTYLING</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>_ HAIRSTYLING</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>NOMINATED MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>HAIRSTYLING *</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>_ NOMINATED MAKEUP AND HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
 </category>
 <category>
-	<pattern>_ HAIRSTYLING *</pattern>
-	<template><srai>MAKEUP AND HAIRSTYLING</srai></template>
+	<pattern>_ NOMINATED MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * MAKEUP AND HAIRSTYLING</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * MAKEUP AND HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * MAKEUP AND HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES MAKEUP</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES MAKEUP </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * MAKEUP</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * MAKEUP </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED MAKEUP</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED MAKEUP </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * MAKEUP</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * MAKEUP </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * MAKEUP *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES HAIRSTYLING</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * HAIRSTYLING</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED HAIRSTYLING</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * HAIRSTYLING</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * HAIRSTYLING </pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * HAIRSTYLING *</pattern>
+	<template><srai>NOMINEES MAKEUP AND HAIRSTYLING</srai></template>
+</category>
+
+<!-- Music (original score) -->
+<category>
+	<pattern>WON ORIGINAL SCORE</pattern>
+	<template>
+		<random>
+			<li>The winner for best original score was La La Land.</li>
+			<li>La La Land got the prize for best original score.</li>
+			<li>La La Land won as best original score.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON SCORE</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>WON SCORE *</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ WON SCORE </pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ WON SCORE *</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>WINNER SCORE</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>WINNER SCORE *</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SCORE</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SCORE *</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SCORE</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SCORE *</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SCORE </pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SCORE *</pattern>
+	<template><srai>WON ORIGINAL SCORE</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ORIGINAL SCORE</pattern>
+	<template>
+		<random>
+			<li>The nominees for best original score were Jackie, La La Land, Lion, Moonlight and Passengers.</li>
+			<li>The movies nominated for best original score were Jackie, La La Land, Lion, Moonlight and Passengers.</li>
+			<li>The following movies were nominated for best original score: Jackie, La La Land, Lion, Moonlight and Passengers.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES SCORE</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SCORE </pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SCORE</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SCORE </pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SCORE</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SCORE </pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SCORE</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SCORE </pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SCORE *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCORE</srai></template>
+</category>
+
+<!-- Music (original song) -->
+<category>
+	<pattern>WON ORIGINAL SONG</pattern>
+	<template>
+		<random>
+			<li>The winner for best original song was La La Land with "City of Stars".</li>
+			<li>La La Land got the prize for best original song with "City of Stars".</li>
+			<li>La La Land won as best original song with "City of Stars".</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON SONG</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>WON SONG *</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ WON SONG </pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ WON SONG *</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>WINNER SONG</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>WINNER SONG *</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SONG</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SONG *</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SONG</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SONG *</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SONG </pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SONG *</pattern>
+	<template><srai>WON ORIGINAL SONG</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ORIGINAL SONG</pattern>
+	<template>
+		<random>
+			<li>The nominees for best original song were La La Land, Trolls, Jim: The James Foley Story and Moana.</li>
+			<li>The movies nominated for best original song were La La Land, Trolls, Jim: The James Foley Story and Moana.</li>
+			<li>The following movies were nominated for best original song: La La Land, Trolls, Jim: The James Foley Story and Moana.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES SONG</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SONG </pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SONG</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SONG </pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SONG</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SONG </pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SONG</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SONG </pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SONG *</pattern>
+	<template><srai>NOMINEES ORIGINAL SONG</srai></template>
+</category>
+
+<!-- Production design -->
+<category>
+	<pattern>WON PRODUCTION DESIGN</pattern>
+	<template>
+		<random>
+			<li>The winner for production design was La La Land.</li>
+			<li>La La Land got the prize for production design.</li>
+			<li>La La Land won as production design.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON PRODUCTION DESIGN *</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WON PRODUCTION DESIGN </pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WON PRODUCTION DESIGN *</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER PRODUCTION DESIGN</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER PRODUCTION DESIGN *</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER PRODUCTION DESIGN</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER PRODUCTION DESIGN *</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER * PRODUCTION DESIGN</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>WINNER * PRODUCTION DESIGN *</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * PRODUCTION DESIGN </pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * PRODUCTION DESIGN *</pattern>
+	<template><srai>WON PRODUCTION DESIGN</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES PRODUCTION DESIGN</pattern>
+	<template>
+		<random>
+			<li>The nominees for production design were Arrival, Fantastic Beasts and Where to Find Them, Hail, Cesar!, La La Land and Passengers.</li>
+			<li>The movies nominated for production design were Arrival, Fantastic Beasts and Where to Find Them, Hail, Cesar!, La La Land and Passengers.</li>
+			<li>The following movies were nominated for production design: Arrival, Fantastic Beasts and Where to Find Them, Hail, Cesar!, La La Land and Passengers.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES PRODUCTION DESIGN </pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * PRODUCTION DESIGN</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * PRODUCTION DESIGN </pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED PRODUCTION DESIGN</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED PRODUCTION DESIGN </pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * PRODUCTION DESIGN</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * PRODUCTION DESIGN </pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * PRODUCTION DESIGN *</pattern>
+	<template><srai>NOMINEES PRODUCTION DESIGN</srai></template>
+</category>
+
+<!-- Short film (animated) -->
+<category>
+	<pattern>WON ANIMATED SHORT</pattern>
+	<template>
+		<random>
+			<li>The winner for animated short was Piper.</li>
+			<li>Piper got the prize for animated short.</li>
+			<li>Piper won as animated short.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ANIMATED SHORT *</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WON ANIMATED SHORT </pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WON ANIMATED SHORT *</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER ANIMATED SHORT</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER ANIMATED SHORT *</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ANIMATED SHORT</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ANIMATED SHORT *</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ANIMATED SHORT</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ANIMATED SHORT *</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ANIMATED SHORT </pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ANIMATED SHORT *</pattern>
+	<template><srai>WON ANIMATED SHORT</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ANIMATED SHORT</pattern>
+	<template>
+		<random>
+			<li>The nominees for animated short film were Blind Vaysha, Borrowed Time, Pear Cider and Cigarettes, Pearl and Piper.</li>
+			<li>The movies nominated for animated short film were Blind Vaysha, Borrowed Time, Pear Cider and Cigarettes, Pearl and Piper.</li>
+			<li>The following movies were nominated for animated short film: Blind Vaysha, Borrowed Time, Pear Cider and Cigarettes, Pearl and Piper.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES ANIMATED SHORT </pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ANIMATED SHORT</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ANIMATED SHORT </pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ANIMATED SHORT</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ANIMATED SHORT </pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ANIMATED SHORT</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ANIMATED SHORT </pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ANIMATED SHORT *</pattern>
+	<template><srai>NOMINEES ANIMATED SHORT</srai></template>
+</category>
+
+<!-- Short film (live action) -->
+<category>
+	<pattern>WON LIVE SHORT</pattern>
+	<template>
+		<random>
+			<li>The winner for live action short film was Sing.</li>
+			<li>Sing got the prize for live action short film.</li>
+			<li>Sing won as live action short film.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON LIVE SHORT *</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WON LIVE SHORT </pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WON LIVE SHORT *</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER LIVE SHORT</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER LIVE SHORT *</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER LIVE SHORT</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER LIVE SHORT *</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER * LIVE SHORT</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>WINNER * LIVE SHORT *</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * LIVE SHORT </pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * LIVE SHORT *</pattern>
+	<template><srai>WON LIVE SHORT</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES LIVE SHORT</pattern>
+	<template>
+		<random>
+			<li>The nominees for live action short film were Ennemis Intérieurs, La Femme et le TGV, Silent Nights, Sing and Timecode.</li>
+			<li>The movies nominated for live action short film were Ennemis Intérieurs, La Femme et le TGV, Silent Nights, Sing and Timecode.</li>
+			<li>The following movies were nominated for live action short film: Ennemis Intérieurs, La Femme et le TGV, Silent Nights, Sing and Timecode.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES LIVE SHORT </pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * LIVE SHORT</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * LIVE SHORT </pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED LIVE SHORT</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED LIVE SHORT </pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * LIVE SHORT</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * LIVE SHORT </pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * LIVE SHORT *</pattern>
+	<template><srai>NOMINEES LIVE SHORT</srai></template>
+</category>
+
+<!-- Sound editing -->
+<category>
+	<pattern>WON SOUND EDITING</pattern>
+	<template>
+		<random>
+			<li>The winner for sound editing was Arrival.</li>
+			<li>Arrival got the prize for sound editing.</li>
+			<li>Arrival won as sound editing.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON SOUND EDITING *</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WON SOUND EDITING </pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WON SOUND EDITING *</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER SOUND EDITING</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER SOUND EDITING *</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SOUND EDITING</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SOUND EDITING *</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SOUND EDITING</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SOUND EDITING *</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SOUND EDITING </pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SOUND EDITING *</pattern>
+	<template><srai>WON SOUND EDITING</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES SOUND EDITING</pattern>
+	<template>
+		<random>
+			<li>The nominees for sound editing were Arrival, Deepwater Horizon, Hacksaw Ridge, La La Land and Sully.</li>
+			<li>The movies nominated for sound editing were Arrival, Deepwater Horizon, Hacksaw Ridge, La La Land and Sully.</li>
+			<li>The following movies were nominated for sound editing: Arrival, Deepwater Horizon, Hacksaw Ridge, La La Land and Sully.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SOUND EDITING </pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SOUND EDITING</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SOUND EDITING </pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SOUND EDITING</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SOUND EDITING </pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SOUND EDITING</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SOUND EDITING </pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SOUND EDITING *</pattern>
+	<template><srai>NOMINEES SOUND EDITING</srai></template>
+</category>
+
+<!-- Sound mixing -->
+<category>
+	<pattern>WON SOUND MIXING</pattern>
+	<template>
+		<random>
+			<li>The winner for sound mixing was Hacksaw Ridge.</li>
+			<li>Hacksaw Ridge got the prize for sound mixing.</li>
+			<li>Hacksaw Ridge won as sound mixing.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON SOUND MIXING *</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ WON SOUND MIXING </pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ WON SOUND MIXING *</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>WINNER SOUND MIXING</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>WINNER SOUND MIXING *</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SOUND MIXING</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER SOUND MIXING *</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SOUND MIXING</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>WINNER * SOUND MIXING *</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SOUND MIXING </pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * SOUND MIXING *</pattern>
+	<template><srai>WON SOUND MIXING</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES SOUND MIXING</pattern>
+	<template>
+		<random>
+			<li>The nominees for sound mixing were Arrival, Hacksaw Ridge, La La Land, Rogue One: A Star Wars Story and 13 Hours: The Secret Soldiers of Benghazi.</li>
+			<li>The movies nominated for sound mixing were Arrival, Hacksaw Ridge, La La Land, Rogue One: A Star Wars Story and 13 Hours: The Secret Soldiers of Benghazi.</li>
+			<li>The following movies were nominated for sound mixing: Arrival, Hacksaw Ridge, La La Land, Rogue One: A Star Wars Story and 13 Hours: The Secret Soldiers of Benghazi.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SOUND MIXING </pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SOUND MIXING</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SOUND MIXING </pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SOUND MIXING</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SOUND MIXING </pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SOUND MIXING</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SOUND MIXING </pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * SOUND MIXING *</pattern>
+	<template><srai>NOMINEES SOUND MIXING</srai></template>
+</category>
+
+<!-- Visual effects -->
+<category>
+	<pattern>WON VISUAL EFFECTS</pattern>
+	<template>
+		<random>
+			<li>The winner for visual effects was The Jungle Book.</li>
+			<li>The Jungle Book got the prize for visual effects.</li>
+			<li>The Jungle Book won as visual effects.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON VISUAL EFFECTS *</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ WON VISUAL EFFECTS </pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ WON VISUAL EFFECTS *</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>WINNER VISUAL EFFECTS</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>WINNER VISUAL EFFECTS *</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER VISUAL EFFECTS</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER VISUAL EFFECTS *</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>WINNER * VISUAL EFFECTS</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>WINNER * VISUAL EFFECTS *</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * VISUAL EFFECTS </pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * VISUAL EFFECTS *</pattern>
+	<template><srai>WON VISUAL EFFECTS</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES VISUAL EFFECTS</pattern>
+	<template>
+		<random>
+			<li>The nominees for best visual effects were Deepwater Horizon, Doctor Strange, The Jungle Book, Kubo and the Two Strings and Rogue One: A Star Wars Story.</li>
+			<li>The movies nominated for best visual effects were Deepwater Horizon, Doctor Strange, The Jungle Book, Kubo and the Two Strings and Rogue One: A Star Wars Story.</li>
+			<li>The following movies were nominated for best visual effects: Deepwater Horizon, Doctor Strange, The Jungle Book, Kubo and the Two Strings and Rogue One: A Star Wars Story.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES VISUAL EFFECTS </pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * VISUAL EFFECTS</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * VISUAL EFFECTS </pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED VISUAL EFFECTS</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED VISUAL EFFECTS </pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * VISUAL EFFECTS</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * VISUAL EFFECTS </pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * VISUAL EFFECTS *</pattern>
+	<template><srai>NOMINEES VISUAL EFFECTS</srai></template>
+</category>
+
+<!-- Writing (adapted screenplay) -->
+<category>
+	<pattern>WON ADAPTED SCREENPLAY</pattern>
+	<template>
+		<random>
+			<li>The winner for adapted screenplay was Moonlight.</li>
+			<li>Moonlight got the prize for adapted screenplay.</li>
+			<li>Moonlight won as adapted screenplay.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ADAPTED SCREENPLAY *</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WON ADAPTED SCREENPLAY </pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WON ADAPTED SCREENPLAY *</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER ADAPTED SCREENPLAY</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER ADAPTED SCREENPLAY *</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ADAPTED SCREENPLAY</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ADAPTED SCREENPLAY *</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ADAPTED SCREENPLAY</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ADAPTED SCREENPLAY *</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ADAPTED SCREENPLAY </pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ADAPTED SCREENPLAY *</pattern>
+	<template><srai>WON ADAPTED SCREENPLAY</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ADAPTED SCREENPLAY</pattern>
+	<template>
+		<random>
+			<li>The nominees for best adapted screenplay were Arrival, Fences, Hidden Figures, Lion and Moonlight.</li>
+			<li>The movies nominated for best adapted screenplay were Arrival, Fences, Hidden Figures, Lion and Moonlight.</li>
+			<li>The following movies were nominated for best adapted screenplay: Arrival, Fences, Hidden Figures, Lion and Moonlight.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES ADAPTED SCREENPLAY </pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ADAPTED SCREENPLAY</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ADAPTED SCREENPLAY </pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ADAPTED SCREENPLAY</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ADAPTED SCREENPLAY </pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ADAPTED SCREENPLAY</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ADAPTED SCREENPLAY </pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ADAPTED SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ADAPTED SCREENPLAY</srai></template>
+</category>
+
+<!-- Writing (original screenplay) -->
+<category>
+	<pattern>WON ORIGINAL SCREENPLAY</pattern>
+	<template>
+		<random>
+			<li>The winner for original screenplay was Manchester by the Sea.</li>
+			<li>Manchester by the Sea got the prize for original screenplay.</li>
+			<li>Manchester by the Sea won as original screenplay.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>WON ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WON ORIGINAL SCREENPLAY </pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WON ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER ORIGINAL SCREENPLAY</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ORIGINAL SCREENPLAY</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ORIGINAL SCREENPLAY</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>WINNER * ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ORIGINAL SCREENPLAY </pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ WINNER * ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>WON ORIGINAL SCREENPLAY</srai></template>
+</category>
+
+<category>
+	<pattern>NOMINEES ORIGINAL SCREENPLAY</pattern>
+	<template>
+		<random>
+			<li>The nominees for best original screenplay were Hell or High Water, La La Land, The Lobster, Manchester by the Sea and 20th Century Women.</li>
+			<li>The movies nominated for best original screenplay were Hell or High Water, La La Land, The Lobster, Manchester by the Sea and 20th Century Women.</li>
+			<li>The following movies were nominated for best original screenplay: Hell or High Water, La La Land, The Lobster, Manchester by the Sea and 20th Century Women.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>NOMINEES ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES ORIGINAL SCREENPLAY </pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ORIGINAL SCREENPLAY</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINEES * ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ORIGINAL SCREENPLAY </pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINEES * ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ORIGINAL SCREENPLAY</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ORIGINAL SCREENPLAY </pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ORIGINAL SCREENPLAY</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>NOMINATED * ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ORIGINAL SCREENPLAY </pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
+</category>
+<category>
+	<pattern>_ NOMINATED * ORIGINAL SCREENPLAY *</pattern>
+	<template><srai>NOMINEES ORIGINAL SCREENPLAY</srai></template>
 </category>
 
 </aiml>
