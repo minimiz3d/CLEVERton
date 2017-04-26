@@ -29,12 +29,12 @@
         <srai>HOW MANY MOVIES SHE DID</srai>
     </template>
 </category>
-<category> <pattern>HOW MANY MOVIES * HE *</pattern>
+<category> <pattern>HOW MANY MOVIES DID HE DO</pattern>
     <template>
         <srai>HOW MANY MOVIES HE DID</srai>
     </template>
 </category>
-<category> <pattern>HOW MANY MOVIES * SHE *</pattern>
+<category> <pattern>HOW MANY MOVIES DID SHE DO</pattern>
     <template>
         <srai>HOW MANY MOVIES SHE DID</srai>
     </template>
