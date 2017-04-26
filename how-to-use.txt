@@ -54,3 +54,29 @@ Characters:
 - Sue Brierley
 - Dorothy Vaughan
 - Randi
+
+Oscar Categories:
+- Best Picture
+- Actor in a Leading Role
+- Actress in a Leading Role
+- Actor in a Supporting Role
+- Actress in a Supporting Role
+- Animated feature film
+- Cinematography
+- Costume Design
+- Directing
+- Feature Documentary
+- Short Documentary
+- Film Editing
+- Foreign Language Film
+- Makeup and Hairstyling
+- Original Score
+- Original Song
+- Production Design
+- Animated Short
+- Live Short
+- Sound Editing
+- Sound mixing
+- Visual Effects
+- Adapted Screenplay
+- Original Screenplay
